@@ -12,7 +12,7 @@
     <name>Voyager Mission Namespace Dictionary</name>
     <ldd_version_id>1.0.0.0</ldd_version_id>
     <dictionary_type>Mission</dictionary_type>
-    <full_name>Matthew S Tiscareno</full_name>
+    <full_name>Matthew Tiscareno</full_name>
     <steward_id>rings</steward_id>
     <namespace_id>vgr</namespace_id>
     <comment> 
@@ -33,8 +33,8 @@
     <name>VICAR1_legacy_label</name>
     <version_id>1.0</version_id>
     <local_identifier>VICAR1_legacy_label</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <nillable_flag>true</nillable_flag>  <!--Bob has indicated that he wants some attributes to be nillable.  This is fine, but I'd like to enable it only as requested.-->
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -47,7 +47,7 @@
     <version_id>1.0</version_id>
     <local_identifier>beam</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -64,11 +64,24 @@
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>companding</name>
+    <version_id>1.0</version_id>
+    <local_identifier>companding</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition><!--Definition needed.--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
     <name>compression_state</name>
     <version_id>1.0</version_id>
     <local_identifier>compression_state</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Whether the image compression mode was operating.<!--More detail would be good.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -89,15 +102,30 @@
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>data_anomaly_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>data_anomaly_type</local_identifier>
+    <nillable_flag>true</nillable_flag><!--I am quite willing to set other attributes as nillable, if we know or have reason to believe that they will be absent in some data products.-->
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Data recording anomalies in the image.  If this keyword is missing [in the source data product], no anomalies were detected.
+    DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
+    Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type><!--Really just allow anything?-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
     <name>dsn_station_name</name>
     <version_id>1.0</version_id>
     <local_identifier>dsn_station_name</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Name of the DSN station where the image was received</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type><!--Really just allow anything?-->
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -106,22 +134,36 @@
     <version_id>1.0</version_id>
     <local_identifier>dsn_station_number</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Numeric ID of DSN station where the image was received</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type><!--Any minimum or maximum?-->
+      <value_data_type>ASCII_Integer</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
+  <DD_Attribute>
+    <name>earth_received_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>earth_received_time</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time at which the image was received at Earth. 
+    Source Data Product Origin:  Keyword EARTH_RECEIVED_TIME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
   <DD_Attribute>
     <name>edit_mode_id</name>
     <version_id>1.0</version_id>
     <local_identifier>edit_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Edit mode of the camera.<!--Do we know what this means??-->
-      Original label parameter: EDIT MODE<!--Check--></definition>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Edit mode of the camera, indicates amount of data read from the vidicon.  '1:1' indicates the full-resolution of the vidicon.  Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'.
+    Source Data Product Origin:  Keyword EDIT_MODE_ID</definition><!--Why do the enumerated values in this definition (which come from documentation in our PDS3 bundle) not match the enumerated values I've included from Bob's spreadsheet?-->
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -141,7 +183,7 @@
     <version_id>1.0</version_id>
     <local_identifier>edr_file_number</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>File number within the tape where the image was originally stored</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -154,7 +196,7 @@
     <version_id>1.0</version_id>
     <local_identifier>edr_tape_id</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Tape ID on which the image was originally stored</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -167,7 +209,7 @@
     <version_id>1.0</version_id>
     <local_identifier>elec_cal</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Electronics cal status<!--This is insufficient as a definition--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -184,50 +226,66 @@
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>exposure_duration</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_duration</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time period during which the shutter was open
+    Source Data Product Origin:  Keyword EXPOSURE_DURATION</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
     <name>filter_name</name>
     <version_id>1.0</version_id>
     <local_identifier>filter_name</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition><!--Definition needed.  Bob says this should be a multimission keyword, but nothing like it is currently in the MSN namespace dictionary.  Bob also hints that perhaps this list is not identical between VG1 and VG2.--></definition>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Optical filter used for the image.
+    Source Data Product Origin:  Keyword FILTER_NAME</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Clear</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>NAC Filter #0 or #4 or WAC Filter #2, spanning portions of the Visible and Ultraviolet spectrum from 0.28 to 0.64 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Violet</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>NAC Filter #1 or WAC Filter #3, spanning portions of the Visible and Ultraviolet spectrum, from 0.35 to 0.45 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Blue</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>NAC Filter #2 or WAC Filter #1, spanning portions of the Visible spectrum from 0.43 to 0.53 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Orange</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>NAC Filter #3 or WAC Filter #7, spanning portions of the Visible spectrum from 0.59 to 0.64 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Green</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>NAC Filter #5 or #6 or WAC Filter #5, spanning portions of the Visible spectrum from 0.53 to 0.64 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>UV</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>NAC Filter #7, spanning portions of the Ultraviolet spectrum from 0.28 to 0.37 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>CH4/JS</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>WAC Filter #0, spanning portions of the Visible spectrum from 0.614 to 0.624 microns.  Also called CH4_JS or METHANE-JST.</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Sodium</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>WAC Filter #0, spanning portions of the Visible spectrum from 0.588 to 0.590 microns.  Also called NAD or SODIUM-D.</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>CH4/U</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value>CH4/U</value><!--The documentation in the PDS3 bundle calls this CH4_U.-->
+        <value_meaning>WAC Filter #6, spanning portions of the Visible spectrum from 0.536 to 0.546 microns.  Also called CH4_U or METHANE-U.</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -237,8 +295,10 @@
     <version_id>1.0</version_id>
     <local_identifier>filter_number</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition><!--Definition needed.  Bob says this should be a multimission keyword, but nothing like it is currently in the MSN namespace dictionary.--></definition>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Optical filter identification number, contains the unique number associated with the optical filter for the image.
+    This value should correspond with that given in the definition of this label's value of filter_name.  Despite the redundancy, it is retained here as it was in the source product label, for historical purposes. 
+    Source Data Product Origin:  Keyword FILTER_NUMBER</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -252,7 +312,7 @@
     <version_id>1.0</version_id>
     <local_identifier>filter_position</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Definition needed.  How is this different from filter step?  Should there be an attribute with an enumerated list being one or the other?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -267,7 +327,7 @@
     <version_id>1.0</version_id>
     <local_identifier>filter_step</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Definition needed.  How is this different from filter position?  Should there be an attribute with an enumerated list being one or the other?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -282,7 +342,7 @@
     <version_id>1.0</version_id>
     <local_identifier>flood</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -303,7 +363,7 @@
     <version_id>1.0</version_id>
     <local_identifier>g1_voltage_count</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Definition needed.  Bob's spreadsheet says "NG1=* means omit label".  What does this mean?  Is that one of the 8 currently possible values, or another one?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -318,29 +378,87 @@
     <version_id>1.0</version_id>
     <local_identifier>gain_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The gain state of an instrument.  Gain is a constant value, set by the observer, that indicates the approximate number of photon-excited electrons registered by the detector that correlate to one "data number" (DN).
-      Original label parameter: GAIN</definition>
+    Source Data Product Origin:  Keyword GAIN_MODE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Low</value>
-        <value_meaning>The lower of the two gain states for Voyager ISS<!--, corresponding to approximately XX electrons per DN--></value_meaning>
+        <value_meaning>The lower of the two gain states for Voyager ISS<!--, corresponding to approximately XX electrons per DN--></value_meaning><!--If anybody knows the approximate electrons per DN corresponding to this setting, it would be good to include that here.-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>High</value>
-        <value_meaning>The higher of the two gain states for Voyager ISS<!--, corresponding to approximately XX electrons per DN--></value_meaning>
+        <value_meaning>The higher of the two gain states for Voyager ISS<!--, corresponding to approximately XX electrons per DN--></value_meaning><!--If anybody knows the approximate electrons per DN corresponding to this setting, it would be good to include that here.-->
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>geometry_state</name>
+    <version_id>1.0</version_id>
+    <local_identifier>geometry_state</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition><!--Definition needed.--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>image_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>image_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach.
+    Source Data Product Origin:  Keyword IMAGE_ID</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type><!--Can/should we apply constraints to ensure correct formatting?-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>image_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>image_number</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Flight Data Subsystem (FDS) clock count at time of image acquisition.  There is a unique IMAGE_NUMBER for each image in a planetary encounter.  The clock count is always a seven digit value, five digits to the left of the decimal point and two digits to the right of the decimal point.
+    Source Data Product Origin:  Keyword IMAGE_NUMBER</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type><!--Perhaps this should be ASCII_Short_String_Collapsed, depending on whether there may sometimes be leading zeroes.-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>image_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>image_time</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time at which the image was acquired.
+    The image_time element is duplicated from the source product label. It provides the time of shutter close calculated from spacecraft clock using both the coarse (seconds) and fine (subRTI) counters (UTC). (A subRTI is approximately 4 msec (1/256 second)).
+    The value is identical to that given in start_time_doy, and start_date_time.  Although it is redundant, it is retained here for historical reasons.
+    When the shutter was inhibited (ie SHUTTER_STATE_ID=”DISABLED”), the IMAGE_TIME = START_TIME = STOP_TIME, and all three represent the start of the exposure window during the prepare cycle of the image.
+    Source Data Product Origin:  Keyword IMAGE_TIME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
     <name>image_type</name>
     <version_id>1.0</version_id>
     <local_identifier>image_type</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -361,7 +479,7 @@
     <version_id>1.0</version_id>
     <local_identifier>lsb_truncate</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Whether the LSB Truncation mode was operating.  In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated.<!--Check--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -382,11 +500,64 @@
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>mission_phase_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>mission_phase_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time period within the Voyager 1 or Voyager 2 mission, as defined by the mission team.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Launch</value>
+        <value_meaning>The day of launch.  For Voyager 1 this is 1977-09-05.  For Voyager 2 this is 1977-08-20.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Earth-Jupiter Cruise</value>
+        <value_meaning>The period of cruise from Earth to Jupiter.  For Voyager 1 this is 1977-09-05 to 1979-01-06.  For Voyager 2 this is 1977-08-20 to 1979-04-25.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Jupiter Encounter</value>
+        <value_meaning>The period surrounding the Jupiter Encounter.  For Voyager 1 this is 1979-01-06 to 1979-04-13.  For Voyager 2 this is 1979-04-25 to 1979-08-05.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Jupiter-Saturn Cruise</value>
+        <value_meaning>The period of cruise from Jupiter to Saturn.  For Voyager 1 this is 1979-04-13 to 1980-08-22.  For Voyager 2 this is 1979-08-05 to 1981-06-05.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Saturn Encounter</value>
+        <value_meaning>The period surrounding the Saturn Encounter.  For Voyager 1 this is 1980-08-22 to 1980-12-14.  For Voyager 2 this is 1981-06-05 to 1981-09-25.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Saturn-Uranus Cruise</value>
+        <value_meaning>The period of cruise from Saturn to Uranus.  This does not apply to Voyager 1.  For Voyager 2 this is 1981-09-25 to 1985-11-04</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Uranus Encounter</value>
+        <value_meaning>The period surrounding the Uranus Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1985-11-04 to 1986-02-25.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Uranus-Neptune Cruise</value>
+        <value_meaning>The period of cruise from Uranus to Neptune.  This does not apply to Voyager 1.  For Voyager 2 this is 1986-02-25 to 1989-06-05.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Neptune Encounter</value>
+        <value_meaning>The period surrounding the Neptune Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1989-06-05 to 1989-10-02.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Interstellar Mission</value>
+        <value_meaning>The period from the final planetary encounter to the end of the mission.  For Voyager 1 this is 1980-12-14 to End of Mission.  For Voyager 2 this is 1989-10-02 to End of Mission.</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
     <name>pixel_dn_average_status</name>
     <version_id>1.0</version_id>
     <local_identifier>pixel_dn_average_status</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Definition needed--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -401,7 +572,7 @@
     <version_id>1.0</version_id>
     <local_identifier>pixel_dn_average_threshold</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Average pixel value, in DN.<!--Check--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -416,31 +587,31 @@
     <version_id>1.0</version_id>
     <local_identifier>scan_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Scan mode of the camera.<!--Do we know what this means??-->
-      Original label parameter: SCAN RATE</definition>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Scan rate of vidicon readout.  The instrument scan rate affects the radiometric properties of the camera because of the dark current buildup on the vidicon.  Values can be '1:1', '2:1', '3:1', '5:1', and '10:1'.
+    Source Data Product Origin:  Keyword SCAN_MODE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>1:1</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>Vidicon readout was at full speed.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>2:1</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>Vidicon readout was at one-half speed.</value_meaning><!--It would be good for someone to check that I am interpreting these correctly. MST-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>3:1</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>Vidicon readout was at one-third speed.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>5:1</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>Vidicon readout was at one-fifth speed.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>10:1</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>Vidicon readout was at one-tenth speed.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -450,7 +621,7 @@
     <version_id>1.0</version_id>
     <local_identifier>shutter_close</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -471,7 +642,7 @@
     <version_id>1.0</version_id>
     <local_identifier>shutter_exposure</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -500,8 +671,9 @@
     <version_id>1.0</version_id>
     <local_identifier>shutter_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Shutter mode.  Indicates which camera was shuttered, Narrow Angle and/or Wide Angle.</definition>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Shutter mode.  Indicates which camera was shuttered, Narrow Angle and/or Wide Angle.
+    Source Data Product Origin:  Keyword SHUTTER_MODE_ID</definition><!--Note that the documentation from our PDS3 bundle defines the enumerated values NADARK and WADARK, which are not in this list of enumerated values, which I took from Bob's spreadsheet.  Also note that Bob's spreadsheet includes the values NOSHUT and BOTALT, which are not mentioned in the documentation from the PDS3 bundle.-->
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -511,11 +683,11 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>NAONLY</value>
-        <value_meaning>The Narrow Angle shutter opened</value_meaning>
+        <value_meaning>Only the Narrow Angle shutter opened</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>WAONLY</value>
-        <value_meaning>The Wide Angle shutter opened</value_meaning>
+        <value_meaning>Only the Wide Angle shutter opened</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>BOTSIM</value>
@@ -527,11 +699,11 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>BSIMAN</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>BOTSIM mode followed by NAONLY</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>BODARK</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value_meaning>Shutter remained closed for Narrow Angle and Wide Angle cameras.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -541,7 +713,7 @@
     <version_id>1.0</version_id>
     <local_identifier>shutter_open</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -562,7 +734,7 @@
     <version_id>1.0</version_id>
     <local_identifier>shutter_reset</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition><!--Need something here--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -583,7 +755,7 @@
     <version_id>1.0</version_id>
     <local_identifier>signal_to_noise_ratio</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Signal-to-noise ratio as measured by the camera onboard.
       Original label parameter: SNR</definition>
     <DD_Value_Domain>
@@ -594,11 +766,53 @@
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>source_product_description</name>
+    <version_id>1.0</version_id>
+    <local_identifier>source_product_description</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>A description of the image, as recorded in the original source product label.
+    Source Data Product Origin:  Keyword DESCRIPTION</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>source_product_note</name>
+    <version_id>1.0</version_id>
+    <local_identifier>source_product_note</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>The observational intent of the image, as recorded in the original source product label.
+    Source Data Product Origin:  Keyword NOTE</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>source_product_target_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>source_product_target_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>The value of TARGET_NAME as given in the source product label.  The relationship between this value and the actual intentions of the observer is unknown.  The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons.
+    Source Data Product Origin:  Keyword TARGET_NAME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
     <name>spacecraft_clock_start_count</name>
     <version_id>1.0</version_id>
     <local_identifier>spacecraft_clock_start_count</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The spacecraft clock value at the beginning of a time period of interest.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -612,7 +826,7 @@
     <version_id>1.0</version_id>
     <local_identifier>spacecraft_clock_stop_count</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The spacecraft clock value at the end of a time period of interest.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -622,11 +836,67 @@
   </DD_Attribute>
   
   <DD_Attribute>
+    <name>start_time_doy</name>
+    <version_id>1.0</version_id>
+    <local_identifier>start_time_doy</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time at which the shutter opened, if given in format yyyy-DOYThh:mm:ssZ. 
+    Source Data Product Origin:  Keyword START_TIME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_DOY</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>start_time_monthday</name>
+    <version_id>1.0</version_id>
+    <local_identifier>start_time_monthday</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time at which the shutter opened, if given in format yyyy-mm-ddThh:mm:ssZ. 
+    Source Data Product Origin:  Keyword START_TIME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>stop_time_doy</name>
+    <version_id>1.0</version_id>
+    <local_identifier>stop_time_doy</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time at which the shutter closed, if given in format yyyy-DOYThh:mm:ssZ. 
+    Source Data Product Origin:  Keyword STOP_TIME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_DOY</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>stop_time_monthday</name>
+    <version_id>1.0</version_id>
+    <local_identifier>stop_time_monthday</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Time at which the shutter closed, if given in format yyyy-mm-ddThh:mm:ssZ. 
+    Source Data Product Origin:  Keyword STOP_TIME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
     <name>telemetry_mode</name>
     <version_id>1.0</version_id>
     <local_identifier>telemetry_mode</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder.<!--Check--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -746,96 +1016,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
-  <DD_Attribute>
-    <name>vg1_mission_phase_name</name>
-    <version_id>1.0</version_id>
-    <local_identifier>vg1_mission_phase_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Time period within the Voyager 1 mission, as defined by the mission team.</definition>  <!--Definition changed from vg1-->
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Launch</value>
-        <value_meaning>Voyager 1 Launch: 1977-09-05</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Earth-Jupiter Cruise</value>
-        <value_meaning>Voyager 1 Cruise between Earth and Jupiter: 1977-09-05 to 1979-01-06</value_meaning>  <!--Note (MST 2022-05-04): I changed the first date from 1997-09-05.-->
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Jupiter Encounter</value>
-        <value_meaning>Voyager 1 Jupiter Encounter: 1979-01-06 to 1979-04-13</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Jupiter-Saturn Cruise</value>
-        <value_meaning>Voyager 1 Cruise between Jupiter and Saturn: 1979-04-13 to 1980-08-22</value_meaning>  <!--Note (MST 2022-05-04): I changed the second date from 1980-08022.-->
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Saturn Encounter</value>
-        <value_meaning>Voyager 1 Saturn Encounter: 1980-08-22 to 1980-12-14</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Interstellar Mission</value>
-        <value_meaning>Voyager 1 Interstellar Cruise: 1980-12-14 to End of Mission</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>vg2_mission_phase_name</name>
-    <version_id>1.0</version_id>
-    <local_identifier>vg2_mission_phase_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Time period within the Voyager 2 mission, as defined by the mission team.</definition>  <!--Definition changed from vg2-->
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Launch</value>
-        <value_meaning>Voyager 2 Launch: 1977-08-20</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Earth-Jupiter Cruise</value>
-        <value_meaning>Voyager 2 Cruise between Earth and Jupiter: 1977-08-20 to 1979-04-25</value_meaning>  <!--Note (MST 2022-05-04): I changed the first date from 1997-08-20.-->
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Jupiter Encounter</value>
-        <value_meaning>Voyager 2 Jupiter Encounter: 1979-04-25 to 1979-08-05</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Jupiter-Saturn Cruise</value>
-        <value_meaning>Voyager 2 Cruise between Jupiter and Saturn: 1979-08-05 to 1981-06-05</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Saturn Encounter</value>
-        <value_meaning>Voyager 2 Saturn Encounter: 1981-06-05 to 1981-09-25</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Saturn-Uranus Cruise</value>
-        <value_meaning>Voyager 2 Cruise between Saturn and Uranus: 1981-09-25 to 1985-11-04</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Uranus Encounter</value>
-        <value_meaning>Voyager 2 Uranus Encounter: 1985-11-04 to 1986-02-25</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Uranus-Neptune Cruise</value>
-        <value_meaning>Voyager 2 Cruise between Uranus and Neptune: 1986-02-25 to 1989-06-05</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Neptune Encounter</value>
-        <value_meaning>Voyager 2 Neptune Encounter: 1989-06-05 to 1989-10-02</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Interstellar Mission</value>
-        <value_meaning>Voyager 2 Interstellar Cruise: 1989-10-02 to End of Mission</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
   <!-- Attributes END -->
 
 
@@ -845,48 +1025,46 @@
     <name>Voyager</name>
     <version_id>1.0</version_id>
     <local_identifier>Voyager</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>This is the umbrella class for the Voyager mission dictionary.</definition>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Elements relevant to the Voyager 1 and/or Voyager 2 spacecraft mission.</definition>
     <abstract_flag>false</abstract_flag>
-    <element_flag>true</element_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>XSChoice#</identifier_reference>
-      <identifier_reference>Voyager1</identifier_reference>
-      <identifier_reference>Voyager2</identifier_reference>
-      <reference_type>component_of</reference_type>
+      <identifier_reference>mission_phase_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>unbounded</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>spacecraft_clock_start_count</identifier_reference>
+      <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-  </DD_Class>
-
-  <DD_Class>
-    <name>Voyager1</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Voyager1</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Container for elements relevant to Voyager 1.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>vg1_mission_phase_name</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>unbounded</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>spacecraft_clock_start_count</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
     <DD_Association>
       <identifier_reference>spacecraft_clock_stop_count</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>ISS_Attributes</identifier_reference>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>start_time_doy</identifier_reference>
+      <identifier_reference>start_time_monthday</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>XSChoice#</identifier_reference>
+      <identifier_reference>stop_time_doy</identifier_reference>
+      <identifier_reference>stop_time_monthday</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ISS_Specific_Attributes</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -894,249 +1072,266 @@
     <DD_Association>
       <identifier_reference>Voyager_Telemetry</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>  <!--Should be 1?-->
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
   </DD_Class>
   
   <DD_Class>
-    <name>Voyager2</name>
+    <name>ISS_Specific_Attributes</name>
     <version_id>1.0</version_id>
-    <local_identifier>Voyager2</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Container for elements relevant to Voyager 2.</definition>
+    <local_identifier>ISS_Specific_Attributes</local_identifier>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Attributes relevant specifically to the Voyager ISS instrument and its observations.</definition>
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>vg2_mission_phase_name</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>unbounded</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>spacecraft_clock_start_count</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>spacecraft_clock_stop_count</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>ISS_Attributes</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-    <DD_Association>
-      <identifier_reference>Voyager_Telemetry</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>  <!--Should be 1?-->
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-  </DD_Class>
-  
-  <DD_Class>
-    <name>ISS_Attributes</name>
-    <version_id>1.0</version_id>
-    <local_identifier>ISS_Attributes</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Container for elements relevant to the Voyager ISS instrument and its observations.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>ISS_Image_State</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>  <!--Should be 1?-->
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-    <DD_Association>
-      <identifier_reference>ISS_Instrument_State</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>  <!--Should be 1?-->
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-  </DD_Class>
 
-  <DD_Class>
-    <name>ISS_Image_State</name>
-    <version_id>1.0</version_id>
-    <local_identifier>ISS_Image_State</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Image state attributes relevant to the Voyager ISS instrument and its observations.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
+    <!-- START attributes included in PDS3 Voyager ISS product labels and/or documentation -->
+
     <DD_Association>
-      <identifier_reference>gain_mode_id</identifier_reference>
+      <identifier_reference>source_product_target_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>earth_received_time</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>scan_mode_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>edit_mode_id</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>signal_to_noise_ratio</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>pixel_dn_average_threshold</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>pixel_dn_average_status</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>shutter_mode_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>gain_mode_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>edit_mode_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>filter_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>filter_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>exposure_duration</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>source_product_note</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>source_product_description</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>data_anomaly_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+
+    <!-- END attributes included in PDS3 Voyager ISS product labels and/or documentation -->
+
+    <!-- START attributes taken from Bob Deen's spreadsheet -->
+
+    <DD_Association>
+      <identifier_reference>signal_to_noise_ratio</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>pixel_dn_average_threshold</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>pixel_dn_average_status</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>lsb_truncate</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>telemetry_mode</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>compression_state</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-  </DD_Class>
-
-  <DD_Class>
-    <name>ISS_Instrument_State</name>
-    <version_id>1.0</version_id>
-    <local_identifier>ISS_Image_State</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
-    <definition>Instrument state attributes relevant to the Voyager ISS instrument and its observations.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>elec_cal</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>image_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>beam</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>shutter_reset</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>shutter_open</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>shutter_close</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>flood</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>exposure_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>filter_position</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>filter_step</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>shutter_exposure</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
+    <DD_Association>
+      <identifier_reference>geometry_state</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>companding</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+
+    <!-- END attributes taken from Bob Deen's spreadsheet -->
+
   </DD_Class>
 
   <DD_Class>
     <name>Voyager_Telemetry</name>
     <version_id>1.0</version_id>
     <local_identifier>Voyager_Telemetry</local_identifier>
-    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Container for elements describing the process of transferring Voyager data from the spacecraft to Earth.</definition>
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>edr_tape_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>edr_file_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>dsn_station_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>dsn_station_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
