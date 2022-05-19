@@ -249,6 +249,66 @@
   </DD_Attribute>
 
   <DD_Attribute>
+    <name>fds_scet_epoch_1</name>
+    <version_id>1.0</version_id>
+    <local_identifier>fds_scet_epoch_1</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Spacecraft Event Time (SCET) for the first FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>fds_scet_epoch_2</name>
+    <version_id>1.0</version_id>
+    <local_identifier>fds_scet_epoch_2</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Spacecraft Event Time (SCET) for the second FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>fds_scet_epoch_3</name>
+    <version_id>1.0</version_id>
+    <local_identifier>fds_scet_epoch_3</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Spacecraft Event Time (SCET) for the third FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>fds_scet_epoch_4</name>
+    <version_id>1.0</version_id>
+    <local_identifier>fds_scet_epoch_4</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>Spacecraft Event Time (SCET) for the fourth FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
     <name>filter_name</name>
     <version_id>1.0</version_id>
     <local_identifier>filter_name</local_identifier>
@@ -1090,13 +1150,19 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>ISS_Specific_Attributes</identifier_reference>
+      <identifier_reference>ISS</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Voyager_Telemetry</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
     <DD_Association>
-      <identifier_reference>Voyager_Telemetry</identifier_reference>
+      <identifier_reference>FDS_Rollover</identifier_reference><!--Does this go here?  I would need to better understand what it is before making such a decision, but here I sketch out a possibility.-->
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1104,11 +1170,11 @@
   </DD_Class>
   
   <DD_Class>
-    <name>ISS_Specific_Attributes</name>
+    <name>ISS</name>
     <version_id>1.0</version_id>
-    <local_identifier>ISS_Specific_Attributes</local_identifier>
+    <local_identifier>ISS</local_identifier>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Attributes relevant specifically to the Voyager ISS instrument and its observations.</definition>
+    <definition>Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations.</definition>
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
 
@@ -1356,6 +1422,40 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>dsn_station_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <DD_Class>
+    <name>FDS_Rollover</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Voyager_Telemetry</local_identifier>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition><!--Definition needed.  In fact, I'm not certain that this should be a class.--></definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>
+      <identifier_reference>fds_scet_epoch_1</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>fds_scet_epoch_2</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>fds_scet_epoch_3</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>fds_scet_epoch_4</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
