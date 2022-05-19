@@ -33,9 +33,10 @@
     <name>VICAR1_legacy_label</name>
     <version_id>1.0</version_id>
     <local_identifier>VICAR1_legacy_label</local_identifier>
-    <nillable_flag>true</nillable_flag>  <!--Bob has indicated that he wants some attributes to be nillable.  This is fine, but I'd like to enable it only as requested.-->
+    <nillable_flag>true</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.</definition>
+    <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
@@ -48,7 +49,8 @@
     <local_identifier>beam</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -69,7 +71,8 @@
     <local_identifier>companding</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.--></definition>
+    <definition><!--Definition needed.-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -82,7 +85,8 @@
     <local_identifier>compression_state</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Whether the image compression mode was operating.<!--More detail would be good.--></definition>
+    <definition>Whether the image compression mode was operating.<!--More detail would be good.-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -112,7 +116,7 @@
     Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type><!--Really just allow anything?-->
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -122,7 +126,8 @@
     <local_identifier>dsn_station_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Name of the DSN station where the image was received</definition>
+    <definition>Name of the DSN station where the image was received
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -135,7 +140,8 @@
     <local_identifier>dsn_station_number</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Numeric ID of DSN station where the image was received</definition>
+    <definition>Numeric ID of DSN station where the image was received
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -184,7 +190,8 @@
     <local_identifier>edr_file_number</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>File number within the tape where the image was originally stored</definition>
+    <definition>File number within the tape where the image was originally stored
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type><!--Any minimum or maximum?-->
@@ -197,7 +204,8 @@
     <local_identifier>edr_tape_id</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Tape ID on which the image was originally stored</definition>
+    <definition>Tape ID on which the image was originally stored
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type><!--Any minimum or maximum?-->
@@ -210,7 +218,8 @@
     <local_identifier>elec_cal</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Electronics cal status<!--This is insufficient as a definition--></definition>
+    <definition>Electronics cal status<!--This is insufficient as a definition-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -313,7 +322,8 @@
     <local_identifier>filter_position</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.  How is this different from filter step?  Should there be an attribute with an enumerated list being one or the other?--></definition>
+    <definition><!--Definition needed.  How is this different from filter step?  Bob's description indicates that perhaps there should be an attribute with an enumerated list being one or the other.-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -328,7 +338,8 @@
     <local_identifier>filter_step</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.  How is this different from filter position?  Should there be an attribute with an enumerated list being one or the other?--></definition>
+    <definition><!--Definition needed.  How is this different from filter position?  Bob's description indicates that perhaps there should be an attribute with an enumerated list being one or the other.-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -343,7 +354,8 @@
     <local_identifier>flood</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -364,7 +376,8 @@
     <local_identifier>g1_voltage_count</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.  Bob's spreadsheet says "NG1=* means omit label".  What does this mean?  Is that one of the 8 currently possible values, or another one?--></definition>
+    <definition><!--Definition needed.  Bob's spreadsheet says "NG1=* means omit label".  What does this mean?  Is that one of the 8 currently possible values, or another one?-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -401,7 +414,8 @@
     <local_identifier>geometry_state</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.--></definition>
+    <definition><!--Definition needed.-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -459,7 +473,8 @@
     <local_identifier>image_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -480,7 +495,8 @@
     <local_identifier>lsb_truncate</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Whether the LSB Truncation mode was operating.  In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated.<!--Check--></definition>
+    <definition>Whether the LSB Truncation mode was operating.  In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated.<!--Check-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -505,7 +521,8 @@
     <local_identifier>mission_phase_name</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time period within the Voyager 1 or Voyager 2 mission, as defined by the mission team.</definition>
+    <definition>Time period within the Voyager 1 or Voyager 2 mission, as defined by the mission team.
+    Source Data Product Origin:  Keyword MISSION_PHASE_NAME</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -558,7 +575,8 @@
     <local_identifier>pixel_dn_average_status</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed--></definition>
+    <definition><!--Definition needed-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -573,7 +591,8 @@
     <local_identifier>pixel_dn_average_threshold</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Average pixel value, in DN.<!--Check--></definition>
+    <definition>Average pixel value, in DN.<!--Check accuracy of this-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -622,7 +641,8 @@
     <local_identifier>shutter_close</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -643,7 +663,8 @@
     <local_identifier>shutter_exposure</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -714,7 +735,8 @@
     <local_identifier>shutter_open</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -735,7 +757,8 @@
     <local_identifier>shutter_reset</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here--></definition>
+    <definition><!--Need something here-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -757,7 +780,8 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Signal-to-noise ratio as measured by the camera onboard.
-      Original label parameter: SNR</definition>
+      Original label parameter: SNR
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Real</value_data_type>
@@ -813,7 +837,8 @@
     <local_identifier>spacecraft_clock_start_count</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The spacecraft clock value at the beginning of a time period of interest.</definition>
+    <definition>The spacecraft clock value at the beginning of a time period of interest.
+    Source Data Product Origin:  Keyword SPACECRAFT_CLOCK_START_COUNT</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -827,7 +852,8 @@
     <local_identifier>spacecraft_clock_stop_count</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The spacecraft clock value at the end of a time period of interest.</definition>
+    <definition>The spacecraft clock value at the end of a time period of interest.
+    Source Data Product Origin:  Keyword SPACECRAFT_CLOCK_STOP_COUNT</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -897,7 +923,8 @@
     <local_identifier>telemetry_mode</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder.<!--Check--></definition>
+    <definition>The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder.<!--Check accuracy of this-->
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
