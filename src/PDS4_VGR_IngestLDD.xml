@@ -33,10 +33,9 @@
     <name>VICAR1_legacy_label</name>
     <version_id>1.0</version_id>
     <local_identifier>VICAR1_legacy_label</local_identifier>
-    <nillable_flag>true</nillable_flag>
+    <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
