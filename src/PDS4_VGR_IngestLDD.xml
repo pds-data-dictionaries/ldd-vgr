@@ -325,7 +325,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Violet</value>
-        <value_meaning>NAC Filter #1 or WAC Filter #3, spanning portions of the Visible and Ultraviolet spectrum, from 0.35 to 0.45 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
+        <value_meaning>NAC Filter #1 or WAC Filter #3, spanning portions of the Visible and Ultraviolet spectrum from 0.35 to 0.45 microns</value_meaning><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html--><!--Source: https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Blue</value>
@@ -926,7 +926,7 @@
     <local_identifier>start_time_doy</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter opened, if given in format yyyy-DOYThh:mm:ssZ. 
+    <definition>Time at which the shutter opened, if given in year-day-of-year format. 
     Source Data Product Origin:  Keyword START_TIME</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -935,12 +935,12 @@
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>start_time_monthday</name>
+    <name>start_time_ymd</name>
     <version_id>1.0</version_id>
-    <local_identifier>start_time_monthday</local_identifier>
+    <local_identifier>start_time_ymd</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter opened, if given in format yyyy-mm-ddThh:mm:ssZ. 
+    <definition>Time at which the shutter opened, if given in year-month-day format. 
     Source Data Product Origin:  Keyword START_TIME</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -954,7 +954,7 @@
     <local_identifier>stop_time_doy</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter closed, if given in format yyyy-DOYThh:mm:ssZ. 
+    <definition>Time at which the shutter closed, if given in year-day-of-year format. 
     Source Data Product Origin:  Keyword STOP_TIME</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -963,12 +963,12 @@
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>stop_time_monthday</name>
+    <name>stop_time_ymd</name>
     <version_id>1.0</version_id>
-    <local_identifier>stop_time_monthday</local_identifier>
+    <local_identifier>stop_time_ymd</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter closed, if given in format yyyy-mm-ddThh:mm:ssZ. 
+    <definition>Time at which the shutter closed, if given in year-month-day format. 
     Source Data Product Origin:  Keyword STOP_TIME</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -1136,7 +1136,7 @@
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>start_time_doy</identifier_reference>
-      <identifier_reference>start_time_monthday</identifier_reference>
+      <identifier_reference>start_time_ymd</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1144,7 +1144,7 @@
     <DD_Association>
       <identifier_reference>XSChoice#</identifier_reference>
       <identifier_reference>stop_time_doy</identifier_reference>
-      <identifier_reference>stop_time_monthday</identifier_reference>
+      <identifier_reference>stop_time_ymd</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
