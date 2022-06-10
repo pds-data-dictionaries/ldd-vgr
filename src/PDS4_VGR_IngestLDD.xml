@@ -48,18 +48,18 @@
     <local_identifier>beam</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Yes</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -99,7 +99,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>N/A</value>
-        <value_meaning><!--I'm not sure what this would mean.--></value_meaning>
+        <value_meaning>@@@ I'm not sure what this would mean. @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -224,11 +224,11 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Yes</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -413,18 +413,18 @@
     <local_identifier>flood</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Yes</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -532,18 +532,18 @@
     <local_identifier>image_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Prep</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Read</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -569,7 +569,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>N/A</value>
-        <value_meaning><!--I'm not sure what this would mean.--></value_meaning>
+        <value_meaning>@@@ I'm not sure what this would mean. @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -700,18 +700,18 @@
     <local_identifier>shutter_close</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Yes</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -722,26 +722,26 @@
     <local_identifier>shutter_exposure</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Normal</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Start Long</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>End Long</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Open</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -794,18 +794,18 @@
     <local_identifier>shutter_open</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Yes</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -816,18 +816,18 @@
     <local_identifier>shutter_reset</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Need something here-->
+    <definition>@@@ Need something here @@@
     Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>Yes</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
-        <value_meaning><!--Need something here--></value_meaning>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -897,7 +897,7 @@
     <nillable_flag>true</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four <!--verify--> partitions.  This attribute signifies which partition was in effect for this data product.  <!--Perhaps more here-->
-    Source Data Product Origin:  <!--Need something here--></definition>
+    Source Data Product Origin:  @@@ Need something here @@@</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1131,12 +1131,6 @@
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>ISS</identifier_reference><!--When more instruments are added to this LDD, this should become a XSChoice.-->
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
       <identifier_reference>Voyager_Telemetry</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
@@ -1144,6 +1138,12 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>Voyager_Timing</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ISS</identifier_reference><!--When more instruments are added to this LDD, this should become a XSChoice.-->
       <reference_type>component_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1161,19 +1161,19 @@
     <DD_Association>
       <identifier_reference>Image_Description</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
     <DD_Association>
       <identifier_reference>Image_State</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
     <DD_Association>
       <identifier_reference>Instrument_State</identifier_reference>
       <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
+      <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>    
   </DD_Class>
