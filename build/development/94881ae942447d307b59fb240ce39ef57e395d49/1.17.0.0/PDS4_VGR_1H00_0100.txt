@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Jun 10 22:50:26 UTC 2022
+   Time                   Fri Jun 10 23:04:57 UTC 2022
    Common Schema          [PDS4_PDS_1H00.xsd]
    Common Schematron      [PDS4_PDS_1H00.sch]
    IM Version Id:         1.17.0.0
@@ -45,14 +45,15 @@ Parsed Input - Header:
    Steward                rings
    Namespace Id           vgr
    Comment                 
-       v0.1.0.0  2022-06-10
-          Created by unifying the vg1 and vg2 namespace dictionaries, which
+	v0.1.0.0  2022-06-10
+	  Created by unifying the vg1 and vg2 namespace dictionaries, which
 	will be deprecated.  Specifically, the new base class Voyager contains
-	the legacy label (optional), a class describing telemetry (also optional), 
-	a class describing timing (required), and requires one class describine 
-	instrument-specific parameters (currently, only ISS is implemented).  
-	        This is a preliminary non-release version.  Changes have not been
-	tracked during intiial drafting, but will be henceforth. 
+	the legacy label (optional), a class describing telemetry (also
+	optional), a class describing timing (required), and a required class
+	describing instrument-specific parameters (currently, only ISS is
+	implemented).  
+	  This is a preliminary non-release version.  Changes have not been
+	tracked during initial drafting, but will be henceforth. 
     
    Last Modification Time 2022-06-10
    PDS4 Merge Flag        false
