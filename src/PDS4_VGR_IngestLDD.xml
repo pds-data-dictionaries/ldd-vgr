@@ -16,16 +16,16 @@
     <steward_id>rings</steward_id>
     <namespace_id>vgr</namespace_id>
     <comment> 
-      v1.0.0.0  2022-05-04
-        Created by unifying the vg1 and vg2 namespace dictionaries, which
+       v0.1.0.0  2022-06-10
+          Created by unifying the vg1 and vg2 namespace dictionaries, which
 	will be deprecated.  Specifically, the new base class Voyager contains
-	elements common to both Voyager 1 and Voyager 2, and also contains
-	exactly one of either the Voyager1 class or the Voyager2 class.  The
-	latter respectively contain elements relevant to only one of the two
-	spacecraft. 
-	Also added new attributes and classes (TBD). 
+	the legacy label (optional), a class describing telemetry (also optional), 
+	a class describing timing (required), and requires one class describine 
+	instrument-specific parameters (currently, only ISS is implemented).  
+	        This is a preliminary non-release version.  Changes have not been
+	tracked during intiial drafting, but will be henceforth. 
     </comment>
-    <last_modification_date_time>2022-05-04</last_modification_date_time>
+    <last_modification_date_time>2022-06-10</last_modification_date_time>
 
   <!-- Attributes START -->
 
