@@ -9,7 +9,7 @@
   xsi:schemaLocation=
    "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd"> 
 
-    <name>Voyager Mission Namespace Dictionary</name>
+    <name>Voyager Mission Submodel</name>
     <ldd_version_id>0.1.0.0</ldd_version_id>
     <dictionary_type>Mission</dictionary_type>
     <full_name>Matthew Tiscareno</full_name>
@@ -30,9 +30,9 @@
   <!-- Attributes START -->
 
   <DD_Attribute>
-    <name>VICAR1_legacy_label</name>
+    <name>legacy_label_VICAR1</name>
     <version_id>1.0</version_id>
-    <local_identifier>VICAR1_legacy_label</local_identifier>
+    <local_identifier>legacy_label_VICAR1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.</definition>
@@ -248,6 +248,28 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
+  <DD_Attribute>
+    <name>exposure_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>@@@ Need something here @@@
+    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Auto</value>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Manual</value>
+        <value_meaning>@@@ Need something here @@@</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
   <DD_Attribute>
     <name>fds_scet_epoch_1</name>
     <version_id>1.0</version_id>
@@ -1129,7 +1151,13 @@
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Elements relevant to the Voyager 1 and/or Voyager 2 spacecraft mission.</definition>
     <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>legacy_label_VICAR1</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
     <DD_Association>
       <identifier_reference>Voyager_Telemetry</identifier_reference>
       <reference_type>component_of</reference_type>
