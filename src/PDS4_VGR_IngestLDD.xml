@@ -121,7 +121,7 @@
     <local_identifier>edit_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Edit mode of the camera, indicates amount of data read from the vidicon.  '1:1' indicates the full-resolution of the vidicon.  Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'.</definition>
+    <definition>Edit mode of the camera, indicates amount of data read from the vidicon.  '1:1' indicates the full-resolution of the vidicon.  Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'.
     Source Data Product Origin:  Keyword EDIT_MODE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -512,7 +512,7 @@
     <local_identifier>scan_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Scan rate of vidicon readout.  The instrument scan rate affects the radiometric properties of the camera because of the dark current buildup on the vidicon.  Values can be '1:1', '2:1', '3:1', '5:1', and '10:1'.</definition>
+    <definition>Scan rate of vidicon readout.  The instrument scan rate affects the radiometric properties of the camera because of the dark current buildup on the vidicon.  Values can be '1:1', '2:1', '3:1', '5:1', and '10:1'.
     Source Data Product Origin:  Keyword SCAN_MODE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
