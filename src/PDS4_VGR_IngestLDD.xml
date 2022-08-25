@@ -202,7 +202,7 @@
     <local_identifier>fds_scet_epoch_1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the first FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the first FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -216,7 +216,7 @@
     <local_identifier>fds_scet_epoch_2</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the second FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the second FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -230,7 +230,7 @@
     <local_identifier>fds_scet_epoch_3</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the third FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the third FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -244,7 +244,7 @@
     <local_identifier>fds_scet_epoch_4</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the fourth FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the fourth FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -604,7 +604,7 @@
     <local_identifier>spacecraft_clock_count_partition</local_identifier>
     <nillable_flag>true</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  This attribute signifies which partition was in effect for this data product.  <!--Perhaps more here-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  This attribute signifies which FDS partition was in effect for this data product.  <!--Perhaps more here-->
     Source Data Product Origin:  @@@ Need something here @@@</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
