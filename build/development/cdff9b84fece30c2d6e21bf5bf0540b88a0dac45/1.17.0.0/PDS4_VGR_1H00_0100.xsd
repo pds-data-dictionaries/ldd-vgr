@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 18:06:08 UTC 2022 -->
+=======
+  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Wed Aug 24 16:39:17 UTC 2022 -->
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -37,11 +41,14 @@
 	Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
 	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
 	Made some attributes nillable or optional
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
 	
 	v0.3.0.0  2022-09-20
 	Continuing to develop content, in advance of any use of this LDD.
 	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
 	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     
     </xs:documentation>
   </xs:annotation>
@@ -65,6 +72,12 @@
       <xs:element name="filter_name" type="vgr:filter_name" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="filter_number" type="vgr:filter_number" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="exposure_duration" type="vgr:exposure_duration" minOccurs="1" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
+=======
+      <xs:element name="signal_to_noise_ratio" type="vgr:signal_to_noise_ratio" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lsb_truncate" type="vgr:lsb_truncate" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="compression_state" type="vgr:compression_state" minOccurs="0" maxOccurs="1"> </xs:element>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
       <xs:element name="pds_source_product_target_name" nillable="true" type="vgr:pds_source_product_target_name" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="pds_source_product_note" nillable="true" type="vgr:pds_source_product_note" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="pds_source_product_description" type="vgr:pds_source_product_description" minOccurs="1" maxOccurs="1"> </xs:element>
@@ -76,6 +89,7 @@
     <!-- <xs:assert test="vgr:gain_mode_id = ('High', 'Low')"/> -->
     <!-- <xs:assert test="vgr:edit_mode_id = ('1:1', '1:10', '1:2', '1:3', '1:5', '3:4')"/> -->
     <!-- <xs:assert test="vgr:filter_name = ('Blue', 'CH4/JS', 'CH4/U', 'Clear', 'Green', 'Orange', 'Sodium', 'UV', 'Violet')"/> -->
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     <!-- <xs:assert test="vgr:pds_source_product_data_anomaly_type = ('RAM_Data_Corruption')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
@@ -143,6 +157,10 @@
     <!-- <xs:assert test="vgr:legacy_label_wa_flood = ('No', 'Yes')"/> -->
     <!-- <xs:assert test="vgr:legacy_label_wa_exposure_type = ('Prep', 'Read')"/> -->
     <!-- <xs:assert test="vgr:legacy_label_wa_shutter_exposure = ('End Long', 'Normal', 'Open', 'Start Long')"/> -->
+=======
+    <!-- <xs:assert test="vgr:lsb_truncate = ('N/A', 'Off', 'On')"/> -->
+    <!-- <xs:assert test="vgr:compression_state = ('Off', 'On')"/> -->
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 
@@ -202,6 +220,20 @@
       </xs:documentation>
     </xs:annotation>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
+=======
+  <xs:simpleType name="compression_state">
+    <xs:annotation>
+      <xs:documentation>Whether the image compression mode was
+        operating.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="dsn_station_name">
     <xs:annotation>
       <xs:documentation>Name of the DSN station where the image was
@@ -298,10 +330,17 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
         dividing each mission into FDS partitions. If there is
         uncertainty regarding the correct FDS partition (that is, the
         correct value of spacecraft_clock_count_partition), then this
         attribute will include the </xs:documentation>
+=======
+        dividing each mission into four partitions. If there is
+        uncertainty regarding the correct
+        spacecraft_clock_count_partition, then this attribute will
+        include the </xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
     	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
@@ -314,10 +353,17 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
         dividing each mission into FDS partitions. If there is
         uncertainty regarding the correct FDS partition (that is, the
         correct value of spacecraft_clock_count_partition), then this
         attribute will include the </xs:documentation>
+=======
+        dividing each mission into four partitions. If there is
+        uncertainty regarding the correct
+        spacecraft_clock_count_partition, then this attribute will
+        include the </xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
     	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
@@ -330,10 +376,17 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
         dividing each mission into FDS partitions. If there is
         uncertainty regarding the correct FDS partition (that is, the
         correct value of spacecraft_clock_count_partition), then this
         attribute will include the </xs:documentation>
+=======
+        dividing each mission into four partitions. If there is
+        uncertainty regarding the correct
+        spacecraft_clock_count_partition, then this attribute will
+        include the </xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
     	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
@@ -346,10 +399,17 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
         dividing each mission into FDS partitions. If there is
         uncertainty regarding the correct FDS partition (that is, the
         correct value of spacecraft_clock_count_partition), then this
         attribute will include the </xs:documentation>
+=======
+        dividing each mission into four partitions. If there is
+        uncertainty regarding the correct
+        spacecraft_clock_count_partition, then this attribute will
+        include the </xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
     	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
@@ -386,6 +446,7 @@
   </xs:simpleType>
 
   <xs:simpleType name="gain_mode_id">
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     <xs:annotation>
       <xs:documentation>The gain state of an instrument. Gain is a
         constant value, set by the observer, that indicates the
@@ -545,6 +606,8 @@
   </xs:simpleType>
 
   <xs:simpleType name="legacy_label_na_image_type">
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
     </xs:annotation>
@@ -554,6 +617,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="legacy_label_na_shutter_close">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
@@ -565,14 +629,18 @@
   </xs:simpleType>
 
   <xs:simpleType name="legacy_label_na_shutter_exposure">
+=======
+  <xs:complexType name="image_id">
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="legacy_label_na_shutter_open">
     <xs:annotation>
@@ -584,6 +652,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="legacy_label_na_shutter_reset">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
@@ -641,6 +710,19 @@
   <xs:simpleType name="legacy_label_wa_beam">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
+=======
+  <xs:simpleType name="legacy_label_VICAR1">
+    <xs:annotation>
+      <xs:documentation>The "VICAR-1" label that was originally attached
+        to the image. Information on how to decode this text can be
+        found at @@@@@@. To the extent possible, the information is
+        captured in the attached VICAR-2 header and/or the PDS4 XML
+        label. This VICAR-1 legacy label is being retained for
+        historical documentation purposes, and in case there is any
+        question about how the rest of the label items were derived.
+        Contemporaneous Voyager documentation sometimes refers to these
+        legacy labels.</xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -668,6 +750,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="legacy_label_wa_filter_position">
     <xs:annotation>
       <xs:documentation>A precursor to filter_name and
@@ -693,6 +776,29 @@
   <xs:simpleType name="legacy_label_wa_flood">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
+=======
+  <xs:complexType name="pds_source_product_data_anomaly_type">
+    <xs:annotation>
+      <xs:documentation>Data recording anomalies in the image. If this
+        keyword is missing [in the source data product], no anomalies
+        were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates
+        that spurious values exist in the image data due to corruption
+        of the random access memory onboard the spacecraft. Source Data
+        Product Origin: Keyword DATA_ANOMALY_TYPE</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="pds_source_product_description">
+    <xs:annotation>
+      <xs:documentation>A description of the image, as recorded in the
+        original source product label. Source Data Product Origin:
+        Keyword DESCRIPTION</xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -700,6 +806,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="legacy_label_wa_g1_voltage_count">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
@@ -713,16 +820,52 @@
   <xs:simpleType name="legacy_label_wa_image_type">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
+=======
+  <xs:complexType name="pds_source_product_note">
+    <xs:annotation>
+      <xs:documentation>The observational intent of the image, as
+        recorded in the original source product label. Source Data
+        Product Origin: Keyword NOTE</xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="legacy_label_wa_shutter_close">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
+=======
+  <xs:complexType name="pds_source_product_target_name">
+    <xs:annotation>
+      <xs:documentation>The value of TARGET_NAME as given in the source
+        product label. The relationship between this value and the
+        actual intentions of the observer is unknown. The most accurate,
+        though potentially flawed identification of the intended target
+        is given in the Target_Identification class elsewhere in the
+        label. This attribute is included in the PDS4 label for
+        historical reasons. Source Data Product Origin: Keyword
+        TARGET_NAME</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="scan_mode_id">
+    <xs:annotation>
+      <xs:documentation>Scan rate of vidicon readout. The instrument
+        scan rate affects the radiometric properties of the camera
+        because of the dark current buildup on the vidicon. Values can
+        be '1:1', '2:1', '3:1', '5:1', and '10:1'. Source Data Product
+        Origin: Keyword SCAN_MODE_ID</xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -740,6 +883,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:simpleType name="legacy_label_wa_shutter_open">
     <xs:annotation>
 <xs:documentation>Unknown</xs:documentation>
@@ -761,6 +905,9 @@
   </xs:simpleType>
 
   <xs:simpleType name="mission_phase_name">
+=======
+  <xs:simpleType name="signal_to_noise_ratio">
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     <xs:annotation>
       <xs:documentation>Time period within the Voyager 1 or Voyager 2
         mission, as defined by the mission team. Source Data Product
@@ -772,6 +919,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:complexType name="pds_source_product_data_anomaly_type">
     <xs:annotation>
       <xs:documentation>Data recording anomalies in the image. This
@@ -859,13 +1007,21 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
   <xs:complexType name="spacecraft_clock_count_partition">
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd
         dividing each mission into FDS partitions. This attribute
         signifies which FDS partition was in effect for this data
         product. </xs:documentation>
+=======
+        dividing each mission into four partitions. This attribute
+        signifies which partition was in effect for this data product.
+        </xs:documentation>
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="pds:ASCII_Short_String_Collapsed">

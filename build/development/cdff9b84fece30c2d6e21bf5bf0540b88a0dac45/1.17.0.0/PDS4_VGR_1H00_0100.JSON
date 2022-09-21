@@ -4,7 +4,11 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.17.0.0" ,
       "LDD Version": "0.1.0.0" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
       "Date": "2022-09-21T11:06:09" ,
+=======
+      "Date": "2022-08-24T09:39:18" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "vgr:"] ,
       "classDictionary": [
@@ -23,6 +27,8 @@
              {"association": {
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_id" ,
                 "title": "image_id" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+=======
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -71,6 +77,7 @@
            , {"association": {
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id" ,
                 "title": "scan_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -80,13 +87,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.image_id"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_number" ,
+                "title": "image_number" ,
+=======
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id" ,
                 "title": "shutter_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -96,13 +112,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1050" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.image_number"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.earth_received_time" ,
+                "title": "earth_received_time" ,
+=======
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id" ,
                 "title": "gain_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -112,13 +137,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1060" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.earth_received_time"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id" ,
+                "title": "scan_mode_id" ,
+=======
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id" ,
                 "title": "edit_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -128,13 +162,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1070" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id" ,
+                "title": "shutter_mode_id" ,
+=======
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name" ,
                 "title": "filter_name" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -144,13 +187,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1080" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id" ,
+                "title": "gain_mode_id" ,
+=======
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number" ,
                 "title": "filter_number" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -160,13 +212,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1090" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id" ,
+                "title": "edit_mode_id" ,
+=======
                 "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration" ,
                 "title": "exposure_duration" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -176,45 +237,88 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1100" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id"
+=======
                   "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name" ,
-                "title": "pds_source_product_target_name" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name" ,
+                "title": "filter_name" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.signal_to_noise_ratio" ,
+                "title": "signal_to_noise_ratio" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1110" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name"
+=======
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.signal_to_noise_ratio"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note" ,
-                "title": "pds_source_product_note" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number" ,
+                "title": "filter_number" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.lsb_truncate" ,
+                "title": "lsb_truncate" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1120" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.lsb_truncate"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description" ,
-                "title": "pds_source_product_description" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.compression_state" ,
+                "title": "compression_state" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1130" ,
+                "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number"
+=======
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.compression_state"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                 ]
+              }
+            }
+           , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration" ,
+                "title": "exposure_duration" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name" ,
+                "title": "pds_source_product_target_name" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -222,8 +326,84 @@
                 "groupName": "null" ,
                 "minimumCardinality": "1" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1130" ,
+                "classOrder": "1140" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration"
+=======
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                 ]
+              }
+            }
+           , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name" ,
+                "title": "pds_source_product_target_name" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note" ,
+                "title": "pds_source_product_note" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1150" ,
+                "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name"
+=======
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                 ]
+              }
+            }
+           , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note" ,
+                "title": "pds_source_product_note" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description" ,
+                "title": "pds_source_product_description" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1160" ,
+                "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note"
+=======
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                 ]
+              }
+            }
+           , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description" ,
+                "title": "pds_source_product_description" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_data_anomaly_type" ,
+                "title": "pds_source_product_data_anomaly_type" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1170" ,
+                "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description"
                  ]
               }
@@ -240,6 +420,8 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1140" ,
                 "attributeId": [
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_data_anomaly_type"
                  ]
               }
@@ -249,19 +431,32 @@
         }
       , {
           "class": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label" ,
             "title": "ISS_Legacy_Label" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.Voyager" ,
+            "title": "Voyager" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed. These attributes are being retained for historical documentation purposes. Nothing in this class should be required for normal processing or analysis of Voyager ISS images."
               , "associationList": [
              {"association": {
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio" ,
                 "title": "legacy_label_signal_to_noise_ratio" ,
+=======
+            "description": "Elements relevant to the Voyager 1 and\/or Voyager 2 spacecraft mission."
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager.vgr.legacy_label_VICAR1" ,
+                "title": "legacy_label_VICAR1" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -271,53 +466,89 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager.vgr.legacy_label_VICAR1"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_threshold" ,
                 "title": "legacy_label_pixel_dn_average_threshold" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager.vgr.Voyager_Telemetry" ,
+                "title": "Voyager_Telemetry" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "attributeId": [
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_threshold"
+=======
+                "classId": [
+                  "0001_NASA_PDS_1.vgr.Voyager_Telemetry"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_status" ,
                 "title": "legacy_label_pixel_dn_average_status" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager.vgr.Voyager_Timing" ,
+                "title": "Voyager_Timing" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "attributeId": [
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_status"
+=======
+                "classId": [
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_lsb_truncate" ,
                 "title": "legacy_label_lsb_truncate" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager.vgr.ISS" ,
+                "title": "ISS" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "attributeId": [
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_lsb_truncate"
                  ]
@@ -358,6 +589,31 @@
            , {"association": {
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_elec_cal" ,
                 "title": "legacy_label_na_elec_cal" ,
+=======
+                "classId": [
+                  "0001_NASA_PDS_1.vgr.ISS"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.vgr.Voyager_Telemetry" ,
+            "title": "Voyager_Telemetry" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "Container for elements describing the process of transferring Voyager data from the spacecraft to Earth."
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.edr_tape_id" ,
+                "title": "edr_tape_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -365,15 +621,24 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1070" ,
+                "classOrder": "1010" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_elec_cal"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.edr_tape_id"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_image_type" ,
                 "title": "legacy_label_na_image_type" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.edr_file_number" ,
+                "title": "edr_file_number" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -381,15 +646,24 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1080" ,
+                "classOrder": "1020" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_image_type"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.edr_file_number"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_beam" ,
                 "title": "legacy_label_na_beam" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.dsn_station_number" ,
+                "title": "dsn_station_number" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -397,15 +671,24 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1090" ,
+                "classOrder": "1030" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_beam"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.dsn_station_number"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_reset" ,
                 "title": "legacy_label_na_shutter_reset" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.dsn_station_name" ,
+                "title": "dsn_station_name" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -413,8 +696,9 @@
                 "groupName": "null" ,
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1100" ,
+                "classOrder": "1040" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_reset"
                  ]
               }
@@ -422,22 +706,59 @@
            , {"association": {
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_open" ,
                 "title": "legacy_label_na_shutter_open" ,
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Telemetry.vgr.dsn_station_name"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing" ,
+            "title": "Voyager_Timing" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "Container for elements describing the time at which a data product was obtained"
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.mission_phase_name" ,
+                "title": "mission_phase_name" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1110" ,
                 "attributeId": [
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_open"
+=======
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "*" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.mission_phase_name"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_close" ,
                 "title": "legacy_label_na_shutter_close" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.spacecraft_clock_count_partition" ,
+                "title": "spacecraft_clock_count_partition" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -447,13 +768,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1120" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_close"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.spacecraft_clock_count_partition"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_flood" ,
                 "title": "legacy_label_na_flood" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.spacecraft_clock_start_count" ,
+                "title": "spacecraft_clock_start_count" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -463,13 +793,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1130" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_flood"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.spacecraft_clock_start_count"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_exposure_type" ,
                 "title": "legacy_label_na_exposure_type" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.spacecraft_clock_stop_count" ,
+                "title": "spacecraft_clock_stop_count" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -479,13 +818,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1140" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_exposure_type"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.spacecraft_clock_stop_count"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_position" ,
                 "title": "legacy_label_na_filter_position" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_1" ,
+                "title": "fds_scet_epoch_1" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -495,13 +843,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1150" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_position"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_1"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_step" ,
                 "title": "legacy_label_na_filter_step" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_2" ,
+                "title": "fds_scet_epoch_2" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -511,13 +868,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1160" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_step"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_2"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_g1_voltage_count" ,
                 "title": "legacy_label_na_g1_voltage_count" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_3" ,
+                "title": "fds_scet_epoch_3" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -527,13 +893,22 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1170" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_g1_voltage_count"
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_3"
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                  ]
               }
             }
            , {"association": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_exposure" ,
                 "title": "legacy_label_na_shutter_exposure" ,
+=======
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_4" ,
+                "title": "fds_scet_epoch_4" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -543,6 +918,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1180" ,
                 "attributeId": [
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_exposure"
                  ]
               }
@@ -2083,18 +2459,35 @@
                   "isDeprecated": "false"
                 }
              }
+=======
+                  "0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_4"
+                 ]
+              }
+            }
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
            ]
           }
         }
-      , {
+      ]
+    , "attributeDictionary": [
+        {
           "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_reset" ,
             "title": "legacy_label_na_shutter_reset" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.compression_state" ,
+            "title": "compression_state" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "Unknown" ,
+=======
+            "description": "Whether the image compression mode was operating." ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -2111,14 +2504,24 @@
             "defaultUnitId": "null"
           , "PermissibleValueList": [
               {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "value": "No" ,
                   "valueMeaning": "No" ,
+=======
+                  "value": "Off" ,
+                  "valueMeaning": "The Compression mode was off" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "value": "Yes" ,
                   "valueMeaning": "Yes" ,
+=======
+                  "value": "On" ,
+                  "valueMeaning": "The Compression mode was on" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
                   "isDeprecated": "false"
                 }
              }
@@ -2127,6 +2530,7 @@
         }
       , {
           "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_status" ,
             "title": "legacy_label_pixel_dn_average_status" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
@@ -2154,20 +2558,33 @@
           "attribute": {
             "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_threshold" ,
             "title": "legacy_label_pixel_dn_average_threshold" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.earth_received_time" ,
+            "title": "earth_received_time" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "Unknown" ,
+=======
+            "description": "Time at which the image was received at Earth. Source Data Product Origin: Keyword EARTH_RECEIVED_TIME" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "dataType": "ASCII_Date_Time_YMD_UTC" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Date_Time_YMD_UTC" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "minimumValue": "0" ,
             "maximumValue": "255" ,
+=======
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
@@ -2177,13 +2594,814 @@
         }
       , {
           "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio" ,
             "title": "legacy_label_signal_to_noise_ratio" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id" ,
+            "title": "edit_mode_id" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+            "description": "Edit mode of the camera, indicates amount of data read from the vidicon. '1:1' indicates the full-resolution of the vidicon. Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'. Source Data Product Origin: Keyword EDIT_MODE_ID" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "1:1" ,
+                  "valueMeaning": "Vidicon readout was at full resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:10" ,
+                  "valueMeaning": "Vidicon readout was at one-tenth resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:2" ,
+                  "valueMeaning": "Vidicon readout was at one-half resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:3" ,
+                  "valueMeaning": "Vidicon readout was at one-third resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:5" ,
+                  "valueMeaning": "Vidicon readout was at one-fifth resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "3:4" ,
+                  "valueMeaning": "Vidicon readout was at three-quarters resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration" ,
+            "title": "exposure_duration" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Time period during which the shutter was open Source Data Product Origin: Keyword EXPOSURE_DURATION" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "Units_of_Time" ,
+            "unitOfMeasureId": "0001_NASA_PDS_1.pds.Units_of_Time" ,
+            "unitId": "day, hr, julian day, microseconds, min, ms, ns, s, yr" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_telemetry_mode" ,
+            "title": "legacy_label_telemetry_mode" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name" ,
+            "title": "filter_name" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Optical filter used for the image. Source Data Product Origin: Keyword FILTER_NAME" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Blue" ,
+                  "valueMeaning": "NAC Filter #2 or WAC Filter #1, spanning portions of the Visible spectrum from 0.43 to 0.53 microns" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "CH4\/JS" ,
+                  "valueMeaning": "WAC Filter #0, spanning portions of the Visible spectrum from 0.614 to 0.624 microns. Also called CH4_JS or METHANE-JST." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "CH4\/U" ,
+                  "valueMeaning": "WAC Filter #6, spanning portions of the Visible spectrum from 0.536 to 0.546 microns. Also called CH4_U or METHANE-U." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Clear" ,
+                  "valueMeaning": "NAC Filter #0 or #4 or WAC Filter #2, spanning portions of the Visible and Ultraviolet spectrum from 0.28 to 0.64 microns" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Green" ,
+                  "valueMeaning": "NAC Filter #5 or #6 or WAC Filter #5, spanning portions of the Visible spectrum from 0.53 to 0.64 microns" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Orange" ,
+                  "valueMeaning": "NAC Filter #3 or WAC Filter #7, spanning portions of the Visible spectrum from 0.59 to 0.64 microns" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Sodium" ,
+                  "valueMeaning": "WAC Filter #0, spanning portions of the Visible spectrum from 0.588 to 0.590 microns. Also called NAD or SODIUM-D." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "UV" ,
+                  "valueMeaning": "NAC Filter #7, spanning portions of the Ultraviolet spectrum from 0.28 to 0.37 microns" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Violet" ,
+                  "valueMeaning": "NAC Filter #1 or WAC Filter #3, spanning portions of the Visible and Ultraviolet spectrum from 0.35 to 0.45 microns" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_beam" ,
+            "title": "legacy_label_wa_beam" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number" ,
+            "title": "filter_number" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+=======
+            "description": "Optical filter identification number, contains the unique number associated with the optical filter for the image. This value should correspond with that given in the definition of this label's value of filter_name. Despite the redundancy, it is retained here as it was in the source product label, for historical purposes. Source Data Product Origin: Keyword FILTER_NUMBER" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_elec_cal" ,
+            "title": "legacy_label_wa_elec_cal" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id" ,
+            "title": "gain_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "The gain state of an instrument. Gain is a constant value, set by the observer, that indicates the approximate number of photon-excited electrons registered by the detector that correlate to one \"data number\" (DN). Source Data Product Origin: Keyword GAIN_MODE_ID" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+=======
+                  "value": "High" ,
+                  "valueMeaning": "The higher of the two gain states for Voyager ISS" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+=======
+                  "value": "Low" ,
+                  "valueMeaning": "The lower of the two gain states for Voyager ISS" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_exposure_type" ,
+            "title": "legacy_label_wa_exposure_type" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_id" ,
+            "title": "image_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+=======
+            "description": "Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach. Source Data Product Origin: Keyword IMAGE_ID" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Prep" ,
+                  "valueMeaning": "Prep" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Read" ,
+                  "valueMeaning": "Read" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_position" ,
+            "title": "legacy_label_wa_filter_position" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_number" ,
+            "title": "image_number" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "A precursor to filter_name and filter_number" ,
+=======
+            "description": "Flight Data Subsystem (FDS) clock count at time of image acquisition. There is a unique IMAGE_NUMBER for each image in a planetary encounter. The clock count is always a seven digit value, five digits to the left of the decimal point and two digits to the right of the decimal point. Source Data Product Origin: Keyword IMAGE_NUMBER" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_step" ,
+            "title": "legacy_label_wa_filter_step" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.lsb_truncate" ,
+            "title": "lsb_truncate" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "A precursor to filter_name and filter_number" ,
+=======
+            "description": "Whether the LSB Truncation mode was operating. In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated." ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N\/A" ,
+                  "valueMeaning": "@@@ I'm not sure what this would mean. @@@" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Off" ,
+                  "valueMeaning": "The LSB Truncate mode was off" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "On" ,
+                  "valueMeaning": "The LSB Truncate mode was on" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_flood" ,
+            "title": "legacy_label_wa_flood" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_data_anomaly_type" ,
+            "title": "pds_source_product_data_anomaly_type" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+=======
+            "description": "Data recording anomalies in the image. If this keyword is missing [in the source data product], no anomalies were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_g1_voltage_count" ,
+            "title": "legacy_label_wa_g1_voltage_count" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description" ,
+            "title": "pds_source_product_description" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+=======
+            "description": "A description of the image, as recorded in the original source product label. Source Data Product Origin: Keyword DESCRIPTION" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_image_type" ,
+            "title": "legacy_label_wa_image_type" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note" ,
+            "title": "pds_source_product_note" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+=======
+            "description": "The observational intent of the image, as recorded in the original source product label. Source Data Product Origin: Keyword NOTE" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Prep" ,
+                  "valueMeaning": "Prep" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Read" ,
+                  "valueMeaning": "Read" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_close" ,
+            "title": "legacy_label_wa_shutter_close" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name" ,
+            "title": "pds_source_product_target_name" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+=======
+            "description": "The value of TARGET_NAME as given in the source product label. The relationship between this value and the actual intentions of the observer is unknown. The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons. Source Data Product Origin: Keyword TARGET_NAME" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_exposure" ,
+            "title": "legacy_label_wa_shutter_exposure" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id" ,
+            "title": "scan_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+=======
+            "description": "Scan rate of vidicon readout. The instrument scan rate affects the radiometric properties of the camera because of the dark current buildup on the vidicon. Values can be '1:1', '2:1', '3:1', '5:1', and '10:1'. Source Data Product Origin: Keyword SCAN_MODE_ID" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "End Long" ,
+                  "valueMeaning": "Unknown" ,
+=======
+                  "value": "10:1" ,
+                  "valueMeaning": "Vidicon readout was at one-tenth speed." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:1" ,
+                  "valueMeaning": "Vidicon readout was at full speed." ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "Normal" ,
+                  "valueMeaning": "Unknown" ,
+=======
+                  "value": "2:1" ,
+                  "valueMeaning": "Vidicon readout was at one-half speed." ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "Open" ,
+                  "valueMeaning": "Unknown" ,
+=======
+                  "value": "3:1" ,
+                  "valueMeaning": "Vidicon readout was at one-third speed." ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "Start Long" ,
+                  "valueMeaning": "Unknown" ,
+=======
+                  "value": "5:1" ,
+                  "valueMeaning": "Vidicon readout was at one-fifth speed." ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_open" ,
+            "title": "legacy_label_wa_shutter_open" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id" ,
+            "title": "shutter_mode_id" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+=======
+            "description": "Shutter mode. Indicates which camera was shuttered, Narrow Angle and\/or Wide Angle. Source Data Product Origin: Keyword SHUTTER_MODE_ID" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+=======
+                  "value": "BODARK" ,
+                  "valueMeaning": "Shutter remained closed for Narrow Angle and Wide Angle cameras." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "BOTALT" ,
+                  "valueMeaning": "From original label. Meaning unclear." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "BOTSIM" ,
+                  "valueMeaning": "Both the Narrow Angle and the Wide Angle shutters opened simultaneously" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "BSIMAN" ,
+                  "valueMeaning": "BOTSIM mode followed by NAONLY" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "NAONLY" ,
+                  "valueMeaning": "Only the Narrow Angle shutter opened" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "NOSHUT" ,
+                  "valueMeaning": "Neither the Narrow Angle nor the Wide Angle shutter opened" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+=======
+                  "value": "WAONLY" ,
+                  "valueMeaning": "Only the Wide Angle shutter opened" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_reset" ,
+            "title": "legacy_label_wa_shutter_reset" ,
+=======
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.signal_to_noise_ratio" ,
+            "title": "signal_to_noise_ratio" ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
+            "description": "Unknown" ,
+=======
             "description": "Signal-to-noise ratio as measured by the camera onboard. Original label parameter: SNR Source Data Product Origin: Legacy Header " ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2198,226 +3416,7 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_telemetry_mode" ,
-            "title": "legacy_label_telemetry_mode" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder." ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "GS-2" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "GS-4" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-10" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-11" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-12" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-13" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-15" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-2" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-20" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-22" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-23" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-24" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-25" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-26" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-2C" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-2W" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-2X" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-3" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-4" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-5" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-6" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-7" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-9" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-K" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-O" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IM-S" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "None" ,
-                  "valueMeaning": "This keyword had no value in the original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "OC-3" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_beam" ,
-            "title": "legacy_label_wa_beam" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "No" ,
@@ -2432,405 +3431,8 @@
                 }
              }
            ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_elec_cal" ,
-            "title": "legacy_label_wa_elec_cal" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Electronics cal status" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "No" ,
-                  "valueMeaning": "No" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Yes" ,
-                  "valueMeaning": "Yes" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_exposure_type" ,
-            "title": "legacy_label_wa_exposure_type" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "Prep" ,
-                  "valueMeaning": "Prep" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Read" ,
-                  "valueMeaning": "Read" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_position" ,
-            "title": "legacy_label_wa_filter_position" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "A precursor to filter_name and filter_number" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "7" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_step" ,
-            "title": "legacy_label_wa_filter_step" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "A precursor to filter_name and filter_number" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "7" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_flood" ,
-            "title": "legacy_label_wa_flood" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "No" ,
-                  "valueMeaning": "No" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Yes" ,
-                  "valueMeaning": "Yes" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_g1_voltage_count" ,
-            "title": "legacy_label_wa_g1_voltage_count" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "7" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_image_type" ,
-            "title": "legacy_label_wa_image_type" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "Prep" ,
-                  "valueMeaning": "Prep" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Read" ,
-                  "valueMeaning": "Read" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_close" ,
-            "title": "legacy_label_wa_shutter_close" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "No" ,
-                  "valueMeaning": "No" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Yes" ,
-                  "valueMeaning": "Yes" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_exposure" ,
-            "title": "legacy_label_wa_shutter_exposure" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "End Long" ,
-                  "valueMeaning": "Unknown" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Normal" ,
-                  "valueMeaning": "Unknown" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Open" ,
-                  "valueMeaning": "Unknown" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Start Long" ,
-                  "valueMeaning": "Unknown" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_open" ,
-            "title": "legacy_label_wa_shutter_open" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "No" ,
-                  "valueMeaning": "No" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Yes" ,
-                  "valueMeaning": "Yes" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_reset" ,
-            "title": "legacy_label_wa_shutter_reset" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Unknown" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "No" ,
-                  "valueMeaning": "No" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Yes" ,
-                  "valueMeaning": "Yes" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
+=======
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
           }
         }
       , {
@@ -2966,7 +3568,11 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
+=======
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the " ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2991,7 +3597,11 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
+=======
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the " ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -3016,7 +3626,11 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
+=======
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the " ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -3041,7 +3655,11 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
+=======
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the " ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -3153,7 +3771,11 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
+<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. This attribute signifies which FDS partition was in effect for this data product. " ,
+=======
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. This attribute signifies which partition was in effect for this data product. " ,
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.JSON
             "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,

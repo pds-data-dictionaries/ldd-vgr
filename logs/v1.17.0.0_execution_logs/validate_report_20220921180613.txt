@@ -3,6 +3,7 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.3.0
+<<<<<<< HEAD:logs/v1.17.0.0_execution_logs/validate_report_20220921180613.txt
    Date                          2022-09-21T18:06:15Z
 
 Parameters:
@@ -10,6 +11,15 @@ Parameters:
    Rule Type                     pds4.label
    User Specified Schemas        [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
    User Specified Schematrons    [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.sch, file:/tmp/PDS4_PDS_1H00.sch]
+=======
+   Date                          2022-08-24T16:39:26Z
+
+Parameters:
+   Targets                       [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xml]
+   Rule Type                     pds4.label
+   User Specified Schemas        [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.sch, file:/tmp/PDS4_PDS_1H00.sch]
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:logs/v1.17.0.0_execution_logs/validate_report_20220824163924.txt
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,7 +32,11 @@ Parameters:
 
 Product Level Validation Results
 
+<<<<<<< HEAD:logs/v1.17.0.0_execution_logs/validate_report_20220921180613.txt
   PASS: file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.xml
+=======
+  PASS: file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.xml
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:logs/v1.17.0.0_execution_logs/validate_report_20220824163924.txt
         1 product validation(s) completed
 
 Summary:
@@ -42,5 +56,9 @@ Summary:
 
 
 End of Report
+<<<<<<< HEAD:logs/v1.17.0.0_execution_logs/validate_report_20220921180613.txt
 Completed execution in 4887 ms
+=======
+Completed execution in 4682 ms
+>>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:logs/v1.17.0.0_execution_logs/validate_report_20220824163924.txt
 
