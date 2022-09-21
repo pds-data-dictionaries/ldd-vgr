@@ -7,7 +7,7 @@
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   
   xsi:schemaLocation=
-   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd"> 
+   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd"> 
 
     <name>Voyager Mission Submodel</name>
     <ldd_version_id>0.1.0.0</ldd_version_id>
@@ -25,8 +25,21 @@
 	implemented).  
 	  This is a preliminary non-release version.  Changes have not been
 	tracked during initial drafting, but will be henceforth. 
+	
+	v0.2.0.0  2022-08-23
+	Continuing to develop content, in advance of any use of this LDD.
+	Updated enumerated values for compression_state, edit_mode_id
+	Deleted beam, companding, elec_cal, exposure_type, filter_position, filter_step, flood, g1_voltage_count, geometry_state, image_time, image_type, pixel_dn_average_thresh, pixel_dn_average_status, shutter_exposure, shutter_reset, shutter_open, shutter_close, start_time_doy, start_time_ymd, stop_time_doy, stop_time_ymd, telemetry_mode
+	Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
+	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
+	Made some attributes nillable or optional
+	
+	v0.3.0.0  2022-09-19
+	Continuing to develop content, in advance of any use of this LDD.
+	Restored many of the attributes removed in v0.2, while adding class ISS_Legacy_Label to contain them. 
+	Also moved three attributes from class ISS to class ISS_Legacy_Label. 
     </comment>
-    <last_modification_date_time>2022-06-10</last_modification_date_time>
+    <last_modification_date_time>2022-09-19</last_modification_date_time>
 
   <!-- Attributes START -->
 
@@ -36,7 +49,7 @@
     <local_identifier>legacy_label_VICAR1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The now-obsolete "VICAR-1" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.</definition>
+    <definition>The "VICAR-1" label that was originally attached to the image. Information on how to decode this text can be found at @@@@@@.  To the extent possible, the information is captured in the attached VICAR-2 header and/or the PDS4 XML label. This VICAR-1 legacy label is being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Text_Preserved</value_data_type>
@@ -44,49 +57,13 @@
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>beam</name>
+    <name>legacy_label_compression_state</name>
     <version_id>1.0</version_id>
-    <local_identifier>beam</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Yes</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>No</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>companding</name>
-    <version_id>1.0</version_id>
-    <local_identifier>companding</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>compression_state</name>
-    <version_id>1.0</version_id>
-    <local_identifier>compression_state</local_identifier>
+    <local_identifier>legacy_label_compression_state</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Whether the image compression mode was operating.<!--More detail would be good.-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    Source Data Product Origin:  Keyword COMPRESSION</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -98,25 +75,6 @@
         <value>On</value>
         <value_meaning>The Compression mode was on</value_meaning>
       </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>N/A</value>
-        <value_meaning>@@@ I'm not sure what this would mean. @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>data_anomaly_type</name>
-    <version_id>1.0</version_id>
-    <local_identifier>data_anomaly_type</local_identifier>
-    <nillable_flag>true</nillable_flag><!--I am quite willing to set other attributes as nillable, if we know or have reason to believe that they will be absent in some data products.-->
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Data recording anomalies in the image.  If this keyword is missing [in the source data product], no anomalies were detected.
-    DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
-    Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -127,7 +85,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Name of the DSN station where the image was received
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    Source Data Product Origin:  DSN_STATION_NAME</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -141,7 +99,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Numeric ID of DSN station where the image was received
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    Source Data Product Origin:  DSN_STATION_NUMBER</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
@@ -169,17 +127,33 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Edit mode of the camera, indicates amount of data read from the vidicon.  '1:1' indicates the full-resolution of the vidicon.  Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'.
-    Source Data Product Origin:  Keyword EDIT_MODE_ID</definition><!--Why do the enumerated values in this definition (which come from documentation in our PDS3 bundle) not match the enumerated values I've included from Bob's spreadsheet?-->
+    Source Data Product Origin:  Keyword EDIT_MODE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>IEN</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value>1:1</value>
+        <value_meaning>Vidicon readout was at full resolution.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
-        <value>IED</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+        <value>3:4</value>
+        <value_meaning>Vidicon readout was at three-quarters resolution.</value_meaning><!--It would be good for someone to check that I am interpreting these correctly. MST-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>1:2</value>
+        <value_meaning>Vidicon readout was at one-half resolution.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>1:3</value>
+        <value_meaning>Vidicon readout was at one-third resolution.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>1:5</value>
+        <value_meaning>Vidicon readout was at one-fifth resolution.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>1:10</value>
+        <value_meaning>Vidicon readout was at one-tenth resolution.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -191,7 +165,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>File number within the tape where the image was originally stored
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    Source Data Product Origin:  EDR_FILE_NUMBER</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type><!--Any minimum or maximum?-->
@@ -205,32 +179,10 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Tape ID on which the image was originally stored
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    Source Data Product Origin:  EDR_TAPE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type><!--Any minimum or maximum?-->
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>elec_cal</name>
-    <version_id>1.0</version_id>
-    <local_identifier>elec_cal</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Electronics cal status<!--This is insufficient as a definition-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Yes</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>No</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -250,35 +202,12 @@
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>exposure_type</name>
-    <version_id>1.0</version_id>
-    <local_identifier>exposure_type</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Auto</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Manual</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
     <name>fds_scet_epoch_1</name>
     <version_id>1.0</version_id>
     <local_identifier>fds_scet_epoch_1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Spacecraft Event Time (SCET) for the first FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the first FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -292,8 +221,7 @@
     <local_identifier>fds_scet_epoch_2</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Spacecraft Event Time (SCET) for the second FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the second FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -307,8 +235,7 @@
     <local_identifier>fds_scet_epoch_3</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Spacecraft Event Time (SCET) for the third FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the third FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -322,8 +249,7 @@
     <local_identifier>fds_scet_epoch_4</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Spacecraft Event Time (SCET) for the fourth FDS count rollover epoch.<!--Define what is meant by FDS count rollover epoch-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the fourth FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -399,76 +325,6 @@
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>filter_position</name>
-    <version_id>1.0</version_id>
-    <local_identifier>filter_position</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.  How is this different from filter step?  Bob's description indicates that perhaps there should be an attribute with an enumerated list being one or the other.-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
-      <maximum_value>7</maximum_value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>filter_step</name>
-    <version_id>1.0</version_id>
-    <local_identifier>filter_step</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.  How is this different from filter position?  Bob's description indicates that perhaps there should be an attribute with an enumerated list being one or the other.-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
-      <maximum_value>7</maximum_value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>flood</name>
-    <version_id>1.0</version_id>
-    <local_identifier>flood</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Yes</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>No</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>g1_voltage_count</name>
-    <version_id>1.0</version_id>
-    <local_identifier>g1_voltage_count</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.  Bob's spreadsheet says "NG1=* means omit label".  What does this mean?  Is that one of the 8 currently possible values, or another one?-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
-      <maximum_value>7</maximum_value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
     <name>gain_mode_id</name>
     <version_id>1.0</version_id>
     <local_identifier>gain_mode_id</local_identifier>
@@ -491,24 +347,10 @@
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>geometry_state</name>
-    <version_id>1.0</version_id>
-    <local_identifier>geometry_state</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed.-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
     <name>image_id</name>
     <version_id>1.0</version_id>
     <local_identifier>image_id</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <nillable_flag>true</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach.
     Source Data Product Origin:  Keyword IMAGE_ID</definition>
@@ -533,48 +375,9 @@
   </DD_Attribute>
 
   <DD_Attribute>
-    <name>image_time</name>
+    <name>legacy_label_lsb_truncate</name>
     <version_id>1.0</version_id>
-    <local_identifier>image_time</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the image was acquired.
-    The image_time element is duplicated from the source product label. It provides the time of shutter close calculated from spacecraft clock using both the coarse (seconds) and fine (subRTI) counters (UTC). (A subRTI is approximately 4 msec (1/256 second)).
-    The value is identical to that given in start_time_doy, and start_date_time.  Although it is redundant, it is retained here for historical reasons.
-    When the shutter was inhibited (ie SHUTTER_STATE_ID=”DISABLED”), the IMAGE_TIME = START_TIME = STOP_TIME, and all three represent the start of the exposure window during the prepare cycle of the image.
-    Source Data Product Origin:  Keyword IMAGE_TIME</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-
-  <DD_Attribute>
-    <name>image_type</name>
-    <version_id>1.0</version_id>
-    <local_identifier>image_type</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Prep</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Read</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>lsb_truncate</name>
-    <version_id>1.0</version_id>
-    <local_identifier>lsb_truncate</local_identifier>
+    <local_identifier>legacy_label_lsb_truncate</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Whether the LSB Truncation mode was operating.  In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated.<!--Check-->
@@ -614,75 +417,100 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Earth-Jupiter Cruise</value>
-        <value_meaning>The period of cruise from Earth to Jupiter.  For Voyager 1 this is 1977-09-05 to 1979-01-06.  For Voyager 2 this is 1977-08-20 to 1979-04-25.</value_meaning>
+        <value_meaning>The period of cruise from Earth to Jupiter.  For Voyager 1 this is 1977-09-06T00:00 to 1979-01-06T12:00.  For Voyager 2 this is 1977-08-20T00:00 to 1979-04-25T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Jupiter Encounter</value>
-        <value_meaning>The period surrounding the Jupiter Encounter.  For Voyager 1 this is 1979-01-06 to 1979-04-13.  For Voyager 2 this is 1979-04-25 to 1979-08-05.</value_meaning>
+        <value_meaning>The period surrounding the Jupiter Encounter.  For Voyager 1 this is 1979-01-06T12:00 to 1979-04-13T12:00.  For Voyager 2 this is 1979-04-25T12:00 to 1979-08-05T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Jupiter-Saturn Cruise</value>
-        <value_meaning>The period of cruise from Jupiter to Saturn.  For Voyager 1 this is 1979-04-13 to 1980-08-22.  For Voyager 2 this is 1979-08-05 to 1981-06-05.</value_meaning>
+        <value_meaning>The period of cruise from Jupiter to Saturn.  For Voyager 1 this is 1979-04-13T12:00 to 1980-08-22T12:00.  For Voyager 2 this is 1979-08-05T12:00 to 1981-06-05T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Saturn Encounter</value>
-        <value_meaning>The period surrounding the Saturn Encounter.  For Voyager 1 this is 1980-08-22 to 1980-12-14.  For Voyager 2 this is 1981-06-05 to 1981-09-25.</value_meaning>
+        <value_meaning>The period surrounding the Saturn Encounter.  For Voyager 1 this is 1980-08-22T12:00 to 1980-12-14T12:00.  For Voyager 2 this is 1981-06-05T12:00 to 1981-09-25T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Saturn-Uranus Cruise</value>
-        <value_meaning>The period of cruise from Saturn to Uranus.  This does not apply to Voyager 1.  For Voyager 2 this is 1981-09-25 to 1985-11-04</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period of cruise from Saturn to Uranus.  This does not apply to Voyager 1.  For Voyager 2 this is 1981-09-25T12:00 to 1985-11-04T12:00</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Uranus Encounter</value>
-        <value_meaning>The period surrounding the Uranus Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1985-11-04 to 1986-02-25.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period surrounding the Uranus Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1985-11-04T12:00 to 1986-02-25T12:00.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Uranus-Neptune Cruise</value>
-        <value_meaning>The period of cruise from Uranus to Neptune.  This does not apply to Voyager 1.  For Voyager 2 this is 1986-02-25 to 1989-06-05.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period of cruise from Uranus to Neptune.  This does not apply to Voyager 1.  For Voyager 2 this is 1986-02-25T12:00 to 1989-06-05T12:00.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Neptune Encounter</value>
-        <value_meaning>The period surrounding the Neptune Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1989-06-05 to 1989-10-02.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period surrounding the Neptune Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1989-06-05T12:00 to 1989-10-02T12:00.</value_meaning>  <!--Schematron rule to prevent use for Voyager 1?-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Interstellar Mission</value>
-        <value_meaning>The period from the final planetary encounter to the end of the mission.  For Voyager 1 this is 1980-12-14 to End of Mission.  For Voyager 2 this is 1989-10-02 to End of Mission.</value_meaning>
+        <value_meaning>The period from the final planetary encounter to the end of the mission.  For Voyager 1 this is 1980-12-14T12:00 to End of Mission.  For Voyager 2 this is 1989-10-02T12:00 to End of Mission.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>pixel_dn_average_status</name>
+    <name>pds_source_product_data_anomaly_type</name>
     <version_id>1.0</version_id>
-    <local_identifier>pixel_dn_average_status</local_identifier>
-    <nillable_flag>false</nillable_flag>
+    <local_identifier>pds_source_product_data_anomaly_type</local_identifier>
+    <nillable_flag>true</nillable_flag><!--I am quite willing to set other attributes as nillable, if we know or have reason to believe that they will be absent in some data products.-->
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition><!--Definition needed-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>Data recording anomalies in the image.  If this keyword is missing [in the source data product], no anomalies were detected.
+    DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
+    Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
-      <maximum_value>1</maximum_value>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>pixel_dn_average_threshold</name>
+    <name>pds_source_product_description</name>
     <version_id>1.0</version_id>
-    <local_identifier>pixel_dn_average_threshold</local_identifier>
+    <local_identifier>pds_source_product_description</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Average pixel value, in DN.<!--Check accuracy of this-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <definition>A description of the image, as recorded in the original source product label.
+    Source Data Product Origin:  Keyword DESCRIPTION</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type>
-      <minimum_value>0</minimum_value>
-      <maximum_value>255</maximum_value>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
+  <DD_Attribute>
+    <name>pds_source_product_note</name>
+    <version_id>1.0</version_id>
+    <local_identifier>pds_source_product_note</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>The observational intent of the image, as recorded in the original source product label.
+    Source Data Product Origin:  Keyword NOTE</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>pds_source_product_target_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>pds_source_product_target_name</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Matthew Tiscareno</submitter_name>
+    <definition>The value of TARGET_NAME as given in the source product label.  The relationship between this value and the actual intentions of the observer is unknown.  The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons.
+    Source Data Product Origin:  Keyword TARGET_NAME</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
   <DD_Attribute>
     <name>scan_mode_id</name>
     <version_id>1.0</version_id>
@@ -713,58 +541,6 @@
       <DD_Permissible_Value>
         <value>10:1</value>
         <value_meaning>Vidicon readout was at one-tenth speed.</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>shutter_close</name>
-    <version_id>1.0</version_id>
-    <local_identifier>shutter_close</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Yes</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>No</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>shutter_exposure</name>
-    <version_id>1.0</version_id>
-    <local_identifier>shutter_exposure</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Normal</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Start Long</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>End Long</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>Open</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -812,53 +588,9 @@
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>shutter_open</name>
+    <name>legacy_label_signal_to_noise_ratio</name>
     <version_id>1.0</version_id>
-    <local_identifier>shutter_open</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Yes</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>No</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>shutter_reset</name>
-    <version_id>1.0</version_id>
-    <local_identifier>shutter_reset</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>@@@ Need something here @@@
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>Yes</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>No</value>
-        <value_meaning>@@@ Need something here @@@</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-  
-  <DD_Attribute>
-    <name>signal_to_noise_ratio</name>
-    <version_id>1.0</version_id>
-    <local_identifier>signal_to_noise_ratio</local_identifier>
+    <local_identifier>legacy_label_signal_to_noise_ratio</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Signal-to-noise ratio as measured by the camera onboard.
@@ -872,54 +604,12 @@
   </DD_Attribute>
   
   <DD_Attribute>
-    <name>source_product_description</name>
-    <version_id>1.0</version_id>
-    <local_identifier>source_product_description</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>A description of the image, as recorded in the original source product label.
-    Source Data Product Origin:  Keyword DESCRIPTION</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-
-  <DD_Attribute>
-    <name>source_product_note</name>
-    <version_id>1.0</version_id>
-    <local_identifier>source_product_note</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The observational intent of the image, as recorded in the original source product label.
-    Source Data Product Origin:  Keyword NOTE</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-
-  <DD_Attribute>
-    <name>source_product_target_name</name>
-    <version_id>1.0</version_id>
-    <local_identifier>source_product_target_name</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The value of TARGET_NAME as given in the source product label.  The relationship between this value and the actual intentions of the observer is unknown.  The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons.
-    Source Data Product Origin:  Keyword TARGET_NAME</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-    </DD_Value_Domain>
-  </DD_Attribute>
-
-  <DD_Attribute>
     <name>spacecraft_clock_count_partition</name>
     <version_id>1.0</version_id>
     <local_identifier>spacecraft_clock_count_partition</local_identifier>
     <nillable_flag>true</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four <!--verify--> partitions.  This attribute signifies which partition was in effect for this data product.  <!--Perhaps more here-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  This attribute signifies which FDS partition was in effect for this data product.  <!--Perhaps more here-->
     Source Data Product Origin:  @@@ Need something here @@@</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -958,70 +648,531 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
+  <!-- Regular Attributes END -->
+  
+  <!-- BEGIN Attributes that exist only within ISS_Legacy_Label -->
+  
   <DD_Attribute>
-    <name>start_time_doy</name>
+    <name>legacy_label_na_beam</name>
     <version_id>1.0</version_id>
-    <local_identifier>start_time_doy</local_identifier>
+    <local_identifier>legacy_label_na_beam</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter opened, if given in year-day-of-year format. 
-    Source Data Product Origin:  Keyword START_TIME</definition>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Date_Time_DOY</value_data_type>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-
+  
   <DD_Attribute>
-    <name>start_time_ymd</name>
+    <name>legacy_label_na_elec_cal</name>
     <version_id>1.0</version_id>
-    <local_identifier>start_time_ymd</local_identifier>
+    <local_identifier>legacy_label_na_elec_cal</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter opened, if given in year-month-day format. 
-    Source Data Product Origin:  Keyword START_TIME</definition>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Electronics cal status<!--This is insufficient as a definition-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-
+  
   <DD_Attribute>
-    <name>stop_time_doy</name>
+    <name>legacy_label_na_exposure_type</name>
     <version_id>1.0</version_id>
-    <local_identifier>stop_time_doy</local_identifier>
+    <local_identifier>legacy_label_na_exposure_type</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter closed, if given in year-day-of-year format. 
-    Source Data Product Origin:  Keyword STOP_TIME</definition>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Date_Time_DOY</value_data_type>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Prep</value>
+        <value_meaning>Prep<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Read</value>
+        <value_meaning>Read<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-
+  
   <DD_Attribute>
-    <name>stop_time_ymd</name>
+    <name>legacy_label_na_filter_position</name>
     <version_id>1.0</version_id>
-    <local_identifier>stop_time_ymd</local_identifier>
+    <local_identifier>legacy_label_na_filter_position</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Time at which the shutter closed, if given in year-month-day format. 
-    Source Data Product Origin:  Keyword STOP_TIME</definition>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>A precursor to filter_name and filter_number<!--Definition needed.  How is this different from filter step?  Should there be an attribute with an enumerated list being one or the other?-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>7</maximum_value>
     </DD_Value_Domain>
   </DD_Attribute>
-
+  
   <DD_Attribute>
-    <name>telemetry_mode</name>
+    <name>legacy_label_na_filter_step</name>
     <version_id>1.0</version_id>
-    <local_identifier>telemetry_mode</local_identifier>
+    <local_identifier>legacy_label_na_filter_step</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder.<!--Check accuracy of this-->
-    Source Data Product Origin:  Legacy Header <!--Please specify coordinates--></definition>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>A precursor to filter_name and filter_number<!--Definition needed.  How is this different from filter position?  Should there be an attribute with an enumerated list being one or the other?-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>7</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_flood</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_flood</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_g1_voltage_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_g1_voltage_count</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Definition needed.  Bob's spreadsheet says "NG1=* means omit label".  What does this mean?  Is that one of the 8 currently possible values, or another one?-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>7</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_image_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_image_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Prep</value>
+        <value_meaning>Prep<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Read</value>
+        <value_meaning>Read<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_shutter_exposure</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_shutter_exposure</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Normal</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Start Long</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>End Long</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Open</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_shutter_close</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_shutter_close</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_shutter_open</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_shutter_open</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_na_shutter_reset</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_na_shutter_reset</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_beam</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_beam</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_elec_cal</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_elec_cal</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Electronics cal status<!--This is insufficient as a definition-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_exposure_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_exposure_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Prep</value>
+        <value_meaning>Prep<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Read</value>
+        <value_meaning>Read<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_filter_position</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_filter_position</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>A precursor to filter_name and filter_number<!--Definition needed.  How is this different from filter step?  Should there be an attribute with an enumerated list being one or the other?-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>7</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_filter_step</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_filter_step</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>A precursor to filter_name and filter_number<!--Definition needed.  How is this different from filter position?  Should there be an attribute with an enumerated list being one or the other?-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>7</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_flood</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_flood</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_g1_voltage_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_g1_voltage_count</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Definition needed.  Bob's spreadsheet says "NG1=* means omit label".  What does this mean?  Is that one of the 8 currently possible values, or another one?-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>7</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_image_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_image_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Prep</value>
+        <value_meaning>Prep<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Read</value>
+        <value_meaning>Read<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_shutter_exposure</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_shutter_exposure</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Normal</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Start Long</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>End Long</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Open</value>
+        <value_meaning>Unknown<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_shutter_close</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_shutter_close</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_shutter_open</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_shutter_open</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_wa_shutter_reset</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_wa_shutter_reset</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Yes</value>
+        <value_meaning>Yes<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>No</value>
+        <value_meaning>No<!--Need something here--></value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_pixel_dn_average_status</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_pixel_dn_average_status</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Definition needed--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>1</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_pixel_dn_average_threshold</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_pixel_dn_average_threshold</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>Unknown<!--Definition needed--></definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <maximum_value>255</maximum_value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>legacy_label_telemetry_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>legacy_label_telemetry_mode</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Matthew S Tiscareno</submitter_name>
+    <definition>The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder.<!--Check--></definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1139,7 +1290,7 @@
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+    
   <!-- Attributes END -->
 
 
@@ -1177,6 +1328,12 @@
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
+    <DD_Association>
+      <identifier_reference>ISS_Legacy_Label</identifier_reference><!--When more instruments are added to this LDD, this should become a XSChoice.-->
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
   </DD_Class>
   
   <DD_Class>
@@ -1187,113 +1344,6 @@
     <definition>Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations.</definition>
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>Image_Description</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-    <DD_Association>
-      <identifier_reference>Image_State</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-    <DD_Association>
-      <identifier_reference>Instrument_State</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>    
-  </DD_Class>
-
-  <DD_Class>
-    <name>Image_State</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Image_State</local_identifier>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Information about an image taken by the Voyager Imaging Science Subsystem (ISS) instrument.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>gain_mode_id</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>scan_mode_id</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>edit_mode_id</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>signal_to_noise_ratio</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>pixel_dn_average_threshold</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>pixel_dn_average_status</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>shutter_mode_id</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>lsb_truncate</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>telemetry_mode</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>compression_state</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
-
-  <DD_Class>
-    <name>Image_Description</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Image_Description</local_identifier>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Attributes describing an image taken by the Voyager Imaging Science Subsystem (ISS) instrument.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-
-    <!-- START attributes included in PDS3 Voyager ISS product labels and/or documentation -->
-
-    <DD_Association>
-      <identifier_reference>source_product_target_name</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
     <DD_Association>
       <identifier_reference>image_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -1307,13 +1357,31 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>image_time</identifier_reference>
+      <identifier_reference>earth_received_time</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>earth_received_time</identifier_reference>
+      <identifier_reference>scan_mode_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>shutter_mode_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>gain_mode_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>edit_mode_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1337,125 +1405,220 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>source_product_note</identifier_reference>
+      <identifier_reference>pds_source_product_target_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>source_product_description</identifier_reference>
+      <identifier_reference>pds_source_product_note</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>data_anomaly_type</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-
-    <!-- END attributes included in PDS3 Voyager ISS product labels and/or documentation -->
-
-    <!-- START attributes taken from the RAV1CIUN Labels spreadsheet -->
-
-    <DD_Association>
-      <identifier_reference>geometry_state</identifier_reference>
+      <identifier_reference>pds_source_product_description</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>companding</identifier_reference>
+      <identifier_reference>pds_source_product_data_anomaly_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
 
-    <!-- END attributes taken from the RAV1CIUN Labels spreadsheet -->
-
   <DD_Class>
-    <name>Instrument_State</name>
+    <name>ISS_Legacy_Label</name>
     <version_id>1.0</version_id>
-    <local_identifier>Instrument_State</local_identifier>
+    <local_identifier>ISS_Legacy_Label</local_identifier>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Instrument settings for an observation.</definition>
+    <definition>Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed.</definition>
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>elec_cal</identifier_reference>
+      <identifier_reference>legacy_label_signal_to_noise_ratio</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>image_type</identifier_reference>
+      <identifier_reference>legacy_label_pixel_dn_average_threshold</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>beam</identifier_reference>
+      <identifier_reference>legacy_label_pixel_dn_average_status</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>shutter_reset</identifier_reference>
+      <identifier_reference>legacy_label_lsb_truncate</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>shutter_open</identifier_reference>
+      <identifier_reference>legacy_label_telemetry_mode</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>shutter_close</identifier_reference>
+      <identifier_reference>legacy_label_compression_state</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>flood</identifier_reference>
+      <identifier_reference>legacy_label_na_elec_cal</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>exposure_type</identifier_reference>
+      <identifier_reference>legacy_label_na_image_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>filter_position</identifier_reference>
+      <identifier_reference>legacy_label_na_beam</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>filter_step</identifier_reference>
+      <identifier_reference>legacy_label_na_shutter_reset</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>g1_voltage_count</identifier_reference>
+      <identifier_reference>legacy_label_na_shutter_open</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>shutter_exposure</identifier_reference>
+      <identifier_reference>legacy_label_na_shutter_close</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-  </DD_Class>
+    <DD_Association>
+      <identifier_reference>legacy_label_na_flood</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_na_exposure_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_na_filter_position</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_na_filter_step</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_na_g1_voltage_count</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_na_shutter_exposure</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_elec_cal</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_image_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_beam</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_shutter_reset</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_shutter_open</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_shutter_close</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_flood</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_exposure_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_filter_position</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_filter_step</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_g1_voltage_count</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>legacy_label_wa_shutter_exposure</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>    
 
   <DD_Class>
     <name>Voyager_Telemetry</name>
@@ -1468,25 +1631,25 @@
     <DD_Association>
       <identifier_reference>edr_tape_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>edr_file_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>dsn_station_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>dsn_station_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
@@ -1526,25 +1689,25 @@
     <DD_Association>
       <identifier_reference>fds_scet_epoch_1</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>fds_scet_epoch_2</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>fds_scet_epoch_3</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
       <identifier_reference>fds_scet_epoch_4</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
