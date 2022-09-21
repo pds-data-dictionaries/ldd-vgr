@@ -460,12 +460,16 @@
     <local_identifier>pds_source_product_data_anomaly_type</local_identifier>
     <nillable_flag>true</nillable_flag><!--I am quite willing to set other attributes as nillable, if we know or have reason to believe that they will be absent in some data products.-->
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Data recording anomalies in the image.  If this keyword is missing [in the source data product], no anomalies were detected.
-    DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
+    <definition>Data recording anomalies in the image.  This attribute, while required, is nillable.  A nil_reason of missing indicates that it was missing from the source product, which in turn implies no anomalies were detected.
+    In the source product, DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
     Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
     <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
+      <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>RAM_Data_Corruption</value>
+        <value_meaning>Spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.</value_meaning>
+      </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
   
