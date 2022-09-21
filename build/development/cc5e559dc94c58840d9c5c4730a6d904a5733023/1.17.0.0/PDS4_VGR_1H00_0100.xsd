@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 17:41:48 UTC 2022 -->
+  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 17:51:32 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -38,10 +38,10 @@
 	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
 	Made some attributes nillable or optional
 	
-	v0.3.0.0  2022-09-19
+	v0.3.0.0  2022-09-20
 	Continuing to develop content, in advance of any use of this LDD.
-	Restored many of the attributes removed in v0.2, while adding class ISS_Legacy_Label to contain them. 
-	Also moved three attributes from class ISS to class ISS_Legacy_Label. 
+	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
+	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
     
     </xs:documentation>
   </xs:annotation>
@@ -83,8 +83,10 @@
     <xs:annotation>
       <xs:documentation>Attributes relevant to the Voyager Imaging
         Science Subsystem (ISS) instrument and its observations that are
-        taken from the legacy label and are not otherwise
-        attributed.</xs:documentation>
+        taken from the legacy label and are not otherwise attributed.
+        These attributes are being retained for historical documentation
+        purposes. Nothing in this class should be required for normal
+        processing or analysis of Voyager ISS images.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="legacy_label_signal_to_noise_ratio" type="vgr:legacy_label_signal_to_noise_ratio" minOccurs="0" maxOccurs="1"> </xs:element>

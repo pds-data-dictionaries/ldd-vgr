@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.17.0.0" ,
       "LDD Version": "0.1.0.0" ,
-      "Date": "2022-09-21T10:41:49" ,
+      "Date": "2022-09-21T10:51:33" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "vgr:"] ,
       "classDictionary": [
@@ -257,7 +257,7 @@
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed."
+            "description": "Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed. These attributes are being retained for historical documentation purposes. Nothing in this class should be required for normal processing or analysis of Voyager ISS images."
               , "associationList": [
              {"association": {
                 "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio" ,

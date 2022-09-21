@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Sep 21 17:41:48 UTC 2022
+   Time                   Wed Sep 21 17:51:32 UTC 2022
    Common Schema          [PDS4_PDS_1H00.xsd]
    Common Schematron      [PDS4_PDS_1H00.sch]
    IM Version Id:         1.17.0.0
@@ -63,12 +63,12 @@ Parsed Input - Header:
 	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
 	Made some attributes nillable or optional
 	
-	v0.3.0.0  2022-09-19
+	v0.3.0.0  2022-09-20
 	Continuing to develop content, in advance of any use of this LDD.
-	Restored many of the attributes removed in v0.2, while adding class ISS_Legacy_Label to contain them. 
-	Also moved three attributes from class ISS to class ISS_Legacy_Label. 
+	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
+	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
     
-   Last Modification Time 2022-09-19
+   Last Modification Time 2022-09-20
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -497,7 +497,7 @@ Parsed Input - Classes:
       reference type        attribute_of
 
    name                   ISS_Legacy_Label
-   description            Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed.
+   description            Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed. These attributes are being retained for historical documentation purposes. Nothing in this class should be required for normal processing or analysis of Voyager ISS images.
    is abstract            false
    is choice              false
    subclass of            USER
