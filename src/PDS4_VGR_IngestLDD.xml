@@ -33,14 +33,11 @@
 	Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
 	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
 	Made some attributes nillable or optional
-<<<<<<< HEAD
 	
 	v0.3.0.0  2022-09-20
 	Continuing to develop content, in advance of any use of this LDD.
 	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
 	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     </comment>
     <last_modification_date_time>2022-09-20</last_modification_date_time>
 
@@ -60,15 +57,9 @@
   </DD_Attribute>
   
   <DD_Attribute>
-<<<<<<< HEAD
     <name>legacy_label_compression_state</name>
     <version_id>1.0</version_id>
     <local_identifier>legacy_label_compression_state</local_identifier>
-=======
-    <name>compression_state</name>
-    <version_id>1.0</version_id>
-    <local_identifier>compression_state</local_identifier>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Whether the image compression mode was operating.<!--More detail would be good.-->
@@ -216,11 +207,7 @@
     <local_identifier>fds_scet_epoch_1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-<<<<<<< HEAD
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the first FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
-=======
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the first FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -234,11 +221,7 @@
     <local_identifier>fds_scet_epoch_2</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-<<<<<<< HEAD
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the second FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
-=======
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the second FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -252,11 +235,7 @@
     <local_identifier>fds_scet_epoch_3</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-<<<<<<< HEAD
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the third FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
-=======
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the third FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -270,11 +249,7 @@
     <local_identifier>fds_scet_epoch_4</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-<<<<<<< HEAD
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the fourth FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
-=======
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the <!--what exactly?--> as it would be if the fourth FDS count rollover epoch is the applicable epoch.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -400,11 +375,7 @@
   </DD_Attribute>
 
   <DD_Attribute>
-<<<<<<< HEAD
     <name>legacy_label_lsb_truncate</name>
-=======
-    <name>lsb_truncate</name>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <version_id>1.0</version_id>
     <local_identifier>legacy_label_lsb_truncate</local_identifier>
     <nillable_flag>false</nillable_flag>
@@ -489,7 +460,6 @@
     <local_identifier>pds_source_product_data_anomaly_type</local_identifier>
     <nillable_flag>true</nillable_flag><!--I am quite willing to set other attributes as nillable, if we know or have reason to believe that they will be absent in some data products.-->
     <submitter_name>Matthew Tiscareno</submitter_name>
-<<<<<<< HEAD
     <definition>Data recording anomalies in the image.  This attribute, while required, is nillable.  A nil_reason of missing indicates that it was missing from the source product, which in turn implies no anomalies were detected.
     In the source product, DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
     Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
@@ -500,14 +470,6 @@
         <value>RAM_Data_Corruption</value>
         <value_meaning>Spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.</value_meaning>
       </DD_Permissible_Value>
-=======
-    <definition>Data recording anomalies in the image.  If this keyword is missing [in the source data product], no anomalies were detected.
-    DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
-    Source Data Product Origin:  Keyword DATA_ANOMALY_TYPE</definition>
-    <DD_Value_Domain>
-      <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -606,7 +568,6 @@
         <value>NAONLY</value>
         <value_meaning>Only the Narrow Angle shutter opened</value_meaning>
       </DD_Permissible_Value>
-<<<<<<< HEAD
       <DD_Permissible_Value>
         <value>WAONLY</value>
         <value_meaning>Only the Wide Angle shutter opened</value_meaning>
@@ -929,23 +890,6 @@
       <DD_Permissible_Value>
         <value>Yes</value>
         <value_meaning>Yes<!--Need something here--></value_meaning>
-=======
-      <DD_Permissible_Value>
-        <value>WAONLY</value>
-        <value_meaning>Only the Wide Angle shutter opened</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>BOTSIM</value>
-        <value_meaning>Both the Narrow Angle and the Wide Angle shutters opened simultaneously</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>BOTALT</value>
-        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>BSIMAN</value>
-        <value_meaning>BOTSIM mode followed by NAONLY</value_meaning>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>No</value>
@@ -955,7 +899,6 @@
   </DD_Attribute>
   
   <DD_Attribute>
-<<<<<<< HEAD
     <name>legacy_label_wa_beam</name>
     <version_id>1.0</version_id>
     <local_identifier>legacy_label_wa_beam</local_identifier>
@@ -999,9 +942,6 @@
   
   <DD_Attribute>
     <name>legacy_label_wa_exposure_type</name>
-=======
-    <name>signal_to_noise_ratio</name>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <version_id>1.0</version_id>
     <local_identifier>legacy_label_wa_exposure_type</local_identifier>
     <nillable_flag>false</nillable_flag>
@@ -1037,7 +977,6 @@
   </DD_Attribute>
   
   <DD_Attribute>
-<<<<<<< HEAD
     <name>legacy_label_wa_filter_step</name>
     <version_id>1.0</version_id>
     <local_identifier>legacy_label_wa_filter_step</local_identifier>
@@ -1095,15 +1034,6 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew S Tiscareno</submitter_name>
     <definition>Unknown<!--Need something here-->  For Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
-=======
-    <name>spacecraft_clock_count_partition</name>
-    <version_id>1.0</version_id>
-    <local_identifier>spacecraft_clock_count_partition</local_identifier>
-    <nillable_flag>true</nillable_flag>
-    <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions.  This attribute signifies which partition was in effect for this data product.  <!--Perhaps more here-->
-    Source Data Product Origin:  @@@ Need something here @@@</definition>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1168,7 +1098,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
-<<<<<<< HEAD
   <DD_Attribute>
     <name>legacy_label_wa_shutter_open</name>
     <version_id>1.0</version_id>
@@ -1366,8 +1295,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
     
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
   <!-- Attributes END -->
 
 
@@ -1423,7 +1350,6 @@
     <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>image_id</identifier_reference>
-<<<<<<< HEAD
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1460,38 +1386,24 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>edit_mode_id</identifier_reference>
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>filter_name</identifier_reference>
-=======
-      <identifier_reference>image_number</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>filter_number</identifier_reference>
-=======
-      <identifier_reference>earth_received_time</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>exposure_duration</identifier_reference>
-=======
-      <identifier_reference>scan_mode_id</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1503,7 +1415,6 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>pds_source_product_note</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>1</minimum_occurrences>
@@ -1551,19 +1462,12 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>legacy_label_lsb_truncate</identifier_reference>
-=======
-      <identifier_reference>gain_mode_id</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_telemetry_mode</identifier_reference>
-=======
-      <identifier_reference>edit_mode_id</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -1587,7 +1491,6 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_na_beam</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
@@ -1649,69 +1552,42 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>legacy_label_wa_elec_cal</identifier_reference>
-=======
-      <identifier_reference>signal_to_noise_ratio</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_wa_image_type</identifier_reference>
-=======
-      <identifier_reference>lsb_truncate</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_wa_beam</identifier_reference>
-=======
-      <identifier_reference>compression_state</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_wa_shutter_reset</identifier_reference>
-=======
-      <identifier_reference>pds_source_product_target_name</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_wa_shutter_open</identifier_reference>
-=======
-      <identifier_reference>pds_source_product_note</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_wa_shutter_close</identifier_reference>
-=======
-      <identifier_reference>pds_source_product_description</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-<<<<<<< HEAD
       <identifier_reference>legacy_label_wa_flood</identifier_reference>
-=======
-      <identifier_reference>pds_source_product_data_anomaly_type</identifier_reference>
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
