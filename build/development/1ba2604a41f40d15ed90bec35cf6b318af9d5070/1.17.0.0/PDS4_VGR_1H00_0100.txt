@@ -7,11 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
-   Time                   Wed Sep 21 18:06:08 UTC 2022
-=======
-   Time                   Wed Aug 24 16:39:17 UTC 2022
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
+   Time                   Wed Sep 21 21:11:02 UTC 2022
    Common Schema          [PDS4_PDS_1H00.xsd]
    Common Schematron      [PDS4_PDS_1H00.sch]
    IM Version Id:         1.17.0.0
@@ -33,15 +29,9 @@ Parameters:
    Merge with Master      false
 
 Summary:
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    Classes                5
    Attributes             57
    Associations           61
-=======
-   Classes                4
-   Attributes             30
-   Associations           33
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -72,14 +62,11 @@ Parsed Input - Header:
 	Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
 	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
 	Made some attributes nillable or optional
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
 	
 	v0.3.0.0  2022-09-20
 	Continuing to develop content, in advance of any use of this LDD.
 	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
 	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
     
    Last Modification Time 2022-09-20
    PDS4 Merge Flag        false
@@ -91,11 +78,7 @@ Parsed Input - Attributes:
    value data type        ASCII_Text_Preserved
    description            The "VICAR-1" label that was originally attached to the image. Information on how to decode this text can be found at @@@@@@. To the extent possible, the information is captured in the attached VICAR-2 header and/or the PDS4 XML label. This VICAR-1 legacy label is being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    name                   legacy_label_compression_state
-=======
-   name                   compression_state
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            Whether the image compression mode was operating.
@@ -139,38 +122,22 @@ Parsed Input - Attributes:
    name                   fds_scet_epoch_1
    version                1.17
    value data type        ASCII_Short_String_Collapsed
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
-=======
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the 
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 
    name                   fds_scet_epoch_2
    version                1.17
    value data type        ASCII_Short_String_Collapsed
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
-=======
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the 
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 
    name                   fds_scet_epoch_3
    version                1.17
    value data type        ASCII_Short_String_Collapsed
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
-=======
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the 
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 
    name                   fds_scet_epoch_4
    version                1.17
    value data type        ASCII_Short_String_Collapsed
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
-=======
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. If there is uncertainty regarding the correct spacecraft_clock_count_partition, then this attribute will include the 
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 
    name                   filter_name
    version                1.17
@@ -185,7 +152,6 @@ Parsed Input - Attributes:
    maximum value          7
 
    name                   gain_mode_id
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            The gain state of an instrument. Gain is a constant value, set by the observer, that indicates the approximate number of photon-excited electrons registered by the detector that correlate to one "data number" (DN). Source Data Product Origin: Keyword GAIN_MODE_ID
@@ -212,14 +178,11 @@ Parsed Input - Attributes:
    description            Time period within the Voyager 1 or Voyager 2 mission, as defined by the mission team. Source Data Product Origin: Keyword MISSION_PHASE_NAME
 
    name                   pds_source_product_data_anomaly_type
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            Data recording anomalies in the image. This attribute, while required, is nillable. A nil_reason of missing indicates that it was missing from the source product, which in turn implies no anomalies were detected. In the source product, DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE
    nillable               true
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    name                   pds_source_product_description
    version                1.17
    value data type        ASCII_Short_String_Collapsed
@@ -229,12 +192,6 @@ Parsed Input - Attributes:
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            The observational intent of the image, as recorded in the original source product label. Source Data Product Origin: Keyword NOTE
-=======
-   name                   image_id
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach. Source Data Product Origin: Keyword IMAGE_ID
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
    nillable               true
 
    name                   pds_source_product_target_name
@@ -259,7 +216,6 @@ Parsed Input - Attributes:
    description            Signal-to-noise ratio as measured by the camera onboard. Original label parameter: SNR Source Data Product Origin: Legacy Header 
    minimum value          0
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    name                   spacecraft_clock_count_partition
    version                1.17
    value data type        ASCII_Short_String_Collapsed
@@ -272,9 +228,6 @@ Parsed Input - Attributes:
    description            The spacecraft clock value at the beginning of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. Source Data Product Origin: Keyword SPACECRAFT_CLOCK_START_COUNT
 
    name                   spacecraft_clock_stop_count
-=======
-   name                   lsb_truncate
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            The spacecraft clock value at the end of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. Source Data Product Origin: Keyword SPACECRAFT_CLOCK_STOP_COUNT
@@ -289,7 +242,6 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            Electronics cal status
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    name                   legacy_label_na_exposure_type
    version                1.17
    value data type        ASCII_Short_String_Collapsed
@@ -345,47 +297,12 @@ Parsed Input - Attributes:
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            Unknown
-=======
-   name                   pds_source_product_data_anomaly_type
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            Data recording anomalies in the image. If this keyword is missing [in the source data product], no anomalies were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE
-   nillable               true
-
-   name                   pds_source_product_description
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            A description of the image, as recorded in the original source product label. Source Data Product Origin: Keyword DESCRIPTION
-
-   name                   pds_source_product_note
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            The observational intent of the image, as recorded in the original source product label. Source Data Product Origin: Keyword NOTE
-   nillable               true
-
-   name                   pds_source_product_target_name
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            The value of TARGET_NAME as given in the source product label. The relationship between this value and the actual intentions of the observer is unknown. The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons. Source Data Product Origin: Keyword TARGET_NAME
-   nillable               true
-
-   name                   scan_mode_id
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            Scan rate of vidicon readout. The instrument scan rate affects the radiometric properties of the camera because of the dark current buildup on the vidicon. Values can be '1:1', '2:1', '3:1', '5:1', and '10:1'. Source Data Product Origin: Keyword SCAN_MODE_ID
-
-   name                   shutter_mode_id
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            Shutter mode. Indicates which camera was shuttered, Narrow Angle and/or Wide Angle. Source Data Product Origin: Keyword SHUTTER_MODE_ID
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 
    name                   legacy_label_wa_beam
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            Unknown
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    name                   legacy_label_wa_elec_cal
    version                1.17
    value data type        ASCII_Short_String_Collapsed
@@ -426,13 +343,6 @@ Parsed Input - Attributes:
    version                1.17
    value data type        ASCII_Short_String_Collapsed
    description            Unknown
-=======
-   name                   spacecraft_clock_count_partition
-   version                1.17
-   value data type        ASCII_Short_String_Collapsed
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four partitions. This attribute signifies which partition was in effect for this data product. 
-   nillable               true
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 
    name                   legacy_label_wa_shutter_exposure
    version                1.17
@@ -444,7 +354,6 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            Unknown
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
    name                   legacy_label_wa_shutter_open
    version                1.17
    value data type        ASCII_Short_String_Collapsed
@@ -474,8 +383,6 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            The mode within the Voyager ISS instrument of telemetry between the detector and the tape recorder.
 
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
 Parsed Input - Classes:
 
    name                   Voyager
@@ -520,7 +427,6 @@ Parsed Input - Classes:
    Associations
 
       local identifier      image_id
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -551,35 +457,21 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      edit_mode_id
-=======
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      filter_name
-=======
-      local identifier      image_number
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      filter_number
-=======
-      local identifier      earth_received_time
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      exposure_duration
-=======
-      local identifier      scan_mode_id
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -589,7 +481,6 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      pds_source_product_note
       minimum occurrences   1
       maximum occurrences   1
@@ -635,15 +526,6 @@ Parsed Input - Classes:
 
       local identifier      legacy_label_telemetry_mode
       minimum occurrences   0
-=======
-      local identifier      gain_mode_id
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      edit_mode_id
-      minimum occurrences   1
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       maximum occurrences   1
       reference type        attribute_of
 
@@ -662,7 +544,6 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      legacy_label_na_beam
       minimum occurrences   0
       maximum occurrences   1
@@ -724,32 +605,20 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      legacy_label_wa_beam
-=======
-      local identifier      signal_to_noise_ratio
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      legacy_label_wa_shutter_reset
-=======
-      local identifier      lsb_truncate
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      legacy_label_wa_shutter_open
-=======
-      local identifier      compression_state
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-<<<<<<< HEAD:build/development/cdff9b84fece30c2d6e21bf5bf0540b88a0dac45/1.17.0.0/PDS4_VGR_1H00_0100.txt
       local identifier      legacy_label_wa_shutter_close
       minimum occurrences   0
       maximum occurrences   1
@@ -782,25 +651,6 @@ Parsed Input - Classes:
 
       local identifier      legacy_label_wa_shutter_exposure
       minimum occurrences   0
-=======
-      local identifier      pds_source_product_target_name
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      pds_source_product_note
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      pds_source_product_description
-      minimum occurrences   1
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      pds_source_product_data_anomaly_type
-      minimum occurrences   1
->>>>>>> cd106b48c3ab932e90594ab79e8f093d831bd244:build/development/4e3c6985a5cbbffed69f13b9aba9f70032b112e9/1.17.0.0/PDS4_VGR_1H00_0100.txt
       maximum occurrences   1
       reference type        attribute_of
 
