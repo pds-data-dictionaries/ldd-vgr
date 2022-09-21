@@ -4,7 +4,7 @@
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.17.0.0" ,
       "LDD Version": "0.1.0.0" ,
-      "Date": "2022-06-10T16:04:57" ,
+      "Date": "2022-09-21T10:41:49" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "vgr:"] ,
       "classDictionary": [
@@ -21,86 +21,7 @@
             "description": "Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.Image_Description" ,
-                "title": "Image_Description" ,
-                "assocType": "component_of" ,
-                "isAttribute": "false" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1010" ,
-                "classId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.Image_State" ,
-                "title": "Image_State" ,
-                "assocType": "component_of" ,
-                "isAttribute": "false" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1020" ,
-                "classId": [
-                  "0001_NASA_PDS_1.vgr.Image_State"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.Instrument_State" ,
-                "title": "Instrument_State" ,
-                "assocType": "component_of" ,
-                "isAttribute": "false" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1030" ,
-                "classId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State"
-                 ]
-              }
-            }
-           ]
-          }
-        }
-      , {
-          "class": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description" ,
-            "title": "Image_Description" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.0.0.0" ,
-            "isAbstract": "false" ,
-            "isDeprecated": "false" ,
-            "description": "Attributes describing an image taken by the Voyager Imaging Science Subsystem (ISS) instrument."
-              , "associationList": [
-             {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_target_name" ,
-                "title": "source_product_target_name" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1010" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_target_name"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_id" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_id" ,
                 "title": "image_id" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -109,15 +30,31 @@
                 "groupName": "null" ,
                 "minimumCardinality": "1" ,
                 "maximumCardinality": "1" ,
-                "classOrder": "1020" ,
+                "classOrder": "1010" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_id"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.image_id"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_number" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_number" ,
                 "title": "image_number" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.image_number"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.earth_received_time" ,
+                "title": "earth_received_time" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -127,13 +64,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_number"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.earth_received_time"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_time" ,
-                "title": "image_time" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id" ,
+                "title": "scan_mode_id" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -143,13 +80,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_time"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.earth_received_time" ,
-                "title": "earth_received_time" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id" ,
+                "title": "shutter_mode_id" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -159,13 +96,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1050" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.earth_received_time"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.filter_name" ,
-                "title": "filter_name" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id" ,
+                "title": "gain_mode_id" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -175,13 +112,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1060" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.filter_name"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.filter_number" ,
-                "title": "filter_number" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id" ,
+                "title": "edit_mode_id" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -191,13 +128,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1070" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.filter_number"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.exposure_duration" ,
-                "title": "exposure_duration" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name" ,
+                "title": "filter_name" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -207,13 +144,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1080" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.exposure_duration"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_note" ,
-                "title": "source_product_note" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number" ,
+                "title": "filter_number" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -223,13 +160,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1090" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_note"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_description" ,
-                "title": "source_product_description" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration" ,
+                "title": "exposure_duration" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -239,13 +176,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1100" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_description"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.data_anomaly_type" ,
-                "title": "data_anomaly_type" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name" ,
+                "title": "pds_source_product_target_name" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -255,13 +192,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1110" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.data_anomaly_type"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.geometry_state" ,
-                "title": "geometry_state" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note" ,
+                "title": "pds_source_product_note" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -271,13 +208,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1120" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.geometry_state"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.companding" ,
-                "title": "companding" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description" ,
+                "title": "pds_source_product_description" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -287,7 +224,23 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1130" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_Description.vgr.companding"
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_data_anomaly_type" ,
+                "title": "pds_source_product_data_anomaly_type" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1140" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_data_anomaly_type"
                  ]
               }
             }
@@ -296,380 +249,493 @@
         }
       , {
           "class": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State" ,
-            "title": "Image_State" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label" ,
+            "title": "ISS_Legacy_Label" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "Information about an image taken by the Voyager Imaging Science Subsystem (ISS) instrument."
+            "description": "Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.gain_mode_id" ,
-                "title": "gain_mode_id" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio" ,
+                "title": "legacy_label_signal_to_noise_ratio" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.gain_mode_id"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.scan_mode_id" ,
-                "title": "scan_mode_id" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_threshold" ,
+                "title": "legacy_label_pixel_dn_average_threshold" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.scan_mode_id"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_threshold"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.edit_mode_id" ,
-                "title": "edit_mode_id" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_status" ,
+                "title": "legacy_label_pixel_dn_average_status" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.edit_mode_id"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_status"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.signal_to_noise_ratio" ,
-                "title": "signal_to_noise_ratio" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_lsb_truncate" ,
+                "title": "legacy_label_lsb_truncate" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.signal_to_noise_ratio"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_lsb_truncate"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.pixel_dn_average_threshold" ,
-                "title": "pixel_dn_average_threshold" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_telemetry_mode" ,
+                "title": "legacy_label_telemetry_mode" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1050" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.pixel_dn_average_threshold"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_telemetry_mode"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.pixel_dn_average_status" ,
-                "title": "pixel_dn_average_status" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_compression_state" ,
+                "title": "legacy_label_compression_state" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1060" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.pixel_dn_average_status"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_compression_state"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.shutter_mode_id" ,
-                "title": "shutter_mode_id" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_elec_cal" ,
+                "title": "legacy_label_na_elec_cal" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1070" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.shutter_mode_id"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_elec_cal"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.lsb_truncate" ,
-                "title": "lsb_truncate" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_image_type" ,
+                "title": "legacy_label_na_image_type" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1080" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.lsb_truncate"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_image_type"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.telemetry_mode" ,
-                "title": "telemetry_mode" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_beam" ,
+                "title": "legacy_label_na_beam" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1090" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.telemetry_mode"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_beam"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.compression_state" ,
-                "title": "compression_state" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_reset" ,
+                "title": "legacy_label_na_shutter_reset" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1100" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Image_State.vgr.compression_state"
-                 ]
-              }
-            }
-           ]
-          }
-        }
-      , {
-          "class": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State" ,
-            "title": "Instrument_State" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.0.0.0" ,
-            "isAbstract": "false" ,
-            "isDeprecated": "false" ,
-            "description": "Instrument settings for an observation."
-              , "associationList": [
-             {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.elec_cal" ,
-                "title": "elec_cal" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1010" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.elec_cal"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_reset"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.image_type" ,
-                "title": "image_type" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_open" ,
+                "title": "legacy_label_na_shutter_open" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1020" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.image_type"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.beam" ,
-                "title": "beam" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1030" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.beam"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_reset" ,
-                "title": "shutter_reset" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1040" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_reset"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_open" ,
-                "title": "shutter_open" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1050" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_open"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_close" ,
-                "title": "shutter_close" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1060" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_close"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.flood" ,
-                "title": "flood" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1070" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.flood"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.exposure_type" ,
-                "title": "exposure_type" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1080" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.exposure_type"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.filter_position" ,
-                "title": "filter_position" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1090" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.filter_position"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.filter_step" ,
-                "title": "filter_step" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1100" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.filter_step"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.g1_voltage_count" ,
-                "title": "g1_voltage_count" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1110" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.g1_voltage_count"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_open"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_exposure" ,
-                "title": "shutter_exposure" ,
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_close" ,
+                "title": "legacy_label_na_shutter_close" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1120" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_exposure"
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_close"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_flood" ,
+                "title": "legacy_label_na_flood" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1130" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_flood"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_exposure_type" ,
+                "title": "legacy_label_na_exposure_type" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1140" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_exposure_type"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_position" ,
+                "title": "legacy_label_na_filter_position" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1150" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_position"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_step" ,
+                "title": "legacy_label_na_filter_step" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1160" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_step"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_g1_voltage_count" ,
+                "title": "legacy_label_na_g1_voltage_count" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1170" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_g1_voltage_count"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_exposure" ,
+                "title": "legacy_label_na_shutter_exposure" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1180" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_exposure"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_elec_cal" ,
+                "title": "legacy_label_wa_elec_cal" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1190" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_elec_cal"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_image_type" ,
+                "title": "legacy_label_wa_image_type" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1200" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_image_type"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_beam" ,
+                "title": "legacy_label_wa_beam" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1210" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_beam"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_reset" ,
+                "title": "legacy_label_wa_shutter_reset" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1220" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_reset"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_open" ,
+                "title": "legacy_label_wa_shutter_open" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1230" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_open"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_close" ,
+                "title": "legacy_label_wa_shutter_close" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1240" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_close"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_flood" ,
+                "title": "legacy_label_wa_flood" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1250" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_flood"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_exposure_type" ,
+                "title": "legacy_label_wa_exposure_type" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1260" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_exposure_type"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_position" ,
+                "title": "legacy_label_wa_filter_position" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1270" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_position"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_step" ,
+                "title": "legacy_label_wa_filter_step" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1280" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_step"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_g1_voltage_count" ,
+                "title": "legacy_label_wa_g1_voltage_count" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1290" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_g1_voltage_count"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_exposure" ,
+                "title": "legacy_label_wa_shutter_exposure" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1300" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_exposure"
                  ]
               }
             }
@@ -752,6 +818,22 @@
                  ]
               }
             }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.vgr.Voyager.vgr.ISS_Legacy_Label" ,
+                "title": "ISS_Legacy_Label" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "0" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1050" ,
+                "classId": [
+                  "0001_NASA_PDS_1.vgr.ISS_Legacy_Label"
+                 ]
+              }
+            }
            ]
           }
         }
@@ -775,7 +857,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
@@ -791,7 +873,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
@@ -807,7 +889,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
@@ -823,7 +905,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
                 "attributeId": [
@@ -918,7 +1000,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1050" ,
                 "attributeId": [
@@ -934,7 +1016,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1060" ,
                 "attributeId": [
@@ -950,7 +1032,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1070" ,
                 "attributeId": [
@@ -966,7 +1048,7 @@
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
-                "minimumCardinality": "1" ,
+                "minimumCardinality": "0" ,
                 "maximumCardinality": "1" ,
                 "classOrder": "1080" ,
                 "attributeId": [
@@ -981,57 +1063,7 @@
     , "attributeDictionary": [
         {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.companding" ,
-            "title": "companding" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Definition needed." ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.data_anomaly_type" ,
-            "title": "data_anomaly_type" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Data recording anomalies in the image. If this keyword is missing [in the source data product], no anomalies were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE" ,
-            "isNillable": "true" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.earth_received_time" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.earth_received_time" ,
             "title": "earth_received_time" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1056,7 +1088,70 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.exposure_duration" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.edit_mode_id" ,
+            "title": "edit_mode_id" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Edit mode of the camera, indicates amount of data read from the vidicon. '1:1' indicates the full-resolution of the vidicon. Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'. Source Data Product Origin: Keyword EDIT_MODE_ID" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "1:1" ,
+                  "valueMeaning": "Vidicon readout was at full resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:10" ,
+                  "valueMeaning": "Vidicon readout was at one-tenth resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:2" ,
+                  "valueMeaning": "Vidicon readout was at one-half resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:3" ,
+                  "valueMeaning": "Vidicon readout was at one-third resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1:5" ,
+                  "valueMeaning": "Vidicon readout was at one-fifth resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "3:4" ,
+                  "valueMeaning": "Vidicon readout was at three-quarters resolution." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.exposure_duration" ,
             "title": "exposure_duration" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1081,7 +1176,7 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.filter_name" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_name" ,
             "title": "filter_name" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1162,7 +1257,7 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.filter_number" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.filter_number" ,
             "title": "filter_number" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1187,266 +1282,7 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.geometry_state" ,
-            "title": "geometry_state" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Definition needed." ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_id" ,
-            "title": "image_id" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach. Source Data Product Origin: Keyword IMAGE_ID" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_number" ,
-            "title": "image_number" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Flight Data Subsystem (FDS) clock count at time of image acquisition. There is a unique IMAGE_NUMBER for each image in a planetary encounter. The clock count is always a seven digit value, five digits to the left of the decimal point and two digits to the right of the decimal point. Source Data Product Origin: Keyword IMAGE_NUMBER" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Real" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "-1.7976931348623157e308" ,
-            "maximumValue": "1.7976931348623157e308" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.image_time" ,
-            "title": "image_time" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Time at which the image was acquired. The image_time element is duplicated from the source product label. It provides the time of shutter close calculated from spacecraft clock using both the coarse (seconds) and fine (subRTI) counters (UTC). (A subRTI is approximately 4 msec (1\/256 second)). The value is identical to that given in start_time_doy, and start_date_time. Although it is redundant, it is retained here for historical reasons. When the shutter was inhibited (ie SHUTTER_STATE_ID=”DISABLED”), the IMAGE_TIME = START_TIME = STOP_TIME, and all three represent the start of the exposure window during the prepare cycle of the image. Source Data Product Origin: Keyword IMAGE_TIME" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Date_Time_YMD_UTC" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Date_Time_YMD_UTC" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_description" ,
-            "title": "source_product_description" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "A description of the image, as recorded in the original source product label. Source Data Product Origin: Keyword DESCRIPTION" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_note" ,
-            "title": "source_product_note" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "The observational intent of the image, as recorded in the original source product label. Source Data Product Origin: Keyword NOTE" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_Description.vgr.source_product_target_name" ,
-            "title": "source_product_target_name" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "The value of TARGET_NAME as given in the source product label. The relationship between this value and the actual intentions of the observer is unknown. The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons. Source Data Product Origin: Keyword TARGET_NAME" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.compression_state" ,
-            "title": "compression_state" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Whether the image compression mode was operating." ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "N\/A" ,
-                  "valueMeaning": "@@@ I'm not sure what this would mean. @@@" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Off" ,
-                  "valueMeaning": "The Compression mode was off" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "On" ,
-                  "valueMeaning": "The Compression mode was on" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.edit_mode_id" ,
-            "title": "edit_mode_id" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Edit mode of the camera, indicates amount of data read from the vidicon. '1:1' indicates the full-resolution of the vidicon. Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'. Source Data Product Origin: Keyword EDIT_MODE_ID" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "IED" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "IEN" ,
-                  "valueMeaning": "From original label. Meaning unclear." ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.gain_mode_id" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.gain_mode_id" ,
             "title": "gain_mode_id" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1485,15 +1321,15 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.lsb_truncate" ,
-            "title": "lsb_truncate" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_id" ,
+            "title": "image_id" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Whether the LSB Truncation mode was operating. In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated." ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
+            "description": "Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach. Source Data Product Origin: Keyword IMAGE_ID" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
             "isDeprecated": "false" ,
             "dataType": "ASCII_Short_String_Collapsed" ,
             "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
@@ -1506,46 +1342,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "N\/A" ,
-                  "valueMeaning": "@@@ I'm not sure what this would mean. @@@" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Off" ,
-                  "valueMeaning": "The LSB Truncate mode was off" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "On" ,
-                  "valueMeaning": "The LSB Truncate mode was on" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
           }
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.pixel_dn_average_status" ,
-            "title": "pixel_dn_average_status" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.image_number" ,
+            "title": "image_number" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Definition needed" ,
+            "description": "Flight Data Subsystem (FDS) clock count at time of image acquisition. There is a unique IMAGE_NUMBER for each image in a planetary encounter. The clock count is always a seven digit value, five digits to the left of the decimal point and two digits to the right of the decimal point. Source Data Product Origin: Keyword IMAGE_NUMBER" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "dataType": "ASCII_Real" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Real" ,
             "minimumCharacters": "Unbounded" ,
             "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "1" ,
+            "minimumValue": "-1.7976931348623157e308" ,
+            "maximumValue": "1.7976931348623157e308" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
@@ -1555,22 +1371,22 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.pixel_dn_average_threshold" ,
-            "title": "pixel_dn_average_threshold" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_data_anomaly_type" ,
+            "title": "pds_source_product_data_anomaly_type" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Average pixel value, in DN." ,
-            "isNillable": "false" ,
+            "description": "Data recording anomalies in the image. If this keyword is missing [in the source data product], no anomalies were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE" ,
+            "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "255" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
@@ -1580,7 +1396,82 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.scan_mode_id" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_description" ,
+            "title": "pds_source_product_description" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "A description of the image, as recorded in the original source product label. Source Data Product Origin: Keyword DESCRIPTION" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_note" ,
+            "title": "pds_source_product_note" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "The observational intent of the image, as recorded in the original source product label. Source Data Product Origin: Keyword NOTE" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.pds_source_product_target_name" ,
+            "title": "pds_source_product_target_name" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "The value of TARGET_NAME as given in the source product label. The relationship between this value and the actual intentions of the observer is unknown. The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons. Source Data Product Origin: Keyword TARGET_NAME" ,
+            "isNillable": "true" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.scan_mode_id" ,
             "title": "scan_mode_id" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1637,7 +1528,7 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.shutter_mode_id" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS.vgr.shutter_mode_id" ,
             "title": "shutter_mode_id" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
@@ -1706,8 +1597,580 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.signal_to_noise_ratio" ,
-            "title": "signal_to_noise_ratio" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_compression_state" ,
+            "title": "legacy_label_compression_state" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Whether the image compression mode was operating." ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Off" ,
+                  "valueMeaning": "The Compression mode was off" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "On" ,
+                  "valueMeaning": "The Compression mode was on" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_lsb_truncate" ,
+            "title": "legacy_label_lsb_truncate" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Whether the LSB Truncation mode was operating. In this mode, only a certain number of the least significant bits are kept, while the bits corresponding to larger place values are truncated." ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N\/A" ,
+                  "valueMeaning": "@@@ I'm not sure what this would mean. @@@" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Off" ,
+                  "valueMeaning": "The LSB Truncate mode was off" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "On" ,
+                  "valueMeaning": "The LSB Truncate mode was on" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_beam" ,
+            "title": "legacy_label_na_beam" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_elec_cal" ,
+            "title": "legacy_label_na_elec_cal" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Electronics cal status" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_exposure_type" ,
+            "title": "legacy_label_na_exposure_type" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Prep" ,
+                  "valueMeaning": "Prep" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Read" ,
+                  "valueMeaning": "Read" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_position" ,
+            "title": "legacy_label_na_filter_position" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "A precursor to filter_name and filter_number" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_filter_step" ,
+            "title": "legacy_label_na_filter_step" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "A precursor to filter_name and filter_number" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_flood" ,
+            "title": "legacy_label_na_flood" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_g1_voltage_count" ,
+            "title": "legacy_label_na_g1_voltage_count" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_image_type" ,
+            "title": "legacy_label_na_image_type" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Prep" ,
+                  "valueMeaning": "Prep" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Read" ,
+                  "valueMeaning": "Read" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_close" ,
+            "title": "legacy_label_na_shutter_close" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_exposure" ,
+            "title": "legacy_label_na_shutter_exposure" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "End Long" ,
+                  "valueMeaning": "Unknown" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Normal" ,
+                  "valueMeaning": "Unknown" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Open" ,
+                  "valueMeaning": "Unknown" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Start Long" ,
+                  "valueMeaning": "Unknown" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_open" ,
+            "title": "legacy_label_na_shutter_open" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_na_shutter_reset" ,
+            "title": "legacy_label_na_shutter_reset" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_status" ,
+            "title": "legacy_label_pixel_dn_average_status" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "1" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_pixel_dn_average_threshold" ,
+            "title": "legacy_label_pixel_dn_average_threshold" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "255" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_signal_to_noise_ratio" ,
+            "title": "legacy_label_signal_to_noise_ratio" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
@@ -1731,8 +2194,8 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Image_State.vgr.telemetry_mode" ,
-            "title": "telemetry_mode" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_telemetry_mode" ,
+            "title": "legacy_label_telemetry_mode" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
@@ -1926,13 +2389,13 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.beam" ,
-            "title": "beam" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_beam" ,
+            "title": "legacy_label_wa_beam" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
+            "description": "Unknown" ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -1950,13 +2413,13 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "No" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "No" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Yes" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Yes" ,
                   "isDeprecated": "false"
                 }
              }
@@ -1965,8 +2428,8 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.elec_cal" ,
-            "title": "elec_cal" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_elec_cal" ,
+            "title": "legacy_label_wa_elec_cal" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
@@ -1989,13 +2452,13 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "No" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "No" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Yes" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Yes" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2004,166 +2467,13 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.exposure_type" ,
-            "title": "exposure_type" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_exposure_type" ,
+            "title": "legacy_label_wa_exposure_type" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "Auto" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Manual" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.filter_position" ,
-            "title": "filter_position" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Definition needed. How is this different from filter step? Bob's description indicates that perhaps there should be an attribute with an enumerated list being one or the other." ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "7" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.filter_step" ,
-            "title": "filter_step" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Definition needed. How is this different from filter position? Bob's description indicates that perhaps there should be an attribute with an enumerated list being one or the other." ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "7" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.flood" ,
-            "title": "flood" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          , "PermissibleValueList": [
-              {"PermissibleValue": {
-                  "value": "No" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
-                  "isDeprecated": "false"
-                }
-             }
-            , {"PermissibleValue": {
-                  "value": "Yes" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
-                  "isDeprecated": "false"
-                }
-             }
-           ]
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.g1_voltage_count" ,
-            "title": "g1_voltage_count" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "Definition needed. Bob's spreadsheet says \"NG1=* means omit label\". What does this mean? Is that one of the 8 currently possible values, or another one?" ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Integer" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
-            "minimumCharacters": "Unbounded" ,
-            "maximumCharacters": "Unbounded" ,
-            "minimumValue": "0" ,
-            "maximumValue": "7" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.image_type" ,
-            "title": "image_type" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "vgr" ,
-            "steward": "rings" ,
-            "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
+            "description": "Unknown" ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -2181,13 +2491,13 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "Prep" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Prep" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Read" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Read" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2196,13 +2506,63 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_close" ,
-            "title": "shutter_close" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_position" ,
+            "title": "legacy_label_wa_filter_position" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
+            "description": "A precursor to filter_name and filter_number" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_filter_step" ,
+            "title": "legacy_label_wa_filter_step" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "A precursor to filter_name and filter_number" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_flood" ,
+            "title": "legacy_label_wa_flood" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -2220,13 +2580,13 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "No" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "No" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Yes" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Yes" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2235,13 +2595,116 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_exposure" ,
-            "title": "shutter_exposure" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_g1_voltage_count" ,
+            "title": "legacy_label_wa_g1_voltage_count" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "false" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "0" ,
+            "maximumValue": "7" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_image_type" ,
+            "title": "legacy_label_wa_image_type" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Prep" ,
+                  "valueMeaning": "Prep" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Read" ,
+                  "valueMeaning": "Read" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_close" ,
+            "title": "legacy_label_wa_shutter_close" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
+            "isNillable": "false" ,
+            "isEnumerated": "true" ,
+            "isDeprecated": "false" ,
+            "dataType": "ASCII_Short_String_Collapsed" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
+            "minimumCharacters": "1" ,
+            "maximumCharacters": "255" ,
+            "minimumValue": "Unbounded" ,
+            "maximumValue": "Unbounded" ,
+            "pattern": "null" ,
+            "unitOfMeasure": "null" ,
+            "unitOfMeasureId": "null" ,
+            "unitId": "null" ,
+            "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "No" ,
+                  "valueMeaning": "No" ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Yes" ,
+                  "valueMeaning": "Yes" ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
+          }
+        }
+      , {
+          "attribute": {
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_exposure" ,
+            "title": "legacy_label_wa_shutter_exposure" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "vgr" ,
+            "steward": "rings" ,
+            "versionId": "1.17" ,
+            "description": "Unknown" ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -2259,25 +2722,25 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "End Long" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Unknown" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Normal" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Unknown" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Open" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Unknown" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Start Long" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Unknown" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2286,13 +2749,13 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_open" ,
-            "title": "shutter_open" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_open" ,
+            "title": "legacy_label_wa_shutter_open" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
+            "description": "Unknown" ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -2310,13 +2773,13 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "No" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "No" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Yes" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Yes" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2325,13 +2788,13 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.vgr.Instrument_State.vgr.shutter_reset" ,
-            "title": "shutter_reset" ,
+            "identifier": "0001_NASA_PDS_1.vgr.ISS_Legacy_Label.vgr.legacy_label_wa_shutter_reset" ,
+            "title": "legacy_label_wa_shutter_reset" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "@@@ Need something here @@@ Source Data Product Origin: Legacy Header " ,
+            "description": "Unknown" ,
             "isNillable": "false" ,
             "isEnumerated": "true" ,
             "isDeprecated": "false" ,
@@ -2349,13 +2812,13 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "No" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "No" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Yes" ,
-                  "valueMeaning": "@@@ Need something here @@@" ,
+                  "valueMeaning": "Yes" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2370,7 +2833,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "The now-obsolete \"VICAR-1\" label that was originally attached to the image. To the extent possible, the information is captured in normal VICAR-2 and PDS4 labels. The labels are being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels." ,
+            "description": "The \"VICAR-1\" label that was originally attached to the image. Information on how to decode this text can be found at @@@@@@. To the extent possible, the information is captured in the attached VICAR-2 header and\/or the PDS4 XML label. This VICAR-1 legacy label is being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2395,7 +2858,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Name of the DSN station where the image was received Source Data Product Origin: Legacy Header " ,
+            "description": "Name of the DSN station where the image was received Source Data Product Origin: DSN_STATION_NAME" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2420,7 +2883,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Numeric ID of DSN station where the image was received Source Data Product Origin: Legacy Header " ,
+            "description": "Numeric ID of DSN station where the image was received Source Data Product Origin: DSN_STATION_NUMBER" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2445,7 +2908,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "File number within the tape where the image was originally stored Source Data Product Origin: Legacy Header " ,
+            "description": "File number within the tape where the image was originally stored Source Data Product Origin: EDR_FILE_NUMBER" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2470,7 +2933,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Tape ID on which the image was originally stored Source Data Product Origin: Legacy Header " ,
+            "description": "Tape ID on which the image was originally stored Source Data Product Origin: EDR_TAPE_ID" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2495,7 +2958,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Spacecraft Event Time (SCET) for the first FDS count rollover epoch." ,
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2520,7 +2983,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Spacecraft Event Time (SCET) for the second FDS count rollover epoch." ,
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2545,7 +3008,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Spacecraft Event Time (SCET) for the third FDS count rollover epoch." ,
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2570,7 +3033,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "Spacecraft Event Time (SCET) for the fourth FDS count rollover epoch." ,
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the " ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -2613,25 +3076,25 @@
           , "PermissibleValueList": [
               {"PermissibleValue": {
                   "value": "Earth-Jupiter Cruise" ,
-                  "valueMeaning": "The period of cruise from Earth to Jupiter. For Voyager 1 this is 1977-09-05 to 1979-01-06. For Voyager 2 this is 1977-08-20 to 1979-04-25." ,
+                  "valueMeaning": "The period of cruise from Earth to Jupiter. For Voyager 1 this is 1977-09-06T00:00 to 1979-01-06T12:00. For Voyager 2 this is 1977-08-20T00:00 to 1979-04-25T12:00." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Interstellar Mission" ,
-                  "valueMeaning": "The period from the final planetary encounter to the end of the mission. For Voyager 1 this is 1980-12-14 to End of Mission. For Voyager 2 this is 1989-10-02 to End of Mission." ,
+                  "valueMeaning": "The period from the final planetary encounter to the end of the mission. For Voyager 1 this is 1980-12-14T12:00 to End of Mission. For Voyager 2 this is 1989-10-02T12:00 to End of Mission." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Jupiter Encounter" ,
-                  "valueMeaning": "The period surrounding the Jupiter Encounter. For Voyager 1 this is 1979-01-06 to 1979-04-13. For Voyager 2 this is 1979-04-25 to 1979-08-05." ,
+                  "valueMeaning": "The period surrounding the Jupiter Encounter. For Voyager 1 this is 1979-01-06T12:00 to 1979-04-13T12:00. For Voyager 2 this is 1979-04-25T12:00 to 1979-08-05T12:00." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Jupiter-Saturn Cruise" ,
-                  "valueMeaning": "The period of cruise from Jupiter to Saturn. For Voyager 1 this is 1979-04-13 to 1980-08-22. For Voyager 2 this is 1979-08-05 to 1981-06-05." ,
+                  "valueMeaning": "The period of cruise from Jupiter to Saturn. For Voyager 1 this is 1979-04-13T12:00 to 1980-08-22T12:00. For Voyager 2 this is 1979-08-05T12:00 to 1981-06-05T12:00." ,
                   "isDeprecated": "false"
                 }
              }
@@ -2643,31 +3106,31 @@
              }
             , {"PermissibleValue": {
                   "value": "Neptune Encounter" ,
-                  "valueMeaning": "The period surrounding the Neptune Encounter. This does not apply to Voyager 1. For Voyager 2 this is 1989-06-05 to 1989-10-02." ,
+                  "valueMeaning": "The period surrounding the Neptune Encounter. This does not apply to Voyager 1. For Voyager 2 this is 1989-06-05T12:00 to 1989-10-02T12:00." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Saturn Encounter" ,
-                  "valueMeaning": "The period surrounding the Saturn Encounter. For Voyager 1 this is 1980-08-22 to 1980-12-14. For Voyager 2 this is 1981-06-05 to 1981-09-25." ,
+                  "valueMeaning": "The period surrounding the Saturn Encounter. For Voyager 1 this is 1980-08-22T12:00 to 1980-12-14T12:00. For Voyager 2 this is 1981-06-05T12:00 to 1981-09-25T12:00." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Saturn-Uranus Cruise" ,
-                  "valueMeaning": "The period of cruise from Saturn to Uranus. This does not apply to Voyager 1. For Voyager 2 this is 1981-09-25 to 1985-11-04" ,
+                  "valueMeaning": "The period of cruise from Saturn to Uranus. This does not apply to Voyager 1. For Voyager 2 this is 1981-09-25T12:00 to 1985-11-04T12:00" ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Uranus Encounter" ,
-                  "valueMeaning": "The period surrounding the Uranus Encounter. This does not apply to Voyager 1. For Voyager 2 this is 1985-11-04 to 1986-02-25." ,
+                  "valueMeaning": "The period surrounding the Uranus Encounter. This does not apply to Voyager 1. For Voyager 2 this is 1985-11-04T12:00 to 1986-02-25T12:00." ,
                   "isDeprecated": "false"
                 }
              }
             , {"PermissibleValue": {
                   "value": "Uranus-Neptune Cruise" ,
-                  "valueMeaning": "The period of cruise from Uranus to Neptune. This does not apply to Voyager 1. For Voyager 2 this is 1986-02-25 to 1989-06-05." ,
+                  "valueMeaning": "The period of cruise from Uranus to Neptune. This does not apply to Voyager 1. For Voyager 2 this is 1986-02-25T12:00 to 1989-06-05T12:00." ,
                   "isDeprecated": "false"
                 }
              }
@@ -2682,7 +3145,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into four " ,
+            "description": "The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. This attribute signifies which FDS partition was in effect for this data product. " ,
             "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
