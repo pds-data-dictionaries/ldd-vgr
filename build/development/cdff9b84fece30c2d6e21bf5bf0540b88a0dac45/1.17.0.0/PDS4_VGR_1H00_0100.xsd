@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 17:51:32 UTC 2022 -->
+  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 18:06:08 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -76,6 +76,7 @@
     <!-- <xs:assert test="vgr:gain_mode_id = ('High', 'Low')"/> -->
     <!-- <xs:assert test="vgr:edit_mode_id = ('1:1', '1:10', '1:2', '1:3', '1:5', '3:4')"/> -->
     <!-- <xs:assert test="vgr:filter_name = ('Blue', 'CH4/JS', 'CH4/U', 'Clear', 'Green', 'Orange', 'Sodium', 'UV', 'Violet')"/> -->
+    <!-- <xs:assert test="vgr:pds_source_product_data_anomaly_type = ('RAM_Data_Corruption')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 
@@ -773,12 +774,14 @@
 
   <xs:complexType name="pds_source_product_data_anomaly_type">
     <xs:annotation>
-      <xs:documentation>Data recording anomalies in the image. If this
-        keyword is missing [in the source data product], no anomalies
-        were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates
-        that spurious values exist in the image data due to corruption
-        of the random access memory onboard the spacecraft. Source Data
-        Product Origin: Keyword DATA_ANOMALY_TYPE</xs:documentation>
+      <xs:documentation>Data recording anomalies in the image. This
+        attribute, while required, is nillable. A nil_reason of missing
+        indicates that it was missing from the source product, which in
+        turn implies no anomalies were detected. In the source product,
+        DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious
+        values exist in the image data due to corruption of the random
+        access memory onboard the spacecraft. Source Data Product
+        Origin: Keyword DATA_ANOMALY_TYPE</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="pds:ASCII_Short_String_Collapsed">

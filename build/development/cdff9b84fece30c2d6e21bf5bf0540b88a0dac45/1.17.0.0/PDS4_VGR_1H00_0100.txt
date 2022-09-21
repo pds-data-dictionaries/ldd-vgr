@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Sep 21 17:51:32 UTC 2022
+   Time                   Wed Sep 21 18:06:08 UTC 2022
    Common Schema          [PDS4_PDS_1H00.xsd]
    Common Schematron      [PDS4_PDS_1H00.sch]
    IM Version Id:         1.17.0.0
@@ -180,7 +180,7 @@ Parsed Input - Attributes:
    name                   pds_source_product_data_anomaly_type
    version                1.17
    value data type        ASCII_Short_String_Collapsed
-   description            Data recording anomalies in the image. If this keyword is missing [in the source data product], no anomalies were detected. DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE
+   description            Data recording anomalies in the image. This attribute, while required, is nillable. A nil_reason of missing indicates that it was missing from the source product, which in turn implies no anomalies were detected. In the source product, DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. Source Data Product Origin: Keyword DATA_ANOMALY_TYPE
    nillable               true
 
    name                   pds_source_product_description

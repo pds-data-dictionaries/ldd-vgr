@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 17:51:32 UTC 2022 -->
+  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 18:06:08 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -44,6 +44,13 @@
       <sch:assert test=". = ('High', 'Low')">
         <title>vgr:ISS/vgr:gain_mode_id/vgr:gain_mode_id</title>
         The attribute vgr:ISS/vgr:gain_mode_id must be equal to one of the following values 'High', 'Low'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="vgr:ISS/vgr:pds_source_product_data_anomaly_type">
+      <sch:assert test="if (not(@xsi:nil eq 'true') and (not(. = ('RAM_Data_Corruption')))) then false() else true()">
+        <title>vgr:ISS/vgr:pds_source_product_data_anomaly_type/vgr:pds_source_product_data_anomaly_type</title>
+        The attribute vgr:ISS/vgr:pds_source_product_data_anomaly_type must be nulled or equal to the value 'RAM_Data_Corruption'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

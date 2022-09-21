@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.17.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.23
->>  INFO Date: Wed Sep 21 17:51:32 UTC 2022
+>>  INFO Date: Wed Sep 21 18:06:08 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-14.1.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.1.0/lib
@@ -31,10 +31,9 @@
 >>> INFO Attribute: <legacy_label_pixel_dn_average_threshold> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <legacy_label_pixel_dn_average_threshold> - The default maximum value provided by the attribute's data type is being overridden with 255
 >>> WARNING Init:  - Config.Properties Namespace Id Not Found:vgr
->>> WARNING Attribute: <pds_source_product_data_anomaly_type> - The 'type' attribute must have at least one permissible value.
 
  -- LDDTool Execution Summary --
-     2 warning(s)
+     1 warning(s)
      0 error(s)
      0 fatal error(s)
 
