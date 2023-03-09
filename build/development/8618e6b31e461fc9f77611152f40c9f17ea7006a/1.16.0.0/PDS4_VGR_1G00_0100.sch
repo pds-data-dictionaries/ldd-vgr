@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.1.0.0 - Wed Sep 21 21:11:02 UTC 2022 -->
-  <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
+  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.1.0.0 - Thu Mar 09 19:17:37 UTC 2023 -->
+  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -97,9 +97,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="vgr:ISS_Legacy_Label/vgr:legacy_label_na_exposure_type">
-      <sch:assert test=". = ('Prep', 'Read')">
+      <sch:assert test=". = ('Manual', 'Prep', 'Read')">
         <title>vgr:ISS_Legacy_Label/vgr:legacy_label_na_exposure_type/vgr:legacy_label_na_exposure_type</title>
-        The attribute vgr:ISS_Legacy_Label/vgr:legacy_label_na_exposure_type must be equal to one of the following values 'Prep', 'Read'.</sch:assert>
+        The attribute vgr:ISS_Legacy_Label/vgr:legacy_label_na_exposure_type must be equal to one of the following values 'Manual', 'Prep', 'Read'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -167,9 +167,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="vgr:ISS_Legacy_Label/vgr:legacy_label_wa_exposure_type">
-      <sch:assert test=". = ('Prep', 'Read')">
+      <sch:assert test=". = ('Manual', 'Prep', 'Read')">
         <title>vgr:ISS_Legacy_Label/vgr:legacy_label_wa_exposure_type/vgr:legacy_label_wa_exposure_type</title>
-        The attribute vgr:ISS_Legacy_Label/vgr:legacy_label_wa_exposure_type must be equal to one of the following values 'Prep', 'Read'.</sch:assert>
+        The attribute vgr:ISS_Legacy_Label/vgr:legacy_label_wa_exposure_type must be equal to one of the following values 'Manual', 'Prep', 'Read'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
