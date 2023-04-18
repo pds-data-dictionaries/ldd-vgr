@@ -46,6 +46,7 @@
   Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
   Updated definition and nillable_flag for spacecraft_clock_count_partition. 
   Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+  Added an enumerated value for edit_mode_id
     </comment>
     <last_modification_date_time>2023-04-17</last_modification_date_time>
 
@@ -146,6 +147,10 @@
       <DD_Permissible_Value>
         <value>3:4</value>
         <value_meaning>Vidicon readout was at three-quarters resolution.</value_meaning><!--It would be good for someone to check that I am interpreting these correctly. MST-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>2:3</value>
+        <value_meaning>Vidicon readout was at two-thirds resolution.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>1:2</value>
