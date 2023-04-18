@@ -42,11 +42,11 @@
 	v0.3.1.0  2023-03-09
 	Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
 
-v0.4.0.0  2023-04-18
-Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
-Updated definition and nillable_flag for spacecraft_clock_count_partition. 
-Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
-Added an enumerated value for edit_mode_id
+        v0.4.0.0  2023-04-18
+        Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+        Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+        Added an enumerated value for edit_mode_id
     </comment>
     <last_modification_date_time>2023-04-18</last_modification_date_time>
 
