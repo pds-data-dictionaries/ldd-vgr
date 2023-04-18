@@ -9,7 +9,7 @@
   xsi:schemaLocation=
    "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd"> 
 
-    <name>Voyager Mission Submodel</name>
+    <name>Voyager Mission Dictionary</name>
     <ldd_version_id>0.1.0.0</ldd_version_id>
     <dictionary_type>Mission</dictionary_type>
     <full_name>Matthew Tiscareno</full_name>
@@ -39,10 +39,16 @@
 	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
 	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
 
-	v0.3.1.0  2022-03-09
+	v0.3.1.0  2023-03-09
 	Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
+
+        v0.4.0.0  2023-04-18
+        Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+        Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+        Added an enumerated value for edit_mode_id
     </comment>
-    <last_modification_date_time>2022-09-20</last_modification_date_time>
+    <last_modification_date_time>2023-04-18</last_modification_date_time>
 
   <!-- Attributes START -->
 
@@ -143,6 +149,10 @@
         <value_meaning>Vidicon readout was at three-quarters resolution.</value_meaning><!--It would be good for someone to check that I am interpreting these correctly. MST-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
+        <value>2:3</value>
+        <value_meaning>Vidicon readout was at two-thirds resolution.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
         <value>1:2</value>
         <value_meaning>Vidicon readout was at one-half resolution.</value_meaning>
       </DD_Permissible_Value>
@@ -210,11 +220,11 @@
     <local_identifier>fds_scet_epoch_1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the first FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -224,11 +234,11 @@
     <local_identifier>fds_scet_epoch_2</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the second FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 2.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -238,11 +248,11 @@
     <local_identifier>fds_scet_epoch_3</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the third FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 3.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -252,11 +262,11 @@
     <local_identifier>fds_scet_epoch_4</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the <!--what exactly?--> as it would be if the fourth FDS partition is the applicable one.<!--Exactly which attribute is used if there is no uncertainty?  spacecraft_clock_start?  spacecraft_clock_stop?  something else?--></definition>
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 4.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?</pattern><!--Bob's spreadsheet says the format is date_time, but the definition indicates this should have the same format as spacecraft_clock_* attributes.-->
+      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -461,7 +471,7 @@
     <name>pds_source_product_data_anomaly_type</name>
     <version_id>1.0</version_id>
     <local_identifier>pds_source_product_data_anomaly_type</local_identifier>
-    <nillable_flag>true</nillable_flag><!--I am quite willing to set other attributes as nillable, if we know or have reason to believe that they will be absent in some data products.-->
+    <nillable_flag>true</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>Data recording anomalies in the image.  This attribute, while required, is nillable.  A nil_reason of missing indicates that it was missing from the source product, which in turn implies no anomalies were detected.
     In the source product, DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft.
@@ -614,9 +624,9 @@
     <name>spacecraft_clock_count_partition</name>
     <version_id>1.0</version_id>
     <local_identifier>spacecraft_clock_count_partition</local_identifier>
-    <nillable_flag>true</nillable_flag>
+    <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  This attribute signifies which FDS partition was in effect for this data product.  <!--Perhaps more here-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions.  This attribute signifies which FDS partition was in effect for this data product.  A value of 0 indicates the partition is unknown.
     Source Data Product Origin:  @@@ Need something here @@@</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -632,6 +642,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The spacecraft clock value at the beginning of a time period of interest.  Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. 
+      The format is n/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown).      
     Source Data Product Origin:  Keyword SPACECRAFT_CLOCK_START_COUNT</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -647,6 +658,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
     <definition>The spacecraft clock value at the end of a time period of interest.  Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. 
+      The format is n/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown).      
     Source Data Product Origin:  Keyword SPACECRAFT_CLOCK_STOP_COUNT</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Thu Mar 09 19:17:26 UTC 2023 -->
+  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Tue Apr 18 18:06:18 UTC 2023 -->
   <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.17.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 0.1.0.0 - vgr: - Voyager Mission Submodel                                 -->
+  <!-- 0.1.0.0 - vgr: - Voyager Mission Dictionary                               -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/mission/vgr/v0"
@@ -43,8 +43,14 @@
 	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
 	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
 
-	v0.3.1.0  2022-03-09
+	v0.3.1.0  2023-03-09
 	Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
+
+        v0.4.0.0  2023-04-18
+        Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+        Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+        Added an enumerated value for edit_mode_id
     
     </xs:documentation>
   </xs:annotation>
@@ -77,7 +83,7 @@
     <!-- <xs:assert test="vgr:scan_mode_id = ('10:1', '1:1', '2:1', '3:1', '5:1')"/> -->
     <!-- <xs:assert test="vgr:shutter_mode_id = ('BODARK', 'BOTALT', 'BOTSIM', 'BSIMAN', 'NAONLY', 'NOSHUT', 'WAONLY')"/> -->
     <!-- <xs:assert test="vgr:gain_mode_id = ('High', 'Low')"/> -->
-    <!-- <xs:assert test="vgr:edit_mode_id = ('1:1', '1:10', '1:2', '1:3', '1:5', '3:4')"/> -->
+    <!-- <xs:assert test="vgr:edit_mode_id = ('1:1', '1:10', '1:2', '1:3', '1:5', '2:3', '3:4')"/> -->
     <!-- <xs:assert test="vgr:filter_name = ('Blue', 'CH4/JS', 'CH4/U', 'Clear', 'Green', 'Orange', 'Sodium', 'UV', 'Violet')"/> -->
     <!-- <xs:assert test="vgr:pds_source_product_data_anomaly_type = ('RAM_Data_Corruption')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
@@ -184,7 +190,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="mission_phase_name" type="vgr:mission_phase_name" minOccurs="1" maxOccurs="unbounded"> </xs:element>
-      <xs:element name="spacecraft_clock_count_partition" nillable="true" type="vgr:spacecraft_clock_count_partition" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="spacecraft_clock_count_partition" type="vgr:spacecraft_clock_count_partition" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="spacecraft_clock_start_count" type="vgr:spacecraft_clock_start_count" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="spacecraft_clock_stop_count" type="vgr:spacecraft_clock_stop_count" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="fds_scet_epoch_1" type="vgr:fds_scet_epoch_1" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -301,13 +307,15 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
-        dividing each mission into FDS partitions. If there is
-        uncertainty regarding the correct FDS partition (that is, the
-        correct value of spacecraft_clock_count_partition), then this
-        attribute will include the </xs:documentation>
+        dividing each mission into FDS partitions, which count starting
+        at 1. If there is uncertainty regarding the correct FDS
+        partition (that is, the correct value of
+        spacecraft_clock_count_partition), then this attribute indicates
+        what the SCET (that is, start_date_time) would be if the
+        partition were 1.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
+    	<xs:pattern value='YYYY-MM-DDTHH:MM:SS.SSSSSSZ'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -317,13 +325,15 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
-        dividing each mission into FDS partitions. If there is
-        uncertainty regarding the correct FDS partition (that is, the
-        correct value of spacecraft_clock_count_partition), then this
-        attribute will include the </xs:documentation>
+        dividing each mission into FDS partitions, which count starting
+        at 1. If there is uncertainty regarding the correct FDS
+        partition (that is, the correct value of
+        spacecraft_clock_count_partition), then this attribute indicates
+        what spacecraft_clock_start_count would be if the partition were
+        2.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
+    	<xs:pattern value='YYYY-MM-DDTHH:MM:SS.SSSSSSZ'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -333,13 +343,15 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
-        dividing each mission into FDS partitions. If there is
-        uncertainty regarding the correct FDS partition (that is, the
-        correct value of spacecraft_clock_count_partition), then this
-        attribute will include the </xs:documentation>
+        dividing each mission into FDS partitions, which count starting
+        at 1. If there is uncertainty regarding the correct FDS
+        partition (that is, the correct value of
+        spacecraft_clock_count_partition), then this attribute indicates
+        what spacecraft_clock_start_count would be if the partition were
+        3.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
+    	<xs:pattern value='YYYY-MM-DDTHH:MM:SS.SSSSSSZ'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -349,13 +361,15 @@
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
-        dividing each mission into FDS partitions. If there is
-        uncertainty regarding the correct FDS partition (that is, the
-        correct value of spacecraft_clock_count_partition), then this
-        attribute will include the </xs:documentation>
+        dividing each mission into FDS partitions, which count starting
+        at 1. If there is uncertainty regarding the correct FDS
+        partition (that is, the correct value of
+        spacecraft_clock_count_partition), then this attribute indicates
+        what spacecraft_clock_start_count would be if the partition were
+        4.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-    	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
+    	<xs:pattern value='YYYY-MM-DDTHH:MM:SS.SSSSSSZ'/>
      <xs:minLength value="1"/>
      <xs:maxLength value="255"/>
 	   </xs:restriction>
@@ -862,20 +876,22 @@
 	   </xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="spacecraft_clock_count_partition">
+  <xs:simpleType name="spacecraft_clock_count_partition">
     <xs:annotation>
       <xs:documentation>The Voyager spacecraft clock, known as the
         Flight Data System (FDS), was reset to zero multiple times,
         dividing each mission into FDS partitions. This attribute
         signifies which FDS partition was in effect for this data
-        product. </xs:documentation>
+        product. A value of 0 indicates the partition is unknown. Source
+        Data Product Origin: @@@ Need something here
+        @@@</xs:documentation>
     </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="pds:ASCII_Short_String_Collapsed">
-        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+    	<xs:pattern value='[0-9]?[0-9]/[0-9]{5}:[0-9]{2}(:[0-9]{3})?'/>
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="spacecraft_clock_start_count">
     <xs:annotation>
@@ -883,7 +899,11 @@
         time period of interest. Voyager used the term Flight Data
         System (FDS) for this quantity, which is equivalent to the term
         spacecraft clock (SCLK) more commonly used by subsequent
-        missions. Source Data Product Origin: Keyword
+        missions. The format is n/sssss:dd:mmm where n is the partition
+        (0 if unknown), sssss is the FDS count (48 minutes per count for
+        sssss), dd is units of 1/60 an FDS count (that is, 48 seconds
+        per count for dd), and mmm is an optional fraction of dd (unused
+        and value unknown). Source Data Product Origin: Keyword
         SPACECRAFT_CLOCK_START_COUNT</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
@@ -899,7 +919,11 @@
         period of interest. Voyager used the term Flight Data System
         (FDS) for this quantity, which is equivalent to the term
         spacecraft clock (SCLK) more commonly used by subsequent
-        missions. Source Data Product Origin: Keyword
+        missions. The format is n/sssss:dd:mmm where n is the partition
+        (0 if unknown), sssss is the FDS count (48 minutes per count for
+        sssss), dd is units of 1/60 an FDS count (that is, 48 seconds
+        per count for dd), and mmm is an optional fraction of dd (unused
+        and value unknown). Source Data Product Origin: Keyword
         SPACECRAFT_CLOCK_STOP_COUNT</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">

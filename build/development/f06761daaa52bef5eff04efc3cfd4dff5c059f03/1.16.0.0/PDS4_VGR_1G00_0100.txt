@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.1.2
+   LDDTool Version        14.1.3
    LDD Version Id:        0.1.0.0
    LDD Label Version Id:  1.22
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Mar 09 19:17:37 UTC 2023
+   Time                   Tue Apr 18 18:06:20 UTC 2023
    Common Schema          [PDS4_PDS_1G00.xsd]
    Common Schematron      [PDS4_PDS_1G00.sch]
    IM Version Id:         1.16.0.0
@@ -39,7 +39,7 @@ Summary:
 Detailed validation messages
 
 Parsed Input - Header:
-   LDD Name               Voyager Mission Submodel
+   LDD Name               Voyager Mission Dictionary
    LDD Version            0.1.0.0
    Full Name              Matthew Tiscareno
    Steward                rings
@@ -68,10 +68,16 @@ Parsed Input - Header:
 	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
 	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
 
-	v0.3.1.0  2022-03-09
+	v0.3.1.0  2023-03-09
 	Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
+
+        v0.4.0.0  2023-04-18
+        Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+        Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+        Added an enumerated value for edit_mode_id
     
-   Last Modification Time 2022-09-20
+   Last Modification Time 2023-04-18
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -125,22 +131,22 @@ Parsed Input - Attributes:
    name                   fds_scet_epoch_1
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.
 
    name                   fds_scet_epoch_2
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 2.
 
    name                   fds_scet_epoch_3
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 3.
 
    name                   fds_scet_epoch_4
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute will include the 
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 4.
 
    name                   filter_name
    version                1.16
@@ -222,18 +228,17 @@ Parsed Input - Attributes:
    name                   spacecraft_clock_count_partition
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. This attribute signifies which FDS partition was in effect for this data product. 
-   nillable               true
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. This attribute signifies which FDS partition was in effect for this data product. A value of 0 indicates the partition is unknown. Source Data Product Origin: @@@ Need something here @@@
 
    name                   spacecraft_clock_start_count
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The spacecraft clock value at the beginning of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. Source Data Product Origin: Keyword SPACECRAFT_CLOCK_START_COUNT
+   description            The spacecraft clock value at the beginning of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Source Data Product Origin: Keyword SPACECRAFT_CLOCK_START_COUNT
 
    name                   spacecraft_clock_stop_count
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            The spacecraft clock value at the end of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. Source Data Product Origin: Keyword SPACECRAFT_CLOCK_STOP_COUNT
+   description            The spacecraft clock value at the end of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Source Data Product Origin: Keyword SPACECRAFT_CLOCK_STOP_COUNT
 
    name                   legacy_label_na_beam
    version                1.16
@@ -396,27 +401,27 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      legacy_label_VICAR1
+      local identifier      vgr:legacy_label_VICAR1
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      Voyager_Telemetry
+      local identifier      vgr:Voyager_Telemetry
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      Voyager_Timing
+      local identifier      vgr:Voyager_Timing
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      ISS
+      local identifier      vgr:ISS
       minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      ISS_Legacy_Label
+      local identifier      vgr:ISS_Legacy_Label
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
@@ -429,72 +434,72 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      image_id
+      local identifier      vgr:image_id
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      image_number
+      local identifier      vgr:image_number
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      earth_received_time
+      local identifier      vgr:earth_received_time
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      scan_mode_id
+      local identifier      vgr:scan_mode_id
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      shutter_mode_id
+      local identifier      vgr:shutter_mode_id
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      gain_mode_id
+      local identifier      vgr:gain_mode_id
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      edit_mode_id
+      local identifier      vgr:edit_mode_id
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      filter_name
+      local identifier      vgr:filter_name
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      filter_number
+      local identifier      vgr:filter_number
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      exposure_duration
+      local identifier      vgr:exposure_duration
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      pds_source_product_target_name
+      local identifier      vgr:pds_source_product_target_name
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      pds_source_product_note
+      local identifier      vgr:pds_source_product_note
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      pds_source_product_description
+      local identifier      vgr:pds_source_product_description
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      pds_source_product_data_anomaly_type
+      local identifier      vgr:pds_source_product_data_anomaly_type
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -507,152 +512,152 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      legacy_label_signal_to_noise_ratio
+      local identifier      vgr:legacy_label_signal_to_noise_ratio
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_pixel_dn_average_threshold
+      local identifier      vgr:legacy_label_pixel_dn_average_threshold
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_pixel_dn_average_status
+      local identifier      vgr:legacy_label_pixel_dn_average_status
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_lsb_truncate
+      local identifier      vgr:legacy_label_lsb_truncate
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_telemetry_mode
+      local identifier      vgr:legacy_label_telemetry_mode
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_compression_state
+      local identifier      vgr:legacy_label_compression_state
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_elec_cal
+      local identifier      vgr:legacy_label_na_elec_cal
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_image_type
+      local identifier      vgr:legacy_label_na_image_type
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_beam
+      local identifier      vgr:legacy_label_na_beam
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_shutter_reset
+      local identifier      vgr:legacy_label_na_shutter_reset
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_shutter_open
+      local identifier      vgr:legacy_label_na_shutter_open
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_shutter_close
+      local identifier      vgr:legacy_label_na_shutter_close
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_flood
+      local identifier      vgr:legacy_label_na_flood
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_exposure_type
+      local identifier      vgr:legacy_label_na_exposure_type
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_filter_position
+      local identifier      vgr:legacy_label_na_filter_position
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_filter_step
+      local identifier      vgr:legacy_label_na_filter_step
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_g1_voltage_count
+      local identifier      vgr:legacy_label_na_g1_voltage_count
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_na_shutter_exposure
+      local identifier      vgr:legacy_label_na_shutter_exposure
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_elec_cal
+      local identifier      vgr:legacy_label_wa_elec_cal
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_image_type
+      local identifier      vgr:legacy_label_wa_image_type
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_beam
+      local identifier      vgr:legacy_label_wa_beam
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_shutter_reset
+      local identifier      vgr:legacy_label_wa_shutter_reset
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_shutter_open
+      local identifier      vgr:legacy_label_wa_shutter_open
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_shutter_close
+      local identifier      vgr:legacy_label_wa_shutter_close
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_flood
+      local identifier      vgr:legacy_label_wa_flood
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_exposure_type
+      local identifier      vgr:legacy_label_wa_exposure_type
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_filter_position
+      local identifier      vgr:legacy_label_wa_filter_position
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_filter_step
+      local identifier      vgr:legacy_label_wa_filter_step
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_g1_voltage_count
+      local identifier      vgr:legacy_label_wa_g1_voltage_count
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      legacy_label_wa_shutter_exposure
+      local identifier      vgr:legacy_label_wa_shutter_exposure
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -665,22 +670,22 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      edr_tape_id
+      local identifier      vgr:edr_tape_id
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      edr_file_number
+      local identifier      vgr:edr_file_number
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      dsn_station_number
+      local identifier      vgr:dsn_station_number
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      dsn_station_name
+      local identifier      vgr:dsn_station_name
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -693,42 +698,42 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      mission_phase_name
+      local identifier      vgr:mission_phase_name
       minimum occurrences   1
       maximum occurrences   unbounded
       reference type        attribute_of
 
-      local identifier      spacecraft_clock_count_partition
+      local identifier      vgr:spacecraft_clock_count_partition
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      spacecraft_clock_start_count
+      local identifier      vgr:spacecraft_clock_start_count
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      spacecraft_clock_stop_count
+      local identifier      vgr:spacecraft_clock_stop_count
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      fds_scet_epoch_1
+      local identifier      vgr:fds_scet_epoch_1
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      fds_scet_epoch_2
+      local identifier      vgr:fds_scet_epoch_2
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      fds_scet_epoch_3
+      local identifier      vgr:fds_scet_epoch_3
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      fds_scet_epoch_4
+      local identifier      vgr:fds_scet_epoch_4
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
