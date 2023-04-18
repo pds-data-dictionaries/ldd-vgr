@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Tue Apr 18 17:57:18 UTC 2023 -->
-  <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
+  <!-- PDS4 XML/Schema for Name Space Id:vgr  Version:0.1.0.0 - Tue Apr 18 18:06:20 UTC 2023 -->
+  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.17.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.16.0.0 - pds: - Common Dictionary                                       -->
   <!-- 0.1.0.0 - vgr: - Voyager Mission Dictionary                               -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -15,7 +15,7 @@
     attributeFormDefault="unqualified"
     version="0.1.0.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -46,11 +46,11 @@
 	v0.3.1.0  2023-03-09
 	Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
 
-  v0.4.0.0  2023-04-12
-  Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
-  Updated definition and nillable_flag for spacecraft_clock_count_partition. 
-  Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
-  Added an enumerated value for edit_mode_id
+        v0.4.0.0  2023-04-18
+        Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+        Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+        Added an enumerated value for edit_mode_id
     
     </xs:documentation>
   </xs:annotation>
