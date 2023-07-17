@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        14.1.3
-   LDD Version Id:        0.1.0.0
+   LDDTool Version        14.2.4
+   LDD Version Id:        0.4.0.0
    LDD Label Version Id:  1.22
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Apr 18 18:06:20 UTC 2023
+   Time                   Mon Jul 17 01:16:34 UTC 2023
    Common Schema          [PDS4_PDS_1G00.xsd]
    Common Schematron      [PDS4_PDS_1G00.sch]
    IM Version Id:         1.16.0.0
@@ -40,7 +40,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Voyager Mission Dictionary
-   LDD Version            0.1.0.0
+   LDD Version            0.4.0.0
    Full Name              Matthew Tiscareno
    Steward                rings
    Namespace Id           vgr
@@ -130,22 +130,22 @@ Parsed Input - Attributes:
 
    name                   fds_scet_epoch_1
    version                1.16
-   value data type        ASCII_Short_String_Collapsed
+   value data type        ASCII_Date_Time_YMD_UTC
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.
 
    name                   fds_scet_epoch_2
    version                1.16
-   value data type        ASCII_Short_String_Collapsed
+   value data type        ASCII_Date_Time_YMD_UTC
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 2.
 
    name                   fds_scet_epoch_3
    version                1.16
-   value data type        ASCII_Short_String_Collapsed
+   value data type        ASCII_Date_Time_YMD_UTC
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 3.
 
    name                   fds_scet_epoch_4
    version                1.16
-   value data type        ASCII_Short_String_Collapsed
+   value data type        ASCII_Date_Time_YMD_UTC
    description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 4.
 
    name                   filter_name

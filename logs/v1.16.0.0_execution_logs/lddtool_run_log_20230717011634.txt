@@ -1,12 +1,12 @@
 
->>  INFO LDDTOOL Version: 14.1.3
+>>  INFO LDDTOOL Version: 14.2.4
 >>  INFO IM Version Id: 1.16.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.22
->>  INFO Date: Tue Apr 18 18:06:20 UTC 2023
->>  INFO PARENT_DIR: /tmp/lddtool-14.1.3
->>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.3/bin
->>  INFO LIB_DIR: /tmp/lddtool-14.1.3/lib
+>>  INFO Date: Mon Jul 17 01:16:34 UTC 2023
+>>  INFO PARENT_DIR: /tmp/lddtool-14.2.4
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.2.4/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.2.4/lib
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:vgr
 >>> INFO Init:  - Config.Properties Namespace Id Using:vgr
@@ -49,9 +49,9 @@ Input:
 
 Output:
 
-     - ./PDS4_VGR_1G00_0100.xsd
-     - ./PDS4_VGR_1G00_0100.sch
-     - ./PDS4_VGR_1G00_0100.xml
-     - ./PDS4_VGR_1G00_0100.JSON
+     - ./PDS4_VGR_1G00_0400.xsd
+     - ./PDS4_VGR_1G00_0400.sch
+     - ./PDS4_VGR_1G00_0400.xml
+     - ./PDS4_VGR_1G00_0400.JSON
 
 >>  INFO Exit(0)
