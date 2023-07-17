@@ -223,8 +223,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -237,8 +236,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 2.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -251,8 +249,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 3.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -265,8 +262,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 4.<!--Verify that start_date_time is the right thing to say here.--></definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <pattern>YYYY-MM-DDTHH:MM:SS.SSSSSSZ</pattern>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
