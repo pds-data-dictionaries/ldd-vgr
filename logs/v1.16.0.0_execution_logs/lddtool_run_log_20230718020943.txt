@@ -1,29 +1,13 @@
 
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.identifier:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_1
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.valueType:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.identifier:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_2
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.valueType:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.identifier:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_3
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.valueType:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.identifier:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_4
->>  ERROR SetMasterAttrXMLBaseDataTypeFromDataType - Data Type is missing - lAttr.valueType:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR Could not find a value type for this attribute while checking for attribute overrides - Name:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_1   Value Type:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR Could not find a value type for this attribute while checking for attribute overrides - Name:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_2   Value Type:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR Could not find a value type for this attribute while checking for attribute overrides - Name:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_3   Value Type:ASCII_​Date_​Time_​YMD_​UTC
->>  ERROR Could not find a value type for this attribute while checking for attribute overrides - Name:0001_NASA_PDS_1.vgr.Voyager_Timing.vgr.fds_scet_epoch_4   Value Type:ASCII_​Date_​Time_​YMD_​UTC
 >>  INFO LDDTOOL Version: 14.2.4
 >>  INFO IM Version Id: 1.16.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.22
->>  INFO Date: Tue Jul 18 00:27:24 UTC 2023
+>>  INFO Date: Tue Jul 18 02:09:43 UTC 2023
 >>  INFO PARENT_DIR: /tmp/lddtool-14.2.4
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.2.4/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.2.4/lib
 
->>> ERROR Attribute: <fds_scet_epoch_1> - Invalid Data Type. Data Type: ASCII_​Date_​Time_​YMD_​UTC
->>> ERROR Attribute: <fds_scet_epoch_2> - Invalid Data Type. Data Type: ASCII_​Date_​Time_​YMD_​UTC
->>> ERROR Attribute: <fds_scet_epoch_3> - Invalid Data Type. Data Type: ASCII_​Date_​Time_​YMD_​UTC
->>> ERROR Attribute: <fds_scet_epoch_4> - Invalid Data Type. Data Type: ASCII_​Date_​Time_​YMD_​UTC
 >>> INFO Init:  - Config.Properties Namespace Id Found:vgr
 >>> INFO Init:  - Config.Properties Namespace Id Using:vgr
 >>> INFO Init:  - LDD Dictionary_Type is Mission
@@ -50,7 +34,7 @@
 
  -- LDDTool Execution Summary --
      0 warning(s)
-     16 error(s)
+     0 error(s)
      0 fatal error(s)
 
 Input:
@@ -70,4 +54,4 @@ Output:
      - ./PDS4_VGR_1G00_0400.xml
      - ./PDS4_VGR_1G00_0400.JSON
 
->>  INFO Exit(1)
+>>  INFO Exit(0)
