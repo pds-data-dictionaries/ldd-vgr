@@ -1,9 +1,9 @@
 
 >>  INFO LDDTOOL Version: 14.2.4
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO IM Version Id: 1.16.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Tue Jul 18 02:09:40 UTC 2023
+>>  INFO IM Label Version Id: 1.22
+>>  INFO Date: Tue Jul 18 02:39:08 UTC 2023
 >>  INFO PARENT_DIR: /tmp/lddtool-14.2.4
 >>  INFO SCRIPT_DIR: /tmp/lddtool-14.2.4/bin
 >>  INFO LIB_DIR: /tmp/lddtool-14.2.4/lib
@@ -39,7 +39,7 @@
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1G00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -49,9 +49,9 @@ Input:
 
 Output:
 
-     - ./PDS4_VGR_1H00_0400.xsd
-     - ./PDS4_VGR_1H00_0400.sch
-     - ./PDS4_VGR_1H00_0400.xml
-     - ./PDS4_VGR_1H00_0400.JSON
+     - ./PDS4_VGR_1G00_0500.xsd
+     - ./PDS4_VGR_1G00_0500.sch
+     - ./PDS4_VGR_1G00_0500.xml
+     - ./PDS4_VGR_1G00_0500.JSON
 
 >>  INFO Exit(0)
