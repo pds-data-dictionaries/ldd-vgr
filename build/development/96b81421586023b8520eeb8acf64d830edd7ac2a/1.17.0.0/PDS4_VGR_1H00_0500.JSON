@@ -3,8 +3,8 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "IM Version": "1.17.0.0" ,
-      "LDD Version": "0.1.0.0" ,
-      "Date": "2023-04-18T18:06:18Z" ,
+      "LDD Version": "0.5.0.0" ,
+      "Date": "2023-07-18T03:42:25Z" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "namespaces": ["pds:", "vgr:"] ,
       "classDictionary": [
@@ -1070,7 +1070,7 @@
             "steward": "rings" ,
             "versionId": "1.17" ,
             "description": "Time at which the image was received at Earth. Source Data Product Origin: Keyword EARTH_RECEIVED_TIME" ,
-            "isNillable": "false" ,
+            "isNillable": "true" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
             "dataType": "ASCII_Date_Time_YMD_UTC" ,
@@ -1111,6 +1111,12 @@
             "defaultUnitId": "null"
           , "PermissibleValueList": [
               {"PermissibleValue": {
+                  "value": "0:0" ,
+                  "valueMeaning": "The source data product from which this data product is being migrated has edit_mode_id of this value, indicating that the edit mode of the camera is unknown." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
                   "value": "1:1" ,
                   "valueMeaning": "Vidicon readout was at full resolution." ,
                   "isDeprecated": "false"
@@ -1796,8 +1802,14 @@
             "defaultUnitId": "null"
           , "PermissibleValueList": [
               {"PermissibleValue": {
+                  "value": "Auto" ,
+                  "valueMeaning": "The auto-exposure methodology was used to acquire the image." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
                   "value": "Manual" ,
-                  "valueMeaning": "Prep" ,
+                  "valueMeaning": "Manual" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2510,8 +2522,14 @@
             "defaultUnitId": "null"
           , "PermissibleValueList": [
               {"PermissibleValue": {
+                  "value": "Auto" ,
+                  "valueMeaning": "The auto-exposure methodology was used to acquire the image." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
                   "value": "Manual" ,
-                  "valueMeaning": "Prep" ,
+                  "valueMeaning": "Manual" ,
                   "isDeprecated": "false"
                 }
              }
@@ -2988,13 +3006,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
+            "dataType": "ASCII_Date_Time_YMD_UTC" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Date_Time_YMD_UTC" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "YYYY-MM-DDTHH:MM:SS.SSSSSSZ" ,
+            "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -3013,13 +3031,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
+            "dataType": "ASCII_Date_Time_YMD_UTC" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Date_Time_YMD_UTC" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "YYYY-MM-DDTHH:MM:SS.SSSSSSZ" ,
+            "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -3038,13 +3056,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
+            "dataType": "ASCII_Date_Time_YMD_UTC" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Date_Time_YMD_UTC" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "YYYY-MM-DDTHH:MM:SS.SSSSSSZ" ,
+            "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -3063,13 +3081,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
+            "dataType": "ASCII_Date_Time_YMD_UTC" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Date_Time_YMD_UTC" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
             "minimumValue": "Unbounded" ,
             "maximumValue": "Unbounded" ,
-            "pattern": "YYYY-MM-DDTHH:MM:SS.SSSSSSZ" ,
+            "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -3175,13 +3193,13 @@
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "[0-9]?[0-9]\/[0-9]{5}:[0-9]{2}(:[0-9]{3})?" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "-9223372036854775808" ,
+            "maximumValue": "9223372036854775807" ,
+            "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
@@ -3196,7 +3214,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "The spacecraft clock value at the beginning of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n\/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1\/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Source Data Product Origin: Keyword SPACECRAFT_CLOCK_START_COUNT" ,
+            "description": "The spacecraft clock value at the beginning of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n\/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1\/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Note: Since the mmm digits are optional, it is possible (and may be common) for spacecraft_clock_start_count to be identical to spacecraft_clock_stop_count for exposure_duration values less than 48 seconds. Source Data Product Origin: Keyword SPACECRAFT_CLOCK_START_COUNT" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -3221,7 +3239,7 @@
             "nameSpaceId": "vgr" ,
             "steward": "rings" ,
             "versionId": "1.17" ,
-            "description": "The spacecraft clock value at the end of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n\/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1\/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Source Data Product Origin: Keyword SPACECRAFT_CLOCK_STOP_COUNT" ,
+            "description": "The spacecraft clock value at the end of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n\/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1\/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Note: Since the mmm digits are optional, it is possible (and may be common) for spacecraft_clock_start_count to be identical to spacecraft_clock_stop_count for exposure_duration values less than 48 seconds. Source Data Product Origin: Keyword SPACECRAFT_CLOCK_STOP_COUNT" ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
