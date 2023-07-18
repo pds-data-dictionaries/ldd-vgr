@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.sch"?>
-
 <Ingest_LDD 
   xmlns="http://pds.nasa.gov/pds4/pds/v1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  
   xsi:schemaLocation=
    "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd"> 
 
@@ -16,43 +14,43 @@
     <steward_id>rings</steward_id>
     <namespace_id>vgr</namespace_id>
     <comment> 
-	v0.1.0.0  2022-06-10
-	  Created by unifying the vg1 and vg2 namespace dictionaries, which
-	will be deprecated.  Specifically, the new base class Voyager contains
-	the legacy label (optional), a class describing telemetry (also
-	optional), a class describing timing (required), and a required class
-	describing instrument-specific parameters (currently, only ISS is
-	implemented).  
-	  This is a preliminary non-release version.  Changes have not been
-	tracked during initial drafting, but will be henceforth. 
+	    v0.1.0.0  2022-06-10
+	    Created by unifying the vg1 and vg2 namespace dictionaries, which
+	    will be deprecated.  Specifically, the new base class Voyager contains
+	    the legacy label (optional), a class describing telemetry (also
+	    optional), a class describing timing (required), and a required class
+	    describing instrument-specific parameters (currently, only ISS is
+	    implemented).  
+	    This is a preliminary non-release version.  Changes have not been
+	    tracked during initial drafting, but will be henceforth. 
 	
-	v0.2.0.0  2022-08-23
-	Continuing to develop content, in advance of any use of this LDD.
-	Updated enumerated values for compression_state, edit_mode_id
-	Deleted beam, companding, elec_cal, exposure_type, filter_position, filter_step, flood, g1_voltage_count, geometry_state, image_time, image_type, pixel_dn_average_thresh, pixel_dn_average_status, shutter_exposure, shutter_reset, shutter_open, shutter_close, start_time_doy, start_time_ymd, stop_time_doy, stop_time_ymd, telemetry_mode
-	Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
-	Renamed data_anomaly_type to pds_source_product_data_anomaly_type
-	Made some attributes nillable or optional
+	    v0.2.0.0  2022-08-23
+	    Continuing to develop content, in advance of any use of this LDD.
+	    Updated enumerated values for compression_state, edit_mode_id
+	    Deleted beam, companding, elec_cal, exposure_type, filter_position, filter_step, flood, g1_voltage_count, geometry_state, image_time, image_type, pixel_dn_average_thresh, pixel_dn_average_status, shutter_exposure, shutter_reset, shutter_open, shutter_close, start_time_doy, start_time_ymd, stop_time_doy, stop_time_ymd, telemetry_mode
+	    Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
+	    Renamed data_anomaly_type to pds_source_product_data_anomaly_type
+	    Made some attributes nillable or optional
 	
-	v0.3.0.0  2022-09-20
-	Continuing to develop content, in advance of any use of this LDD.
-	Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
-	Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
+	    v0.3.0.0  2022-09-20
+	    Continuing to develop content, in advance of any use of this LDD.
+	    Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
+	    Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
 
-	v0.3.1.0  2023-03-09
-	Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
+	    v0.3.1.0  2023-03-09
+	    Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
 
-        v0.4.0.0  2023-04-18
-        Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
-        Updated definition and nillable_flag for spacecraft_clock_count_partition. 
-        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
-        Added an enumerated value for edit_mode_id.
+      v0.4.0.0  2023-04-18
+      Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+      Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+      Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+      Added an enumerated value for edit_mode_id.
 
-	v0.5.0.0  2023-07-17
-        Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
-	Updated value_data_type and removed pattern for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, fds_scet_epoch_4, and spacecraft_clock_count_partition. 
-	Updated nillable_flag for earth_received_time.
-	Added enumerated values for edit_mode_id, legacy_label_na_exposure_type, and legacy_label_wa_exposure_type.
+	    v0.5.0.0  2023-07-17
+      Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+	    Updated value_data_type and removed pattern for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, fds_scet_epoch_4, and spacecraft_clock_count_partition. 
+	    Updated nillable_flag for earth_received_time.
+	    Added enumerated values for edit_mode_id, legacy_label_na_exposure_type, and legacy_label_wa_exposure_type.
     </comment>
     <last_modification_date_time>2023-07-17</last_modification_date_time>
 
@@ -233,7 +231,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.<!--Verify that start_date_time is the right thing to say here.--></definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_​Date_​Time_​YMD_​UTC</value_data_type>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -246,7 +244,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 2.<!--Verify that start_date_time is the right thing to say here.--></definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_​Date_​Time_​YMD_​UTC</value_data_type>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -259,7 +257,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 3.<!--Verify that start_date_time is the right thing to say here.--></definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_​Date_​Time_​YMD_​UTC</value_data_type>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -272,7 +270,7 @@
     <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what spacecraft_clock_start_count would be if the partition were 4.<!--Verify that start_date_time is the right thing to say here.--></definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_​Date_​Time_​YMD_​UTC</value_data_type>
+      <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
