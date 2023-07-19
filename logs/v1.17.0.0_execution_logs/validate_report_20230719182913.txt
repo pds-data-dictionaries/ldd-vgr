@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       3.2.0
-   Date                          2023-07-18T03:42:31Z
+   Date                          2023-07-19T18:29:16Z
 
 Parameters:
-   Targets                       [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/96b81421586023b8520eeb8acf64d830edd7ac2a/1.17.0.0/PDS4_VGR_1H00_0500.xml]
+   Targets                       [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/0cd11e79b4c2891ac4b5dfc9531f6f63dd9106d0/1.17.0.0/PDS4_VGR_1H00_0600.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/96b81421586023b8520eeb8acf64d830edd7ac2a/1.17.0.0/PDS4_VGR_1H00_0500.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/96b81421586023b8520eeb8acf64d830edd7ac2a/1.17.0.0/PDS4_VGR_1H00_0500.sch, file:/tmp/PDS4_PDS_1H00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/0cd11e79b4c2891ac4b5dfc9531f6f63dd9106d0/1.17.0.0/PDS4_VGR_1H00_0600.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/0cd11e79b4c2891ac4b5dfc9531f6f63dd9106d0/1.17.0.0/PDS4_VGR_1H00_0600.sch, file:/tmp/PDS4_PDS_1H00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/96b81421586023b8520eeb8acf64d830edd7ac2a/1.17.0.0/PDS4_VGR_1H00_0500.xml
+  PASS: file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/0cd11e79b4c2891ac4b5dfc9531f6f63dd9106d0/1.17.0.0/PDS4_VGR_1H00_0600.xml
         1 product validation(s) completed
 
 Summary:
@@ -42,5 +42,5 @@ Summary:
 
 
 End of Report
-Completed execution in 4761 ms
+Completed execution in 7679 ms
 

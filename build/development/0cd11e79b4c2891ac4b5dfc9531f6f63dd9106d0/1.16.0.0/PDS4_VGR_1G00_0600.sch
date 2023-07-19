@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.5.0.0 - Tue Jul 18 03:42:24 UTC 2023 -->
-  <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
+  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.6.0.0 - Wed Jul 19 18:28:56 UTC 2023 -->
+  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -20,9 +20,9 @@
 		   <!-- ================================================ -->
   <sch:pattern>
     <sch:rule context="vgr:ISS/vgr:edit_mode_id">
-      <sch:assert test=". = ('0:0', '1:1', '1:10', '1:2', '1:3', '1:5', '2:3', '3:4')">
+      <sch:assert test=". = ('0:0', '1:1', '1:10', '1:2', '1:3', '1:5', '2:3', '3:4', '3:5')">
         <title>vgr:ISS/vgr:edit_mode_id/vgr:edit_mode_id</title>
-        The attribute vgr:ISS/vgr:edit_mode_id must be equal to one of the following values '0:0', '1:1', '1:10', '1:2', '1:3', '1:5', '2:3', '3:4'.</sch:assert>
+        The attribute vgr:ISS/vgr:edit_mode_id must be equal to one of the following values '0:0', '1:1', '1:10', '1:2', '1:3', '1:5', '2:3', '3:4', '3:5'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -146,9 +146,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="vgr:ISS_Legacy_Label/vgr:legacy_label_telemetry_mode">
-      <sch:assert test=". = ('GS-2', 'GS-4', 'IM-10', 'IM-11', 'IM-12', 'IM-13', 'IM-15', 'IM-2', 'IM-20', 'IM-22', 'IM-23', 'IM-24', 'IM-25', 'IM-26', 'IM-2C', 'IM-2W', 'IM-2X', 'IM-3', 'IM-4', 'IM-5', 'IM-6', 'IM-7', 'IM-9', 'IM-K', 'IM-O', 'IM-S', 'None', 'OC-3')">
+      <sch:assert test=". = ('GS-2', 'GS-4', 'IM-10', 'IM-11', 'IM-12', 'IM-13', 'IM-15', 'IM-2', 'IM-20', 'IM-22', 'IM-23', 'IM-24', 'IM-25', 'IM-26', 'IM-2C', 'IM-2W', 'IM-2X', 'IM-3', 'IM-4', 'IM-5', 'IM-6', 'IM-7', 'IM-9', 'IM-K', 'IM-O', 'IM-Q', 'IM-S', 'None', 'OC-3')">
         <title>vgr:ISS_Legacy_Label/vgr:legacy_label_telemetry_mode/vgr:legacy_label_telemetry_mode</title>
-        The attribute vgr:ISS_Legacy_Label/vgr:legacy_label_telemetry_mode must be equal to one of the following values 'GS-2', 'GS-4', 'IM-10', 'IM-11', 'IM-12', 'IM-13', 'IM-15', 'IM-2', 'IM-20', 'IM-22', 'IM-23', 'IM-24', 'IM-25', 'IM-26', 'IM-2C', 'IM-2W', 'IM-2X', 'IM-3', 'IM-4', 'IM-5', 'IM-6', 'IM-7', 'IM-9', 'IM-K', 'IM-O', 'IM-S', 'None', 'OC-3'.</sch:assert>
+        The attribute vgr:ISS_Legacy_Label/vgr:legacy_label_telemetry_mode must be equal to one of the following values 'GS-2', 'GS-4', 'IM-10', 'IM-11', 'IM-12', 'IM-13', 'IM-15', 'IM-2', 'IM-20', 'IM-22', 'IM-23', 'IM-24', 'IM-25', 'IM-26', 'IM-2C', 'IM-2W', 'IM-2X', 'IM-3', 'IM-4', 'IM-5', 'IM-6', 'IM-7', 'IM-9', 'IM-K', 'IM-O', 'IM-Q', 'IM-S', 'None', 'OC-3'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

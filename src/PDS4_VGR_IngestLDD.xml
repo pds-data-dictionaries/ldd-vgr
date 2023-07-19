@@ -8,7 +8,7 @@
    "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd"> 
 
     <name>Voyager Mission Dictionary</name>
-    <ldd_version_id>0.5.0.0</ldd_version_id>
+    <ldd_version_id>0.6.0.0</ldd_version_id>
     <dictionary_type>Mission</dictionary_type>
     <full_name>Matthew Tiscareno</full_name>
     <steward_id>rings</steward_id>
@@ -45,8 +45,12 @@
 	    Updated value_data_type and removed pattern for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, fds_scet_epoch_4, and spacecraft_clock_count_partition. 
 	    Updated nillable_flag for earth_received_time.
 	    Added enumerated values for edit_mode_id, legacy_label_na_exposure_type, and legacy_label_wa_exposure_type.
+
+	    v0.6.0.0  2023-07-19
+	    Updated value_data_type for edr_tape_id.
+	    Added enumerated values for edit_mode_id and legacy_label_telemetry_mode.
     </comment>
-    <last_modification_date_time>2023-07-17</last_modification_date_time>
+    <last_modification_date_time>2023-07-19</last_modification_date_time>
 
   <!-- Attributes START -->
 
@@ -133,7 +137,7 @@
     <local_identifier>edit_mode_id</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>Edit mode of the camera, indicates amount of data read from the vidicon.  '1:1' indicates the full-resolution of the vidicon.  Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'.
+    <definition>Edit mode of the camera, indicates amount of data read from the vidicon.  '1:1' indicates the full-resolution of the vidicon.  Other values include '3:5', '3:4', '1:2', '1:3', '1:5', and '1:10'.
     Source Data Product Origin:  Keyword EDIT_MODE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>true</enumeration_flag>
@@ -145,6 +149,10 @@
       <DD_Permissible_Value>
         <value>1:1</value>
         <value_meaning>Vidicon readout was at full resolution.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>3:5</value>
+        <value_meaning>Vidicon readout was at three-fifths resolution.</value_meaning><!--It would be good for someone to check that I am interpreting these correctly. MST-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>3:4</value>
@@ -197,7 +205,7 @@
     Source Data Product Origin:  EDR_TAPE_ID</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
-      <value_data_type>ASCII_Integer</value_data_type><!--Any minimum or maximum?-->
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
     </DD_Value_Domain>
   </DD_Attribute>
   
@@ -1216,6 +1224,10 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>IM-2W</value>
+        <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>IM-Q</value>
         <value_meaning>From original label.  Meaning unclear.</value_meaning><!--This is unsatisfactory.-->
       </DD_Permissible_Value>
       <DD_Permissible_Value>
