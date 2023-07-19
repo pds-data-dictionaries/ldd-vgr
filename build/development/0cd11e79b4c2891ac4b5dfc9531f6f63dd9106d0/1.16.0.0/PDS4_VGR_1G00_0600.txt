@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        14.2.4
-   LDD Version Id:        0.5.0.0
+   LDD Version Id:        0.6.0.0
    LDD Label Version Id:  1.22
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Jul 18 03:42:24 UTC 2023
+   Time                   Wed Jul 19 18:28:56 UTC 2023
    Common Schema          [PDS4_PDS_1G00.xsd]
    Common Schematron      [PDS4_PDS_1G00.sch]
    IM Version Id:         1.16.0.0
@@ -40,7 +40,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Voyager Mission Dictionary
-   LDD Version            0.5.0.0
+   LDD Version            0.6.0.0
    Full Name              Matthew Tiscareno
    Steward                rings
    Namespace Id           vgr
@@ -76,8 +76,12 @@ Parsed Input - Header:
 	    Updated value_data_type and removed pattern for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, fds_scet_epoch_4, and spacecraft_clock_count_partition. 
 	    Updated nillable_flag for earth_received_time.
 	    Added enumerated values for edit_mode_id, legacy_label_na_exposure_type, and legacy_label_wa_exposure_type.
+
+	    v0.6.0.0  2023-07-19
+	    Updated value_data_type for edr_tape_id.
+	    Added enumerated values for edit_mode_id and legacy_label_telemetry_mode.
     
-   Last Modification Time 2023-07-17
+   Last Modification Time 2023-07-19
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -111,7 +115,7 @@ Parsed Input - Attributes:
    name                   edit_mode_id
    version                1.16
    value data type        ASCII_Short_String_Collapsed
-   description            Edit mode of the camera, indicates amount of data read from the vidicon. '1:1' indicates the full-resolution of the vidicon. Other values include '3:4', '1:2', '1:3', '1:5', and '1:10'. Source Data Product Origin: Keyword EDIT_MODE_ID
+   description            Edit mode of the camera, indicates amount of data read from the vidicon. '1:1' indicates the full-resolution of the vidicon. Other values include '3:5', '3:4', '1:2', '1:3', '1:5', and '1:10'. Source Data Product Origin: Keyword EDIT_MODE_ID
 
    name                   edr_file_number
    version                1.16
@@ -120,7 +124,7 @@ Parsed Input - Attributes:
 
    name                   edr_tape_id
    version                1.16
-   value data type        ASCII_Integer
+   value data type        ASCII_Short_String_Collapsed
    description            Tape ID on which the image was originally stored Source Data Product Origin: EDR_TAPE_ID
 
    name                   exposure_duration
