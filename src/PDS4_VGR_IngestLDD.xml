@@ -767,7 +767,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew S Tiscareno</submitter_name>
     <definition>This attribute is a precursor to filter_name and filter_number.
-    This attribute preserves information found in Line <!--need line--> of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
+    This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
     It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -826,6 +826,7 @@
     <submitter_name>Matthew S Tiscareno</submitter_name>
     <definition>The meaning of this attribute is unknown.
     This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
+    This attribute is omitted if the value in the VICAR-1 legacy header is *.
     It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -1042,7 +1043,7 @@
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew S Tiscareno</submitter_name>
     <definition>This attribute is a precursor to filter_name and filter_number.
-    This attribute preserves information found in Line <!--need line--> of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
+    This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
     It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -1101,7 +1102,8 @@
     <submitter_name>Matthew S Tiscareno</submitter_name>
     <definition>The meaning of this attribute is unknown.
     This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
-    It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition><!--The sample in the RAV1CIUN SIS has * as the value for this attribute.  How is that migrated to PDS4?-->
+    This attribute is omitted if the value in the VICAR-1 legacy header is *.
+    It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
