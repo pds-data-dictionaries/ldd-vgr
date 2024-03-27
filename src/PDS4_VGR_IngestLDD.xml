@@ -50,10 +50,10 @@
 	    Updated value_data_type for edr_tape_id.
 	    Added enumerated values for edit_mode_id and legacy_label_telemetry_mode.
 
-	    v1.0.0.0  2024-03-26
+	    v1.0.0.0  2024-03-27
 	    Updated definitions for a large fraction of the attributes, resolving various questions and preparing for release.
     </comment>
-    <last_modification_date_time>2023-07-19</last_modification_date_time>
+    <last_modification_date_time>2024-03-27</last_modification_date_time>
 
   <!-- Attributes START -->
 
