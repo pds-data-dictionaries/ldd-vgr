@@ -1,5 +1,0 @@
-Error on line 395 column 67 of PDS4_VGR_1G00_1000.xsd:
-  SXXP0003   Error reported by XML parser: The element type "xs:documentation" must be
-  terminated by the matching end-tag "</xs:documentation>".: The element type
-  "xs:documentation" must be terminated by the matching end-tag "</xs:documentation>".
-java.lang.Exception: Error while getting targetNamespace of schema 'file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/f40b2711c0faaa3413c0795ac800c46e2d0659a5/1.16.0.0/PDS4_VGR_1G00_1000.xsd': org.xml.sax.SAXParseException; systemId: file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/f40b2711c0faaa3413c0795ac800c46e2d0659a5/1.16.0.0/PDS4_VGR_1G00_1000.xsd; lineNumber: 395; columnNumber: 67; The element type "xs:documentation" must be terminated by the matching end-tag "</xs:documentation>".
