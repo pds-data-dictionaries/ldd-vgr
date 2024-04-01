@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:vgr  Version:0.6.0.0 - Wed Jul 19 18:28:56 UTC 2023 -->
-  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
+  <!-- PDS4 Schematron for Name Space Id:vgr  Version:1.0.0.0 - Mon Apr 01 21:29:28 UTC 2024 -->
+  <!-- Generated from the PDS4 Information Model Version 1.20.0.0 - System Build 13.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -8,7 +8,7 @@
 
   <sch:ns uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
   <sch:ns uri="http://pds.nasa.gov/pds4/pds/v1" prefix="pds"/>
-  <sch:ns uri="http://pds.nasa.gov/pds4/mission/vgr/v0" prefix="vgr"/>
+  <sch:ns uri="http://pds.nasa.gov/pds4/mission/vgr/v1" prefix="vgr"/>
 
 		   <!-- ================================================ -->
 		   <!-- NOTE:  There are two types of schematron rules.  -->
