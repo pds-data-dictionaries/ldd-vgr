@@ -50,9 +50,9 @@
 	    Updated value_data_type for edr_tape_id.
 	    Added enumerated values for edit_mode_id and legacy_label_telemetry_mode.
 
-	    v1.0.0.0  2024-03-27
+	    v1.0.0.0  2024-04-04
 	    Updated definitions for a large fraction of the attributes, resolving various questions and preparing for release.
-	    Added schematron rules . 
+	    Added schematron rules to ensure proper use of mission_phase_name and fds_scet_epoch_N. 
     </comment>
     <last_modification_date_time>2024-03-27</last_modification_date_time>
 
@@ -236,7 +236,7 @@
     <local_identifier>fds_scet_epoch_1</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.</definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -249,7 +249,7 @@
     <local_identifier>fds_scet_epoch_2</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 2.</definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 2.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -262,7 +262,7 @@
     <local_identifier>fds_scet_epoch_3</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 3.</definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 3.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -275,7 +275,7 @@
     <local_identifier>fds_scet_epoch_4</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>Matthew Tiscareno</submitter_name>
-    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 4.</definition><!--There should be a schematron rule ensuring that at least two of the fds_scet_epoch_N values are used whenever spacecraft_clock_count_partition is zero.-->
+    <definition>The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1.  If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 4.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -460,19 +460,19 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Saturn-Uranus Cruise</value>
-        <value_meaning>The period of cruise from Saturn to Uranus.  This does not apply to Voyager 1.  For Voyager 2 this is 1981-09-25T12:00 to 1985-11-04T12:00</value_meaning><!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period of cruise from Saturn to Uranus.  This does not apply to Voyager 1.  For Voyager 2 this is 1981-09-25T12:00 to 1985-11-04T12:00</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Uranus Encounter</value>
-        <value_meaning>The period surrounding the Uranus Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1985-11-04T12:00 to 1986-02-25T12:00.</value_meaning><!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period surrounding the Uranus Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1985-11-04T12:00 to 1986-02-25T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Uranus-Neptune Cruise</value>
-        <value_meaning>The period of cruise from Uranus to Neptune.  This does not apply to Voyager 1.  For Voyager 2 this is 1986-02-25T12:00 to 1989-06-05T12:00.</value_meaning><!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period of cruise from Uranus to Neptune.  This does not apply to Voyager 1.  For Voyager 2 this is 1986-02-25T12:00 to 1989-06-05T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Neptune Encounter</value>
-        <value_meaning>The period surrounding the Neptune Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1989-06-05T12:00 to 1989-10-02T12:00.</value_meaning><!--Schematron rule to prevent use for Voyager 1?-->
+        <value_meaning>The period surrounding the Neptune Encounter.  This does not apply to Voyager 1.  For Voyager 2 this is 1989-06-05T12:00 to 1989-10-02T12:00.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>Interstellar Mission</value>
@@ -1829,8 +1829,23 @@
     <rule_context>Voyager_Timing/mission_phase_name</rule_context>
     <DD_Rule_Statement>
       <rule_type>Assert</rule_type>
+      <rule_test>if ((.='Saturn-Uranus Cruise') and (pds:Observing_System_Component/pds:Internal_Reference/pds:lid_reference='urn:nasa:pds:context:instrument_host:spacecraft.vg1')) then false() else true()</rule_test>
+      <rule_message>If vgr:mission_phase_name is set to Saturn-Uranus Cruise, then the spacecraft must be Voyager 2, not Voyager 1.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
       <rule_test>if ((.='Uranus Encounter') and (pds:Observing_System_Component/pds:Internal_Reference/pds:lid_reference='urn:nasa:pds:context:instrument_host:spacecraft.vg1')) then false() else true()</rule_test>
       <rule_message>If vgr:mission_phase_name is set to Uranus Encounter, then the spacecraft must be Voyager 2, not Voyager 1.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>if ((.='Uranus-Neptune Cruise') and (pds:Observing_System_Component/pds:Internal_Reference/pds:lid_reference='urn:nasa:pds:context:instrument_host:spacecraft.vg1')) then false() else true()</rule_test>
+      <rule_message>If vgr:mission_phase_name is set to Uranus-Neptune Cruise, then the spacecraft must be Voyager 2, not Voyager 1.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>if ((.='Neptune Encounter') and (pds:Observing_System_Component/pds:Internal_Reference/pds:lid_reference='urn:nasa:pds:context:instrument_host:spacecraft.vg1')) then false() else true()</rule_test>
+      <rule_message>If vgr:mission_phase_name is set to Neptune Encounter, then the spacecraft must be Voyager 2, not Voyager 1.</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
 
@@ -1841,6 +1856,16 @@
       <rule_type>Assert</rule_type>
       <rule_test>if ((vgr:spacecraft_clock_count_partition eq '0') and not (vgr:fds_scet_epoch_1 or vgr:fds_scet_epoch_2)) then false() else true()</rule_test>
       <rule_message>If vgr:spacecraft_clock_count_partition is set to 0 (meaning that the correct value is not known), then either vgr:fds_scet_epoch_1 or vgr:fds_scet_epoch_2 must be used.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>if ((vgr:spacecraft_clock_count_partition eq '0') and not vgr:fds_scet_epoch_3) then false() else true()</rule_test>
+      <rule_message>If vgr:spacecraft_clock_count_partition is set to 0 (meaning that the correct value is not known), then vgr:fds_scet_epoch_3 must be used.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+      <rule_type>Assert</rule_type>
+      <rule_test>if ((vgr:spacecraft_clock_count_partition eq '0') and not vgr:fds_scet_epoch_4) then false() else true()</rule_test>
+      <rule_message>If vgr:spacecraft_clock_count_partition is set to 0 (meaning that the correct value is not known), then vgr:fds_scet_epoch_4 must be used.</rule_message>
     </DD_Rule_Statement>
   </DD_Rule>
 
