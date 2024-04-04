@@ -1,0 +1,70 @@
+Error near {... and not vgr:fds_scet_epoch...} at char 58 in xsl:when/@test on line 408 column 133 
+  XPST0003: expected ")", found name "vgr:fds_scet_epoch_3"
+Error near {... and not vgr:fds_scet_epoch...} at char 58 in xsl:when/@test on line 423 column 133 
+  XPST0003: expected ")", found name "vgr:fds_scet_epoch_4"
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at gov.nasa.pds.tools.validate.rule.AbstractValidationRule.execute(AbstractValidationRule.java:64)
+	at org.apache.commons.chain.impl.ChainBase.execute(ChainBase.java:191)
+	at gov.nasa.pds.tools.validate.task.ValidationTask.execute(ValidationTask.java:130)
+	at gov.nasa.pds.tools.validate.task.BlockingTaskManager.submit(BlockingTaskManager.java:26)
+	at gov.nasa.pds.tools.label.LocationValidator.validate(LocationValidator.java:285)
+	at gov.nasa.pds.validate.ValidateLauncher.doValidation(ValidateLauncher.java:1454)
+	at gov.nasa.pds.validate.ValidateLauncher.processMain(ValidateLauncher.java:1740)
+	at gov.nasa.pds.validate.ValidateLauncher.main(ValidateLauncher.java:1784)
+Caused by: java.lang.NullPointerException
+	at gov.nasa.pds.tools.label.LabelValidator.parseAndValidate(LabelValidator.java:626)
+	at gov.nasa.pds.tools.validate.rule.pds4.LabelValidationRule.validateLabel(LabelValidationRule.java:316)
+	... 12 more
+
+PDS Validate Tool Report
+
+Configuration:
+   Version                       3.4.1
+   Date                          2024-04-04T05:55:08Z
+
+Parameters:
+   Targets                       [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/ef089507564d31f7a9a793816776d928ab3f6b4b/1.16.0.0/PDS4_VGR_1G00_1000.xml]
+   Rule Type                     pds4.label
+   User Specified Schemas        [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/ef089507564d31f7a9a793816776d928ab3f6b4b/1.16.0.0/PDS4_VGR_1G00_1000.xsd, file:/tmp/PDS4_PDS_1G00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/ef089507564d31f7a9a793816776d928ab3f6b4b/1.16.0.0/PDS4_VGR_1G00_1000.sch, file:/tmp/PDS4_PDS_1G00.sch]
+   Severity Level                WARNING
+   Recurse Directories           true
+   File Filters Used             [*.xml, *.XML]
+   Data Content Validation       off
+   Product Level Validation      on
+   Max Errors                    100000
+   Registered Contexts File      /tmp/validate-3.4.1/resources/registered_context_products.json
+
+
+
+Product Level Validation Results
+
+  FAIL: file:/home/runner/work/ldd-vgr/ldd-vgr/build/development/ef089507564d31f7a9a793816776d928ab3f6b4b/1.16.0.0/PDS4_VGR_1G00_1000.xml
+      ERROR  [error.validation.internal_error]   Error executing validationTask: java.lang.NullPointerException
+        1 product validation(s) completed
+
+Summary:
+
+  1 error(s)
+  0 warning(s)
+
+  Product Validation Summary:
+    0          product(s) passed
+    1          product(s) failed
+    0          product(s) skipped
+
+  Referential Integrity Check Summary:
+    0          check(s) passed
+    0          check(s) failed
+    0          check(s) skipped
+
+  Message Types:
+    1            error.validation.internal_error
+
+End of Report
+Completed execution in 3755 ms
+
