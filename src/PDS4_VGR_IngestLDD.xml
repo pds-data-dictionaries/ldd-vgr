@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.1" encoding="UTF-8"?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.sch"?>
 <Ingest_LDD 
   xmlns="http://pds.nasa.gov/pds4/pds/v1"
@@ -8,7 +8,7 @@
    "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd"> 
 
     <name>Voyager Mission Dictionary</name>
-    <ldd_version_id>1.0.0.0</ldd_version_id>
+    <ldd_version_id>1.1.0.0</ldd_version_id>
     <dictionary_type>Mission</dictionary_type>
     <full_name>Matthew Tiscareno</full_name>
     <steward_id>rings</steward_id>
@@ -52,9 +52,12 @@
 
 	    v1.0.0.0  2024-04-04
 	    Updated definitions for a large fraction of the attributes, resolving various questions and preparing for release.
-	    Added schematron rules to ensure proper use of mission_phase_name and fds_scet_epoch_N. 
+	    Added schematron rules to ensure proper use of mission_phase_name and fds_scet_epoch_N.
+
+	    v1.1.0.0  2024-05-04
+	    Removed the schematron rules requiring fds_scet_epoch_3 and fds_scet_epoch_4 in certain cases.  This was done because we have verified that, in the only data set being archived with this LDD at the present time, all images that are missing these two attributes should probably have them nil with nilReason = "inapplicable".  However, these attributes are currently optional, and thus cannot be nil.  In a future version, we will address the underlying structural issues, but not at this time. 
     </comment>
-    <last_modification_date_time>2024-03-27</last_modification_date_time>
+    <last_modification_date_time>2024-05-04</last_modification_date_time>
 
   <!-- Attributes START -->
 
@@ -1857,7 +1860,7 @@
       <rule_test>if ((vgr:spacecraft_clock_count_partition eq '0') and not (vgr:fds_scet_epoch_1 or vgr:fds_scet_epoch_2)) then false() else true()</rule_test>
       <rule_message>If vgr:spacecraft_clock_count_partition is set to 0 (meaning that the correct value is not known), then either vgr:fds_scet_epoch_1 or vgr:fds_scet_epoch_2 must be used.</rule_message>
     </DD_Rule_Statement>
-    <DD_Rule_Statement>
+<!--<DD_Rule_Statement>
       <rule_type>Assert</rule_type>
       <rule_test>if ((vgr:spacecraft_clock_count_partition eq '0') and not (vgr:fds_scet_epoch_3)) then false() else true()</rule_test>
       <rule_message>If vgr:spacecraft_clock_count_partition is set to 0 (meaning that the correct value is not known), then vgr:fds_scet_epoch_3 must be used.</rule_message>
@@ -1866,7 +1869,7 @@
       <rule_type>Assert</rule_type>
       <rule_test>if ((vgr:spacecraft_clock_count_partition eq '0') and not (vgr:fds_scet_epoch_4)) then false() else true()</rule_test>
       <rule_message>If vgr:spacecraft_clock_count_partition is set to 0 (meaning that the correct value is not known), then vgr:fds_scet_epoch_4 must be used.</rule_message>
-    </DD_Rule_Statement>
+    </DD_Rule_Statement>-->
   </DD_Rule>
 
 </Ingest_LDD>
