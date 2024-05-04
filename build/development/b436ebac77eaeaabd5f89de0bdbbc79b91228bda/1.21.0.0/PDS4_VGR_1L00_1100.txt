@@ -1,0 +1,753 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        15.0.6
+   LDD Version Id:        1.1.0.0
+   LDD Label Version Id:  1.27
+   LDD Discipline (T/F):  false
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Sat May 04 20:18:19 UTC 2024
+   Common Schema          [PDS4_PDS_1L00.xsd]
+   Common Schematron      [PDS4_PDS_1L00.sch]
+   IM Version Id:         1.21.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.27
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Configuration File  [MDPTNConfigClassDisp.xml]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-vgr/ldd-vgr/src/PDS4_VGR_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         false
+   Mission LDD            true
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                5
+   Attributes             57
+   Associations           61
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               Voyager Mission Dictionary
+   LDD Version            1.1.0.0
+   Full Name              Matthew Tiscareno
+   Steward                rings
+   Namespace Id           vgr
+   Comment                 
+	    v0.1.0.0  2022-06-10
+	    Created by unifying the vg1 and vg2 namespace dictionaries, which will be deprecated.  Specifically, the new base class Voyager contains the legacy label (optional), a class describing telemetry (also optional), a class describing timing (required), and a required class describing instrument-specific parameters (currently, only ISS is implemented).  
+	    This is a preliminary non-release version.  Changes have not been tracked during initial drafting, but will be henceforth. 
+	
+	    v0.2.0.0  2022-08-23
+	    Continuing to develop content, in advance of any use of this LDD.
+	    Updated enumerated values for compression_state, edit_mode_id
+	    Deleted beam, companding, elec_cal, exposure_type, filter_position, filter_step, flood, g1_voltage_count, geometry_state, image_time, image_type, pixel_dn_average_thresh, pixel_dn_average_status, shutter_exposure, shutter_reset, shutter_open, shutter_close, start_time_doy, start_time_ymd, stop_time_doy, stop_time_ymd, telemetry_mode
+	    Deleted classes Image_Description, Image_State, and Instrument_State.  The attributes that were in Image_Description and Image_State are now in the previous parent class ISS, while the attributes that were in Instrument_State have all been deleted per the line above.
+	    Renamed data_anomaly_type to pds_source_product_data_anomaly_type
+	    Made some attributes nillable or optional
+	
+	    v0.3.0.0  2022-09-20
+	    Continuing to develop content, in advance of any use of this LDD.
+	    Restored many of the attributes removed in v0.2, while prepending "legacy_label_" to the attribute names and adding class ISS_Legacy_Label to contain them. 
+	    Also moved some attributes from class ISS to class ISS_Legacy_Label, again now prepending those attribute names with "legacy_label_". 
+
+	    v0.3.1.0  2023-03-09
+	    Added enumerated value "Manual" to legacy_label_na_exposure_type and legacy_label_wa_exposure_type. 
+
+	    v0.4.0.0  2023-04-18
+	    Updated definitions and patterns for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, and fds_scet_epoch_4. 
+	    Updated definition and nillable_flag for spacecraft_clock_count_partition. 
+	    Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+	    Added an enumerated value for edit_mode_id.
+
+	    v0.5.0.0  2023-07-17
+	    Updated definitions for spacecraft_clock_start_count and spacecraft_clock_stop_count. 
+	    Updated value_data_type and removed pattern for fds_scet_epoch_1, fds_scet_epoch_2, fds_scet_epoch_3, fds_scet_epoch_4, and spacecraft_clock_count_partition. 
+	    Updated nillable_flag for earth_received_time.
+	    Added enumerated values for edit_mode_id, legacy_label_na_exposure_type, and legacy_label_wa_exposure_type.
+
+	    v0.6.0.0  2023-07-19
+	    Updated value_data_type for edr_tape_id.
+	    Added enumerated values for edit_mode_id and legacy_label_telemetry_mode.
+
+	    v1.0.0.0  2024-04-04
+	    Updated definitions for a large fraction of the attributes, resolving various questions and preparing for release.
+	    Added schematron rules to ensure proper use of mission_phase_name and fds_scet_epoch_N.
+
+	    v1.1.0.0  2024-05-04
+	    Removed the schematron rules requiring fds_scet_epoch_3 and fds_scet_epoch_4 in certain cases.  This was done because we have verified that, in the only data set being archived with this LDD at the present time, all images that are missing these two attributes should probably have them nil with nilReason = "inapplicable".  However, these attributes are currently optional, and thus cannot be nil.  In a future version, we will address the underlying structural issues, but not at this time. 
+    
+   Last Modification Time 2024-05-04
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   legacy_label_VICAR1
+   version                1.21
+   value data type        ASCII_Text_Preserved
+   description            The "VICAR-1" label that was originally attached to the image. Information on how to decode this text can be found in the Software Interface Specification (SIS) of the Restoring and Archiving Voyager 1 Cruise Images of Uranus and Neptune (RAV1CIUN) project, especially in the Appendices (urn:nasa:pds:wenkert_pdart16_vgr_rav1ciun:document:vgr_rav1ciun_sis.pdf). To the extent possible, the information is captured in the attached VICAR-2 header and/or the PDS4 XML label. This VICAR-1 legacy label is being retained for historical documentation purposes, and in case there is any question about how the rest of the label items were derived. Contemporaneous Voyager documentation sometimes refers to these legacy labels.
+
+   name                   legacy_label_compression_state
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Whether the image compression mode was operating. This attribute preserves information found in Line 11 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). This attribute corresponds to the keyword COMPRESSION in earlier versions of Voyager data products.
+
+   name                   dsn_station_name
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Name of the DSN station where the image was received This attribute corresponds to the keyword DSN_STATION_NAME in earlier versions of Voyager data products.
+
+   name                   dsn_station_number
+   version                1.21
+   value data type        ASCII_Integer
+   description            Numeric ID of DSN station where the image was received This attribute corresponds to the keyword DSN_STATION_NUMBER in earlier versions of Voyager data products.
+
+   name                   earth_received_time
+   version                1.21
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            Time at which the image was received at Earth. This attribute corresponds to the keyword EARTH_RECEIVED_TIME in earlier versions of Voyager data products.
+   nillable               true
+
+   name                   edit_mode_id
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Edit mode of the camera, indicating the subframe of data read from the vidicon. '1:1' indicates the full vidicon was read out. Documentation is unclear, but inspection of individual data products indicates that the archived image in the sample direction contains a subframe that is approximately centered with a width given by the value of this attribute (ratio compared to full frame), while the line direction is not subframed. This attribute corresponds to the keyword EDIT_MODE_ID in earlier versions of Voyager data products.
+
+   name                   edr_file_number
+   version                1.21
+   value data type        ASCII_Integer
+   description            File number within the tape where the image was originally stored This attribute corresponds to the keyword EDR_FILE_NUMBER in earlier versions of Voyager data products.
+
+   name                   edr_tape_id
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Tape ID on which the image was originally stored This attribute corresponds to the keyword EDR_TAPE_ID in earlier versions of Voyager data products.
+
+   name                   exposure_duration
+   version                1.21
+   value data type        ASCII_Real
+   description            Time period during which the shutter was open This attribute corresponds to the keyword EXPOSURE_DURATION in earlier versions of Voyager data products.
+   unit of measure type   Units_of_Time
+
+   name                   fds_scet_epoch_1
+   version                1.21
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 1.
+
+   name                   fds_scet_epoch_2
+   version                1.21
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 2.
+
+   name                   fds_scet_epoch_3
+   version                1.21
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 3.
+
+   name                   fds_scet_epoch_4
+   version                1.21
+   value data type        ASCII_Date_Time_YMD_UTC
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions, which count starting at 1. If there is uncertainty regarding the correct FDS partition (that is, the correct value of spacecraft_clock_count_partition), then this attribute indicates what the SCET (that is, start_date_time) would be if the partition were 4.
+
+   name                   filter_name
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Optical filter used for the image. This attribute corresponds to the keyword FILTER_NAME in earlier versions of Voyager data products. For details see the documentation at https://pds-rings.seti.org/voyager/iss/inst_cat_na1.html and https://pds-rings.seti.org/voyager/iss/inst_cat_wa1.html 
+
+   name                   filter_number
+   version                1.21
+   value data type        ASCII_Integer
+   description            Optical filter identification number, contains the unique number associated with the optical filter for the image. This value should correspond with that given in the definition of this label's value of filter_name. Despite the redundancy, it is retained here as it was in the source product label, for historical purposes. This attribute corresponds to the keyword FILTER_NUMBER in earlier versions of Voyager data products.
+   minimum value          0
+   maximum value          7
+
+   name                   gain_mode_id
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The gain state of an instrument. Gain is a constant value, set by the observer, that indicates the approximate number of photon-excited electrons registered by the detector that correlate to one "data number" (DN). This attribute corresponds to the keyword GAIN_MODE_ID in earlier versions of Voyager data products.
+
+   name                   image_id
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Image identification, takes the form: nnnnes+ddd, where 'nnnn' = picture sequence number for a given day, 'e' = planet of encounter (J=Jupiter, S=Saturn, U=Uranus, N=Neptune), 's' = Voyager spacecraft (1 or 2), - sign indicates before and a + sign indicates after closest planetary approach. 'ddd' = number of days from closest approach. This attribute corresponds to the keyword IMAGE_ID in earlier versions of Voyager data products.
+   nillable               true
+
+   name                   image_number
+   version                1.21
+   value data type        ASCII_Real
+   description            Flight Data Subsystem (FDS) clock count at time of image acquisition. There is a unique IMAGE_NUMBER for each image in a planetary encounter. The clock count is always a seven digit value, five digits to the left of the decimal point and two digits to the right of the decimal point. This attribute corresponds to the keyword IMAGE_NUMBER in earlier versions of Voyager data products.
+
+   name                   legacy_label_lsb_truncate
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Whether the LSB Truncation mode was operating. Documentation is unclear, but it seems likely that this mode involved either regular rounding (truncating the least significant bits), or keeping only a certain number of the least significant bits while the bits corresponding to larger place values are truncated. This attribute preserves information found in Line 11 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). This attribute corresponds to the keyword LSB_TRUNC in earlier versions of Voyager data products.
+
+   name                   mission_phase_name
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Time period within the Voyager 1 or Voyager 2 mission, as defined by the mission team. This attribute corresponds to the keyword MISSION_PHASE_NAME in earlier versions of Voyager data products.
+
+   name                   pds_source_product_data_anomaly_type
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Data recording anomalies in the image. This attribute, while required, is nillable. A nil_reason of missing indicates that it was missing from the source product, which in turn implies no anomalies were detected. In the source product, DATA_ANOMALY_TYPE = RAM_DATA_CORRUPTION indicates that spurious values exist in the image data due to corruption of the random access memory onboard the spacecraft. This attribute corresponds to the keyword DATA_ANOMALY_TYPE in earlier versions of Voyager data products.
+   nillable               true
+
+   name                   pds_source_product_description
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            A description of the image, as recorded in the original source product label. This attribute corresponds to the keyword DESCRIPTION in earlier versions of Voyager data products.
+
+   name                   pds_source_product_note
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The observational intent of the image, as recorded in the original source product label. This attribute corresponds to the keyword NOTE in earlier versions of Voyager data products.
+   nillable               true
+
+   name                   pds_source_product_target_name
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The value of TARGET_NAME as given in the source product label. The relationship between this value and the actual intentions of the observer is unknown. The most accurate, though potentially flawed identification of the intended target is given in the Target_Identification class elsewhere in the label. This attribute is included in the PDS4 label for historical reasons. This attribute corresponds to the keyword TARGET_NAME in earlier versions of Voyager data products.
+   nillable               true
+
+   name                   scan_mode_id
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Scan rate of vidicon readout. The instrument scan rate affects the radiometric properties of the camera because of the dark current buildup on the vidicon. This attribute corresponds to the keyword SCAN_MODE_ID in earlier versions of Voyager data products.
+
+   name                   shutter_mode_id
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Shutter mode. Indicates which camera was shuttered, Narrow Angle and/or Wide Angle. This attribute corresponds to the keyword SHUTTER_MODE_ID in earlier versions of Voyager data products.
+
+   name                   legacy_label_signal_to_noise_ratio
+   version                1.21
+   value data type        ASCII_Real
+   description            Signal-to-noise ratio as measured by the camera onboard. This attribute preserves information found in Line 05 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
+   minimum value          0
+
+   name                   spacecraft_clock_count_partition
+   version                1.21
+   value data type        ASCII_Integer
+   description            The Voyager spacecraft clock, known as the Flight Data System (FDS), was reset to zero multiple times, dividing each mission into FDS partitions. This attribute signifies which FDS partition was in effect for this data product. A value of 0 indicates the partition is unknown.
+
+   name                   spacecraft_clock_start_count
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft clock value at the beginning of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Note: Since the mmm digits are optional, it is possible (and may be common) for spacecraft_clock_start_count to be identical to spacecraft_clock_stop_count for exposure_duration values less than 48 seconds. This attribute corresponds to the keyword SPACECRAFT_CLOCK_START_COUNT in earlier versions of Voyager data products.
+
+   name                   spacecraft_clock_stop_count
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft clock value at the end of a time period of interest. Voyager used the term Flight Data System (FDS) for this quantity, which is equivalent to the term spacecraft clock (SCLK) more commonly used by subsequent missions. The format is n/sssss:dd:mmm where n is the partition (0 if unknown), sssss is the FDS count (48 minutes per count for sssss), dd is units of 1/60 an FDS count (that is, 48 seconds per count for dd), and mmm is an optional fraction of dd (unused and value unknown). Note: Since the mmm digits are optional, it is possible (and may be common) for spacecraft_clock_start_count to be identical to spacecraft_clock_stop_count for exposure_duration values less than 48 seconds. This attribute corresponds to the keyword SPACECRAFT_CLOCK_STOP_COUNT in earlier versions of Voyager data products.
+
+   name                   legacy_label_na_beam
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_elec_cal
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Electronics cal status. Further detail about the meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_exposure_type
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_filter_position
+   version                1.21
+   value data type        ASCII_Integer
+   description            This attribute is a precursor to filter_name and filter_number. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+   minimum value          0
+   maximum value          7
+
+   name                   legacy_label_na_filter_step
+   version                1.21
+   value data type        ASCII_Integer
+   description            This attribute is a precursor to filter_name and filter_number. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+   minimum value          0
+   maximum value          7
+
+   name                   legacy_label_na_flood
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Following readout, light flooding is used to remove any residual image that might remain from the previous frame. For details see page 3-31 of Benesh and Jepsen (1978), urn:nasa:pds:wenkert_pdart16_vgr_rav1ciun:document:benesh_jepsen_1978.pdf This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_g1_voltage_count
+   version                1.21
+   value data type        ASCII_Integer
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). This attribute is omitted if the value in the VICAR-1 legacy header is *. It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+   minimum value          0
+   maximum value          7
+
+   name                   legacy_label_na_image_type
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_shutter_exposure
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_shutter_close
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_shutter_open
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_na_shutter_reset
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Narrow Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_beam
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_elec_cal
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Electronics cal status. Further detail about the meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_exposure_type
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_filter_position
+   version                1.21
+   value data type        ASCII_Integer
+   description            This attribute is a precursor to filter_name and filter_number. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+   minimum value          0
+   maximum value          7
+
+   name                   legacy_label_wa_filter_step
+   version                1.21
+   value data type        ASCII_Integer
+   description            This attribute is a precursor to filter_name and filter_number. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+   minimum value          0
+   maximum value          7
+
+   name                   legacy_label_wa_flood
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Following readout, light flooding is used to remove any residual image that might remain from the previous frame. For details see page 3-31 of Benesh and Jepsen (1978), urn:nasa:pds:wenkert_pdart16_vgr_rav1ciun:document:benesh_jepsen_1978.pdf This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_g1_voltage_count
+   version                1.21
+   value data type        ASCII_Integer
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). This attribute is omitted if the value in the VICAR-1 legacy header is *. It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+   minimum value          0
+   maximum value          7
+
+   name                   legacy_label_wa_image_type
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_shutter_exposure
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_shutter_close
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_shutter_open
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_wa_shutter_reset
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            This attribute is a precursor to shutter_mode_id. This attribute preserves information found in Line 09 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). It is reported for the Wide Angle camera, regardless of whether that camera is the one that produced this data product.
+
+   name                   legacy_label_pixel_dn_average_status
+   version                1.21
+   value data type        ASCII_Integer
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 07 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
+   minimum value          0
+   maximum value          1
+
+   name                   legacy_label_pixel_dn_average_threshold
+   version                1.21
+   value data type        ASCII_Integer
+   description            The meaning of this attribute is unknown. This attribute preserves information found in Line 07 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1).
+   minimum value          0
+   maximum value          255
+
+   name                   legacy_label_telemetry_mode
+   version                1.21
+   value data type        ASCII_Short_String_Collapsed
+   description            Documentation is unclear, including regarding whether this attribute has to do with telemetry coming out of the camera, or with telemetry between the spacecraft and Earth. This attribute preserves information found in Line 11 of the VICAR-1 legacy header (for more information, see the attribute definition for legacy_label_VICAR1). This attribute corresponds to the keyword TLM_MODE in earlier versions of Voyager data products.
+
+Parsed Input - Classes:
+
+   name                   Voyager
+   description            Elements relevant to the Voyager 1 and/or Voyager 2 spacecraft mission.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      vgr:legacy_label_VICAR1
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:Voyager_Telemetry
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      vgr:Voyager_Timing
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      vgr:ISS
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      vgr:ISS_Legacy_Label
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+   name                   ISS
+   description            Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      vgr:image_id
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:image_number
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:earth_received_time
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:scan_mode_id
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:shutter_mode_id
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:gain_mode_id
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:edit_mode_id
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:filter_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:filter_number
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:exposure_duration
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:pds_source_product_target_name
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:pds_source_product_note
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:pds_source_product_description
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:pds_source_product_data_anomaly_type
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   ISS_Legacy_Label
+   description            Attributes relevant to the Voyager Imaging Science Subsystem (ISS) instrument and its observations that are taken from the legacy label and are not otherwise attributed. These attributes are being retained for historical documentation purposes. Nothing in this class should be required for normal processing or analysis of Voyager ISS images.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      vgr:legacy_label_signal_to_noise_ratio
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_pixel_dn_average_threshold
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_pixel_dn_average_status
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_lsb_truncate
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_telemetry_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_compression_state
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_elec_cal
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_image_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_beam
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_shutter_reset
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_shutter_open
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_shutter_close
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_flood
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_exposure_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_filter_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_filter_step
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_g1_voltage_count
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_na_shutter_exposure
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_elec_cal
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_image_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_beam
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_shutter_reset
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_shutter_open
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_shutter_close
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_flood
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_exposure_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_filter_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_filter_step
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_g1_voltage_count
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:legacy_label_wa_shutter_exposure
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Voyager_Telemetry
+   description            Container for elements describing the process of transferring Voyager data from the spacecraft to Earth.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      vgr:edr_tape_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:edr_file_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:dsn_station_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:dsn_station_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Voyager_Timing
+   description            Container for elements describing the time at which a data product was obtained
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      vgr:mission_phase_name
+      minimum occurrences   1
+      maximum occurrences   unbounded
+      reference type        attribute_of
+
+      local identifier      vgr:spacecraft_clock_count_partition
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:spacecraft_clock_start_count
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:spacecraft_clock_stop_count
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:fds_scet_epoch_1
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:fds_scet_epoch_2
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:fds_scet_epoch_3
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      vgr:fds_scet_epoch_4
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+End of Report
